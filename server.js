@@ -65,7 +65,7 @@ function nextQuestion() {
 }
 
 function quizFinished() {
-  console.log("Quiz finito");
+  console.log("Quiz finito", JSON.stringify(responses, null, 2));
   const total = Object.keys(responses).length;
   const correctCount = Object.values(responses).filter(
     (r) => r === currentQuestion.correct
@@ -80,7 +80,8 @@ function quizFinished() {
   });
   io.emit("quizFinished");
   questionsCounter = 0;
-  nextQuestion();
+
+  if (questionTimer) clearInterval(questionTimer);
 }
 
 function sendChatMessage(data) {
@@ -161,6 +162,7 @@ function simulateChat() {
       testMsg.userId = `user${random}`;
       testMsg.msgId = `msg${random}`;
       testMsg.nickname = `User${random}`;
+      testMsg.uniqueId = `user${random}`;
 
       sendChatMessage(testMsg);
     }, i * 1000);
