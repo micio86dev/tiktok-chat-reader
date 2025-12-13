@@ -43,18 +43,22 @@ io.on("connection", (socket) => {
 
 // --- FUNZIONE NUOVA DOMANDA ---
 function nextQuestion() {
-  currentQuestion = questions[Math.floor(Math.random() * questions.length)];
-  console.log(
-    `📝 Nuova domanda ${questionsCounter + 1}/${maxQuestions}: ${
-      currentQuestion.text
-    }`
-  );
-
   if (questionsCounter >= maxQuestions) {
     quizFinished();
     return;
   }
+
+  responses = {}; // Reset responses for the new question
+  io.emit("updateAnswerCounts", {}); // Clear counts on frontend
+
+  currentQuestion = questions[Math.floor(Math.random() * questions.length)];
   questionsCounter++;
+
+  console.log(
+    `📝 Nuova domanda ${questionsCounter}/${maxQuestions}: ${
+      currentQuestion.text
+    }`
+  );
 
   io.emit("newQuestion", {
     id: currentQuestion.id,
@@ -134,6 +138,13 @@ function sendChatMessage(data) {
         avatar: data.profilePictureUrl,
         timestamp: Date.now(),
       };
+
+      // Calculate and emit answer counts
+      const counts = {};
+      Object.values(responses).forEach((r) => {
+        counts[r.answer] = (counts[r.answer] || 0) + 1;
+      });
+      io.emit("updateAnswerCounts", counts);
     }
 
     io.emit("tiktokMessage", {

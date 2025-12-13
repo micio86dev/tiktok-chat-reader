@@ -53,6 +53,7 @@ h1 {
   font-weight: 800;
   background: linear-gradient(to right, var(--tiktok-cyan), var(--tiktok-pink));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 8px;
 }
@@ -367,4 +368,31 @@ main {
   .options-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Option Count Badge */
+.option-text-container {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.option-count {
+  background: rgba(105, 201, 208, 0.2);
+  color: var(--tiktok-cyan);
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  white-space: nowrap;
+  margin-left: 10px;
+  box-shadow: 0 0 10px rgba(105, 201, 208, 0.1);
+  animation: scaleIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }

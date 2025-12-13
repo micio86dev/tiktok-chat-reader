@@ -42,7 +42,12 @@
         <div class="options-grid" v-if="options.length > 0">
           <div class="option-card" v-for="(opt, index) in options" :key="index">
             <div class="option-index">?{{ index + 1 }}</div>
-            <span>{{ opt }}</span>
+            <div class="option-text-container">
+              <span>{{ opt }}</span>
+              <div class="option-count" v-if="answerCounts && answerCounts['?' + (index + 1)]">
+                {{ answerCounts['?' + (index + 1)] }} voti
+              </div>
+            </div>
           </div>
         </div>
 

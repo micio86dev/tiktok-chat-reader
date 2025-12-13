@@ -8,7 +8,9 @@ createApp({
         const currentQuestion = ref(null);
         const options = ref([]);
         const timer = ref("00:00");
+
         const stats = ref(null);
+        const answerCounts = ref({});
         const messages = ref([]);
         const isQuizActive = ref(false);
         const chatContainer = ref(null);
@@ -57,23 +59,31 @@ createApp({
                 clearInterval(countdownInterval);
             });
 
-            // Chat Messages
-            socket.on("tiktokMessage", (msg) => {
-                messages.value.push(msg);
-                if (messages.value.length > 50) {
-                    messages.value.shift(); // Keep only last 50 messages
-                }
-                scrollToBottom();
-            });
 
-            // Quiz Finished
-            socket.on("quizFinished", () => {
-                currentQuestion.value = "Quiz Terminato!";
-                options.value = [];
-                timer.value = "00:00";
-                isQuizActive.value = false;
-            });
         });
+
+        // Update Answer Counts
+        socket.on("updateAnswerCounts", (counts) => {
+            answerCounts.value = counts;
+        });
+
+        // Chat Messages
+        socket.on("tiktokMessage", (msg) => {
+            messages.value.push(msg);
+            if (messages.value.length > 50) {
+                messages.value.shift(); // Keep only last 50 messages
+            }
+            scrollToBottom();
+        });
+
+        // Quiz Finished
+        socket.on("quizFinished", () => {
+            currentQuestion.value = "Quiz Terminato!";
+            options.value = [];
+            timer.value = "00:00";
+            isQuizActive.value = false;
+        });
+
 
         const scrollToBottom = async () => {
             await nextTick();
@@ -86,7 +96,9 @@ createApp({
             currentQuestion,
             options,
             timer,
+
             stats,
+            answerCounts,
             messages,
             isQuizActive,
             chatContainer
