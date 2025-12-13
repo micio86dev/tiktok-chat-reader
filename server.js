@@ -25,6 +25,7 @@ const questions = require("./questions.json");
 
 let currentQuestion = null;
 let responses = {};
+let globalScores = {};
 
 // --- CONNESSIONE CLIENT ---
 io.on("connection", (socket) => {
@@ -39,10 +40,55 @@ io.on("connection", (socket) => {
       counter: questionsCounter,
     });
   }
+
+  // Admin: Restart Quiz
+  socket.on("resetQuiz", () => {
+    console.log("🔄 Riavvio Quiz Manuale");
+    questionsCounter = 0;
+    responses = {};
+    globalScores = {};
+    currentQuestion = null;
+
+    // Start first question immediately
+    nextQuestion();
+
+    // Restart Interval
+    if (questionTimer) clearInterval(questionTimer);
+    questionTimer = setInterval(() => nextQuestion(), timerDuration * 1000);
+  });
 });
+
+// --- FUNZIONE CALCOLO PUNTEGGI ---
+function processRound() {
+  if (!currentQuestion) return;
+
+  Object.entries(responses).forEach(([userId, data]) => {
+    if (!globalScores[userId]) {
+      globalScores[userId] = {
+        score: 0,
+        attempts: 0,
+        nickname: data.nickname,
+        avatar: data.avatar,
+      };
+    }
+
+    globalScores[userId].attempts++;
+    globalScores[userId].nickname = data.nickname;
+    globalScores[userId].avatar = data.avatar;
+
+    if (data.answer === currentQuestion.correct) {
+      globalScores[userId].score++;
+    }
+  });
+}
 
 // --- FUNZIONE NUOVA DOMANDA ---
 function nextQuestion() {
+  // Process results of the previous question
+  if (currentQuestion) {
+    processRound();
+  }
+
   if (questionsCounter >= maxQuestions) {
     quizFinished();
     return;
@@ -55,8 +101,7 @@ function nextQuestion() {
   questionsCounter++;
 
   console.log(
-    `📝 Nuova domanda ${questionsCounter}/${maxQuestions}: ${
-      currentQuestion.text
+    `📝 Nuova domanda ${questionsCounter}/${maxQuestions}: ${currentQuestion.text
     }`
   );
 
@@ -72,37 +117,33 @@ function nextQuestion() {
 }
 
 function quizFinished() {
-  console.log(`Quiz finito: ${JSON.stringify(responses, null, 2)}`);
+  console.log(`Quiz finito. Calcolo classifica finale...`);
 
-  const responseList = Object.values(responses);
-  const total = responseList.length;
-
-  // Filter correct answers
-  const correctAnswers = responseList.filter(
-    (r) => r.answer === currentQuestion.correct
-  );
-
-  const correctCount = correctAnswers.length;
+  // Calculate stats from globalScores
+  const participants = Object.values(globalScores);
+  const totalParticipants = participants.length;
+  const totalCorrect = participants.reduce((sum, p) => sum + p.score, 0);
+  const totalAttempts = participants.reduce((sum, p) => sum + p.attempts, 0);
   const percentCorrect =
-    total > 0 ? ((correctCount / total) * 100).toFixed(1) : 0;
+    totalAttempts > 0 ? ((totalCorrect / totalAttempts) * 100).toFixed(1) : 0;
 
-  // Create leaderboard (winners)
-  // Sort by timestamp if available, otherwise just list them
-  // Assuming we want to show who answered correctly first
-  correctAnswers.sort((a, b) => a.timestamp - b.timestamp);
-
-  const winners = correctAnswers.map((r) => ({
-    nickname: r.nickname,
-    avatar: r.avatar,
-  }));
+  // Create leaderboard (sort by score descending)
+  const winners = participants
+    .sort((a, b) => b.score - a.score)
+    .map((p) => ({
+      nickname: p.nickname,
+      avatar: p.avatar,
+      score: p.score // Adding score just in case frontend wants it later
+    }));
 
   console.log(
-    `📝 Risultati Quiz: ${JSON.stringify(
+    `📝 Classifica Finale: ${JSON.stringify(
       {
-        total,
-        correctCount,
+        totalParticipants,
+        totalAttempts,
+        totalCorrect,
         percentCorrect,
-        winners,
+        topWinners: winners.slice(0, 3)
       },
       null,
       2
@@ -110,15 +151,18 @@ function quizFinished() {
   );
 
   io.emit("questionResult", {
-    total,
-    correctCount,
-    percentCorrect,
-    winners,
+    total: totalAttempts,
+    correctCount: totalCorrect,
+    percentCorrect: percentCorrect,
+    winners: winners,
   });
   io.emit("quizFinished");
 
+  // Reset Game State
   questionsCounter = 0;
   responses = {};
+  globalScores = {};
+  currentQuestion = null;
 
   if (questionTimer) clearInterval(questionTimer);
 }

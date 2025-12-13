@@ -78,5 +78,305 @@
       "event.stopPropagation()"
     ],
     "correct": "?2"
+  },
+  {
+    "id": 11,
+    "text": "Cosa restituisce 'typeof null'?",
+    "options": ["'null'", "'undefined'", "'object'", "'number'"],
+    "correct": "?3"
+  },
+  {
+    "id": 12,
+    "text": "Quale metodo rimuove l'ultimo elemento di un array?",
+    "options": ["pop()", "shift()", "remove()", "last()"],
+    "correct": "?1"
+  },
+  {
+    "id": 13,
+    "text": "Come si dichiara una costante in JavaScript?",
+    "options": ["let", "var", "const", "constant"],
+    "correct": "?3"
+  },
+  {
+    "id": 14,
+    "text": "Qual è l'output di '2' + 2?",
+    "options": ["4", "'22'", "NaN", "Error"],
+    "correct": "?2"
+  },
+  {
+    "id": 15,
+    "text": "Quale metodo unisce due o più array?",
+    "options": ["concat()", "join()", "merge()", "append()"],
+    "correct": "?1"
+  },
+  {
+    "id": 16,
+    "text": "Cosa fa 'Array.prototype.map()'?",
+    "options": ["Modifica l'array", "Crea un nuovo array", "Filtra l'array", "Riduce l'array"],
+    "correct": "?2"
+  },
+  {
+    "id": 17,
+    "text": "Quale simbolo si usa per i commenti su una riga?",
+    "options": ["/* */", "//", "#", "<!-- -->"],
+    "correct": "?2"
+  },
+  {
+    "id": 18,
+    "text": "Cosa restituisce 'Boolean(0)'?",
+    "options": ["true", "false", "null", "undefined"],
+    "correct": "?2"
+  },
+  {
+    "id": 19,
+    "text": "Quale metodo trasforma una stringa in un array?",
+    "options": ["split()", "join()", "slice()", "cut()"],
+    "correct": "?1"
+  },
+  {
+    "id": 20,
+    "text": "Quale operatore verifica sia valore che tipo?",
+    "options": ["==", "===", "=", "!="],
+    "correct": "?2"
+  },
+  {
+    "id": 21,
+    "text": "Come si crea un oggetto vuoto?",
+    "options": ["{}", "[]", "()", "<>"],
+    "correct": "?1"
+  },
+  {
+    "id": 22,
+    "text": "Cosa restituisce 'Math.random()'?",
+    "options": ["Intero 0-100", "Float 0-1", "Intero 0-1", "Float 0-100"],
+    "correct": "?2"
+  },
+  {
+    "id": 23,
+    "text": "Quale evento scatta quando l'utente clicca un elemento?",
+    "options": ["onhover", "onclick", "onchange", "onmouse"],
+    "correct": "?2"
+  },
+  {
+    "id": 24,
+    "text": "Cosa fa 'event.stopPropagation()'?",
+    "options": ["Ferma il bubbling", "Ferma il default", "Chiude il browser", "Nulla"],
+    "correct": "?1"
+  },
+  {
+    "id": 25,
+    "text": "Qual è il valore iniziale di una variabile non inizializzata?",
+    "options": ["null", "0", "undefined", "NaN"],
+    "correct": "?3"
+  },
+  {
+    "id": 26,
+    "text": "Come si controlla se un array include un valore?",
+    "options": ["has()", "contains()", "includes()", "find()"],
+    "correct": "?3"
+  },
+  {
+    "id": 27,
+    "text": "Quale metodo rimuove il primo elemento di un array?",
+    "options": ["shift()", "pop()", "unshift()", "delete"],
+    "correct": "?1"
+  },
+  {
+    "id": 28,
+    "text": "Cosa restituisce 'isNaN(\"Hello\")'?",
+    "options": ["true", "false", "undefined", "Error"],
+    "correct": "?1"
+  },
+  {
+    "id": 29,
+    "text": "Quale ciclo itera sulle proprietà di un oggetto?",
+    "options": ["for...of", "for...in", "foreach", "while"],
+    "correct": "?2"
+  },
+  {
+    "id": 30,
+    "text": "Come si scrive 'AND' logico in JS?",
+    "options": ["&", "&&", "||", "AND"],
+    "correct": "?2"
+  },
+  {
+    "id": 31,
+    "text": "Cosa fa 'JSON.parse()'?",
+    "options": ["Stringa -> Oggetto", "Oggetto -> Stringa", "Copia Oggetto", "Formatta JSON"],
+    "correct": "?1"
+  },
+  {
+    "id": 32,
+    "text": "Quale metodo aggiunge elementi all'inizio di un array?",
+    "options": ["push()", "unshift()", "shift()", "prepend()"],
+    "correct": "?2"
+  },
+  {
+    "id": 33,
+    "text": "Cosa restituisce '[] == []'?",
+    "options": ["true", "false", "undefined", "Error"],
+    "correct": "?2"
+  },
+  {
+    "id": 34,
+    "text": "Quale è un tipo primitivo in JS?",
+    "options": ["Array", "Object", "String", "Function"],
+    "correct": "?3"
+  },
+  {
+    "id": 35,
+    "text": "Come si definisce una classe in ES6?",
+    "options": ["struct", "class", "type", "interface"],
+    "correct": "?2"
+  },
+  {
+    "id": 36,
+    "text": "Cosa fa 'setTimeout'?",
+    "options": ["Ripete codice", "Ritarda codice", "Ferma codice", "Misura tempo"],
+    "correct": "?2"
+  },
+  {
+    "id": 37,
+    "text": "Qual è l'output di '!!1'?",
+    "options": ["true", "false", "1", "undefined"],
+    "correct": "?1"
+  },
+  {
+    "id": 38,
+    "text": "Come si ottiene la lunghezza di una stringa?",
+    "options": [".size", ".length", ".count", ".index"],
+    "correct": "?2"
+  },
+  {
+    "id": 39,
+    "text": "Quale metodo taglia una parte di array?",
+    "options": ["splice()", "slice()", "split()", "cut()"],
+    "correct": "?2"
+  },
+  {
+    "id": 40,
+    "text": "Cosa indica 'NaN'?",
+    "options": ["Not a Null", "Not a Number", "New and Null", "None at Now"],
+    "correct": "?2"
+  },
+  {
+    "id": 41,
+    "text": "Come si esporta una funzione in un modulo?",
+    "options": ["export", "return", "output", "public"],
+    "correct": "?1"
+  },
+  {
+    "id": 42,
+    "text": "Cosa fa 'Promise.all()'?",
+    "options": ["Esegue in serie", "Attende tutte", "Attende la prima", "Annulla tutte"],
+    "correct": "?2"
+  },
+  {
+    "id": 43,
+    "text": "Qual è il contesto di 'this' in una arrow function?",
+    "options": ["Globale", "Lessicale", "Dinamico", "Undefined"],
+    "correct": "?2"
+  },
+  {
+    "id": 44,
+    "text": "Come si converte una stringa '123' in numero?",
+    "options": ["parseInt()", "toNumber()", "int()", "parse()"],
+    "correct": "?1"
+  },
+  {
+    "id": 45,
+    "text": "Quale metodo controlla se una stringa inizia con un valore?",
+    "options": ["startsWith()", "beginsWith()", "indexOf()", "match()"],
+    "correct": "?1"
+  },
+  {
+    "id": 46,
+    "text": "Cosa fa l'operatore spread '...'?",
+    "options": ["Espande iterabili", "Restringe iterabili", "Copia profonda", "Nulla"],
+    "correct": "?1"
+  },
+  {
+    "id": 47,
+    "text": "Quale metodo trova il primo elemento che soddisfa una condizione?",
+    "options": ["filter()", "map()", "find()", "search()"],
+    "correct": "?3"
+  },
+  {
+    "id": 48,
+    "text": "Come si crea un template literal?",
+    "options": ["' '", "\" \"", "` `", "( )"],
+    "correct": "?3"
+  },
+  {
+    "id": 49,
+    "text": "Cosa è il DOM?",
+    "options": ["Data Object Model", "Document Object Model", "Disk OS Mode", "Digital Object Method"],
+    "correct": "?2"
+  },
+  {
+    "id": 50,
+    "text": "Quale metodo modifica il contenuto HTML di un elemento?",
+    "options": ["innerHTML", "innerText", "textContent", "value"],
+    "correct": "?1"
+  },
+  {
+    "id": 51,
+    "text": "Cosa restituisce '3 > 2 > 1'?",
+    "options": ["true", "false", "error", "1"],
+    "correct": "?2"
+  },
+  {
+    "id": 52,
+    "text": "Quale keyword si usa per gestire errori?",
+    "options": ["try...catch", "if...else", "do...while", "for...in"],
+    "correct": "?1"
+  },
+  {
+    "id": 53,
+    "text": "Come si rimuovono gli spazi ai lati di una stringa?",
+    "options": ["trim()", "clean()", "strip()", "cut()"],
+    "correct": "?1"
+  },
+  {
+    "id": 54,
+    "text": "Quale metodo ordina un array?",
+    "options": ["order()", "sort()", "arrange()", "filter()"],
+    "correct": "?2"
+  },
+  {
+    "id": 55,
+    "text": "Cosa è una Callback?",
+    "options": ["Funzione passata come argomento", "Errore di chiamata", "Chiamata di rete", "Ciclo infinito"],
+    "correct": "?1"
+  },
+  {
+    "id": 56,
+    "text": "Quale operatore serve per l'elevamento a potenza?",
+    "options": ["^", "**", "pow", "exp"],
+    "correct": "?2"
+  },
+  {
+    "id": 57,
+    "text": "Cosa restituisce 'typeof []'?",
+    "options": ["'array'", "'object'", "'list'", "'undefined'"],
+    "correct": "?2"
+  },
+  {
+    "id": 58,
+    "text": "Come si ferma un ciclo?",
+    "options": ["stop", "break", "return", "exit"],
+    "correct": "?2"
+  },
+  {
+    "id": 59,
+    "text": "Quale metodo di console mostra un errore?",
+    "options": ["console.log", "console.error", "console.warn", "console.info"],
+    "correct": "?2"
+  },
+  {
+    "id": 60,
+    "text": "Cosa è 'undefined'?",
+    "options": ["Variabile non dichiarata", "Valore assegnato automaticamente", "Errore", "Keywords"],
+    "correct": "?2"
   }
 ]

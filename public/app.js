@@ -92,6 +92,12 @@ createApp({
             }
         };
 
+        const resetQuiz = () => {
+            if (confirm("Sei sicuro di voler avviare un nuovo quiz?")) {
+                socket.emit("resetQuiz");
+            }
+        };
+
         return {
             currentQuestion,
             options,
@@ -101,7 +107,8 @@ createApp({
             answerCounts,
             messages,
             isQuizActive,
-            chatContainer
+            chatContainer,
+            resetQuiz
         };
     }
 }).mount('#app');

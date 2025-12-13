@@ -82,6 +82,11 @@
             <div class="no-winners" v-else-if="stats.winners">
               Nessuna risposta corretta 😢
             </div>
+
+            <!-- Restart Button -->
+            <button class="restart-btn" @click="resetQuiz">
+              🔄 Nuovo Quiz
+            </button>
           </div>
         </div>
       </div>
