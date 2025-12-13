@@ -1,0 +1,190 @@
+{
+  "comment": "TEST",
+  "visibleToSender": false,
+  "fullScreenTextColor": "",
+  "inputType": 0,
+  "emotes": [
+    
+  ],
+  "contentLanguage": "it",
+  "quickChatScene": 0,
+  "communityflaggedStatus": 0,
+  "commentQualityScores": [
+    {
+      "version": "user_type_rule",
+      "score": "100000"
+    },
+    {
+      "version": "community-flagged",
+      "score": "990579"
+    },
+    {
+      "version": "commentator_id",
+      "score": "7024167937150075909"
+    },
+    {
+      "version": "default",
+      "score": "1765619183515000"
+    },
+    {
+      "version": "default_app",
+      "score": "10000"
+    },
+    {
+      "version": "rankV3",
+      "score": "1765619190000099"
+    },
+    {
+      "version": "ttp_rule_rerank",
+      "score": "1765619193224000"
+    },
+    {
+      "version": "timestamp_desc",
+      "score": "98234380816776000"
+    },
+    {
+      "version": "tikcast_community_comment_18866_v7_r655069",
+      "score": "1765619193224000"
+    },
+    {
+      "version": "tikcast_community_comment_18866_v7_r655069_desc",
+      "score": "1765619193224000"
+    },
+    {
+      "version": "idc_rule_rerank",
+      "score": "1765619233224000"
+    },
+    {
+      "version": "v13_r712088",
+      "score": "1765619233224000"
+    },
+    {
+      "version": "v12_r702075",
+      "score": "1765619233224000"
+    },
+    {
+      "version": "batch_rank_v1",
+      "score": "1765619233516000"
+    }
+  ],
+  "userIdentity": {
+    "isGiftGiverOfAnchor": false,
+    "isSubscriberOfAnchor": false,
+    "isMutualFollowingWithAnchor": false,
+    "isFollowerOfAnchor": false,
+    "isModeratorOfAnchor": false,
+    "isAnchor": false
+  },
+  "commentTag": [
+    0
+  ],
+  "publicAreaMessageCommon": {
+    "scrollGapCount": "0",
+    "anchorScrollGapCount": "0",
+    "releaseToScrollArea": false,
+    "anchorReleaseToScrollArea": false,
+    "isAnchorMarked": false,
+    "creatorSuccessInfo": {
+      "tags": [
+        
+      ]
+    },
+    "portraitInfo": {
+      "userMetrics": [
+        {
+          "type": 1,
+          "metricsValue": "3"
+        },
+        {
+          "type": 2,
+          "metricsValue": "0"
+        },
+        {
+          "type": 3,
+          "metricsValue": "0"
+        },
+        {
+          "type": 4,
+          "metricsValue": "0"
+        },
+        {
+          "type": 5,
+          "metricsValue": "10"
+        }
+      ],
+      "portraitTag": [
+        {
+          "tagId": "7399855526094244626",
+          "priority": "6",
+          "showValue": "ttlive_ls_msgGroups_viewerLabel_notSub",
+          "showArgs": ""
+        }
+      ]
+    },
+    "adminFoldType": "0"
+  },
+  "screenTime": "0",
+  "signature": "2f8affe0961c2c099034b66476e90b56",
+  "signatureVersion": "v1",
+  "ecStreamerKey": "",
+  "userId": "7024167937150075909",
+  "secUid": "MS4wLjABAAAAlkEBq-DauwGgNC3dY9i3XhGS-EuKZOddfP1Ml9f_0dBDeobuLmD_Iu5PTD2PoRyN",
+  "uniqueId": "micheleboccia00",
+  "nickname": "michele",
+  "profilePictureUrl": "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/008510970c897c8b71cd17958e528683~tplv-tiktokx-cropcenter:100:100.webp?dr=10399&refresh_token=2ef59539&x-expires=1765789200&x-signature=roqhoyaXCxIvvMnXjq2seZtyyhU%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=fdd36af4&idc=no1a",
+  "followRole": "0",
+  "userBadges": [
+    
+  ],
+  "userSceneTypes": [
+    
+  ],
+  "userDetails": {
+    "createTime": "0",
+    "bioDescription": "",
+    "profilePictureUrls": [
+      "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/008510970c897c8b71cd17958e528683~tplv-tiktokx-cropcenter:100:100.webp?dr=10399&refresh_token=2ef59539&x-expires=1765789200&x-signature=roqhoyaXCxIvvMnXjq2seZtyyhU%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=fdd36af4&idc=no1a",
+      "https://p77-sign-va.tiktokcdn.com/tos-maliva-avt-0068/008510970c897c8b71cd17958e528683~tplv-tiktokx-cropcenter:100:100.webp?dr=10399&refresh_token=3eb8111b&x-expires=1765789200&x-signature=NyBxc0eNCKgeYu3QAxilkrWkuDE%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=fdd36af4&idc=no1a",
+      "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/008510970c897c8b71cd17958e528683~tplv-tiktokx-cropcenter:100:100.jpeg?dr=10399&refresh_token=98ad7d02&x-expires=1765789200&x-signature=LoN0lKEBcquSJBg3sX9e%2BkDwJ84%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=fdd36af4&idc=no1a",
+      "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/008510970c897c8b71cd17958e528683~tplv-tiktokx-cropcenter:100:100.webp?dr=13166&refresh_token=de71adf3&x-expires=1765789200&x-signature=3SLGxwC669PW3KaqPVjMmPU0Ce0%3D&t=4d5b0474&ps=ae600521&shp=a5d48078&shcp=fdd36af4&idc=no1a",
+      "https://p19-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/008510970c897c8b71cd17958e528683~tplv-tiktokx-cropcenter:100:100.webp?dr=13166&refresh_token=c5942d2e&x-expires=1765789200&x-signature=8jcY0Z203XHxLrT9iYzpfLCe4jk%3D&t=4d5b0474&ps=ae600521&shp=a5d48078&shcp=fdd36af4&idc=no1a",
+      "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/008510970c897c8b71cd17958e528683~tplv-tiktokx-cropcenter:100:100.jpeg?dr=13166&refresh_token=db6c35fe&x-expires=1765789200&x-signature=4cLfzG5gben2wMxLSGeSuyK5S4Y%3D&t=4d5b0474&ps=ae600521&shp=a5d48078&shcp=fdd36af4&idc=no1a"
+    ]
+  },
+  "followInfo": {
+    "followingCount": "381",
+    "followerCount": "82",
+    "followStatus": "0",
+    "pushStatus": "0"
+  },
+  "isModerator": false,
+  "isNewGifter": false,
+  "isSubscriber": false,
+  "topGifterRank": null,
+  "gifterLevel": 0,
+  "teamMemberLevel": 0,
+  "method": "WebcastChatMessage",
+  "msgId": "7583276594103028502",
+  "roomId": "7583271394507590422",
+  "createTime": "1765619183275",
+  "monitor": 0,
+  "isShowMsg": true,
+  "describe": "",
+  "foldType": "2",
+  "anchorFoldType": "2",
+  "priorityScore": "0",
+  "logId": "",
+  "msgProcessFilterK": "",
+  "msgProcessFilterV": "",
+  "fromIdc": "no1a",
+  "toIdc": "",
+  "filterMsgTagsList": [
+    
+  ],
+  "anchorPriorityScore": "0",
+  "roomMessageHeatLevel": "3",
+  "foldTypeForWeb": "2",
+  "anchorFoldTypeForWeb": "2",
+  "clientSendTime": "1765619182618",
+  "dispatchStrategy": 0
+}

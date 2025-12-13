@@ -1,5 +1,6 @@
 const express = require("express");
 const http = require("http");
+require('dotenv').config();
 const { Server } = require("socket.io");
 const { WebcastPushConnection } = require("tiktok-live-connector");
 
@@ -9,17 +10,21 @@ const io = new Server(server);
 
 app.use(express.static("public"));
 
-const username = "7amanzx";
+const username = process.env.TIKTOK_USERNAME;
 let retryDelay = 5000;
 const maxRetryDelay = 60000;
 const receivedMsgs = new Set();
+let live = null;
+let questionsCounter = 0;
+let questionTimer = null;
+const timerDuration = 10; // Seconds
+const maxQuestions = 3;
 
 // --- QUIZ MULTIPLE DOMANDE ---
 const questions = require("./questions.json");
 
 let currentQuestion = null;
 let responses = {};
-let questionTimer = null;
 
 // --- CONNESSIONE CLIENT ---
 io.on("connection", (socket) => {
@@ -30,10 +35,8 @@ io.on("connection", (socket) => {
     socket.emit("newQuestion", {
       question: currentQuestion.text,
       options: currentQuestion.options,
-      timer: Math.floor(
-        (questionTimer._idleStart + questionTimer._idleTimeout - Date.now()) /
-          1000
-      ),
+      timer: timerDuration,
+      counter: questionsCounter,
     });
   }
 });
@@ -44,64 +47,87 @@ function nextQuestion() {
   responses = {};
   console.log(`📝 Nuova domanda: ${currentQuestion.text}`);
 
+  if (questionsCounter >= maxQuestions) {
+    quizFinished();
+    return;
+  }
+  questionsCounter++;
+
   io.emit("newQuestion", {
+    id: currentQuestion.id,
     question: currentQuestion.text,
     options: currentQuestion.options,
-    timer: 60,
+    counter: questionsCounter,
+    timer: timerDuration,
   });
 
-  // timer 1 minuto
-  questionTimer = setTimeout(() => {
-    const total = Object.keys(responses).length;
-    const correctCount = Object.values(responses).filter(
-      (r) => r === currentQuestion.correct
-    ).length;
-    const percentCorrect =
-      total > 0 ? ((correctCount / total) * 100).toFixed(1) : 0;
+  simulateChat();
+}
 
-    io.emit("questionResult", {
-      total,
-      correctCount,
-      percentCorrect,
+function quizFinished() {
+  console.log("Quiz finito");
+  const total = Object.keys(responses).length;
+  const correctCount = Object.values(responses).filter(
+    (r) => r === currentQuestion.correct
+  ).length;
+  const percentCorrect =
+    total > 0 ? ((correctCount / total) * 100).toFixed(1) : 0;
+
+  io.emit("questionResult", {
+    total,
+    correctCount,
+    percentCorrect,
+  });
+  io.emit("quizFinished");
+  questionsCounter = 0;
+  nextQuestion();
+}
+
+function sendChatMessage(data) {
+  if (!currentQuestion) return;
+  if (receivedMsgs.has(data.msgId)) return;
+  receivedMsgs.add(data.msgId);
+
+  if (data.method === "WebcastChatMessage") {
+    const answer = data.comment.trim();
+    if (/^\?\d+$/.test(answer) && !responses[data.uniqueId]) {
+      responses[data.uniqueId] = answer;
+    }
+
+    io.emit("tiktokMessage", {
+      type: "chat",
+      userId: data.userId,
+      avatar: data.profilePictureUrl,
+      nickname: data.nickname,
+      text: data.comment,
     });
-
-    nextQuestion();
-  }, 60_000);
+  } else if (data.method === "WebcastGift" || data.giftImage) {
+    io.emit("tiktokMessage", {
+      type: "gift",
+      userId: data.userId,
+      avatar: data.profilePictureUrl,
+      nickname: data.nickname,
+      gift: data.gift || data.giftImage,
+    });
+  }
 }
 
 // --- CONNESSIONE LIVE TIKTOK ---
 function connectLive() {
+  live = new WebcastPushConnection(username);
   console.log(`🔗 Tentativo di connessione a ${username}...`);
-  const live = new WebcastPushConnection(username);
+
+  if (questionTimer) clearInterval(questionTimer);
+  questionTimer = setInterval(() => nextQuestion(), timerDuration * 1000); // TEMP
 
   live.on("chat", (data) => {
-    if (!currentQuestion) return;
-    if (receivedMsgs.has(data.msgId)) return;
-    receivedMsgs.add(data.msgId);
-
-    if (data.method === "WebcastChatMessage") {
-      const answer = data.comment.trim();
-      if (/^\?\d+$/.test(answer) && !responses[data.uniqueId]) {
-        responses[data.uniqueId] = answer;
-      }
-
-      io.emit("tiktokMessage", {
-        type: "chat",
-        user: data.uniqueId,
-        text: data.comment,
-      });
-    } else if (data.method === "WebcastGift" || data.giftImage) {
-      io.emit("tiktokMessage", {
-        type: "gift",
-        user: data.uniqueId,
-        gift: data.gift || data.giftImage,
-      });
-    }
+    sendChatMessage(data);
   });
 
   live.on("connected", (room) => {
     console.log(`✅ Connesso a ${username} (roomId: ${room.roomId})`);
     retryDelay = 5000;
+    // setInterval(() => nextQuestion(), timerDuration * 1000); // TODO
   });
 
   live.on("disconnected", () => {
@@ -110,23 +136,38 @@ function connectLive() {
     retryDelay = Math.min(retryDelay * 2, maxRetryDelay);
   });
 
-  live.on("error", (err) => {
-    console.error("‼️ Errore:", err.message || err);
+  live.on("error", () => {
+    console.error("‼️ Errore");
     setTimeout(connectLive, retryDelay);
     retryDelay = Math.min(retryDelay * 2, maxRetryDelay);
   });
 
-  live.connect().catch((err) => {
-    console.error("❌ Errore connessione iniziale:", err.message);
+  live.connect().catch(() => {
+    console.error("❌ Errore connessione iniziale");
     setTimeout(connectLive, retryDelay);
     retryDelay = Math.min(retryDelay * 2, maxRetryDelay);
   });
 }
 
-connectLive();
+function simulateChat() {
+  const exampleMsg = require("./exampleMsg.json");
+  const totalAnswers = 10;
 
-// --- AVVIA PRIMA DOMANDA SUBITO ---
-nextQuestion();
+  for (let i = 0; i < totalAnswers; i++) {
+    setTimeout(() => {
+      const random = Math.floor(Math.random() * 1000);
+      const testMsg = exampleMsg;
+      testMsg.comment = `?${Math.floor(Math.random() * 4) + 1}`;
+      testMsg.userId = `user${random}`;
+      testMsg.msgId = `msg${random}`;
+      testMsg.nickname = `User${random}`;
+
+      sendChatMessage(testMsg);
+    }, i * 1000);
+  }
+}
+
+connectLive();
 
 server.listen(3000, () =>
   console.log("🌐 Server in ascolto su http://localhost:3000")
