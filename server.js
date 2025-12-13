@@ -1,6 +1,6 @@
 const express = require("express");
 const http = require("http");
-require('dotenv').config();
+require("dotenv").config();
 const { Server } = require("socket.io");
 const { WebcastPushConnection } = require("tiktok-live-connector");
 
@@ -17,8 +17,8 @@ const receivedMsgs = new Set();
 let live = null;
 let questionsCounter = 0;
 let questionTimer = null;
-const timerDuration = 10; // Seconds
-const maxQuestions = 3;
+const timerDuration = 60; // Seconds
+const maxQuestions = 10;
 
 // --- QUIZ MULTIPLE DOMANDE ---
 const questions = require("./questions.json");
@@ -44,7 +44,11 @@ io.on("connection", (socket) => {
 // --- FUNZIONE NUOVA DOMANDA ---
 function nextQuestion() {
   currentQuestion = questions[Math.floor(Math.random() * questions.length)];
-  console.log(`📝 Nuova domanda ${questionsCounter + 1}/${maxQuestions}: ${currentQuestion.text}`);
+  console.log(
+    `📝 Nuova domanda ${questionsCounter + 1}/${maxQuestions}: ${
+      currentQuestion.text
+    }`
+  );
 
   if (questionsCounter >= maxQuestions) {
     quizFinished();
@@ -60,7 +64,7 @@ function nextQuestion() {
     timer: timerDuration,
   });
 
-  simulateChat();
+  // simulateChat();
 }
 
 function quizFinished() {
@@ -83,23 +87,29 @@ function quizFinished() {
   // Assuming we want to show who answered correctly first
   correctAnswers.sort((a, b) => a.timestamp - b.timestamp);
 
-  const winners = correctAnswers.map(r => ({
+  const winners = correctAnswers.map((r) => ({
     nickname: r.nickname,
-    avatar: r.avatar
+    avatar: r.avatar,
   }));
 
-  console.log(`📝 Risultati Quiz: ${JSON.stringify({
-    total,
-    correctCount,
-    percentCorrect,
-    winners
-  }, null, 2)}`);
+  console.log(
+    `📝 Risultati Quiz: ${JSON.stringify(
+      {
+        total,
+        correctCount,
+        percentCorrect,
+        winners,
+      },
+      null,
+      2
+    )}`
+  );
 
   io.emit("questionResult", {
     total,
     correctCount,
     percentCorrect,
-    winners
+    winners,
   });
   io.emit("quizFinished");
 
@@ -122,7 +132,7 @@ function sendChatMessage(data) {
         answer: answer,
         nickname: data.nickname,
         avatar: data.profilePictureUrl,
-        timestamp: Date.now()
+        timestamp: Date.now(),
       };
     }
 
@@ -150,7 +160,7 @@ function connectLive() {
   console.log(`🔗 Tentativo di connessione a ${username}...`);
 
   if (questionTimer) clearInterval(questionTimer);
-  questionTimer = setInterval(() => nextQuestion(), timerDuration * 1000); // TEMP
+  // questionTimer = setInterval(() => nextQuestion(), timerDuration * 1000); // TEMP
 
   live.on("chat", (data) => {
     sendChatMessage(data);
@@ -159,7 +169,7 @@ function connectLive() {
   live.on("connected", (room) => {
     console.log(`✅ Connesso a ${username} (roomId: ${room.roomId})`);
     retryDelay = 5000;
-    // setInterval(() => nextQuestion(), timerDuration * 1000); // TODO
+    questionTimer = setInterval(() => nextQuestion(), timerDuration * 1000); // TEMP
   });
 
   live.on("disconnected", () => {
