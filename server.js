@@ -44,8 +44,7 @@ io.on("connection", (socket) => {
 // --- FUNZIONE NUOVA DOMANDA ---
 function nextQuestion() {
   currentQuestion = questions[Math.floor(Math.random() * questions.length)];
-  responses = {};
-  console.log(`📝 Nuova domanda: ${currentQuestion.text}`);
+  console.log(`📝 Nuova domanda ${questionsCounter + 1}/${maxQuestions}: ${currentQuestion.text}`);
 
   if (questionsCounter >= maxQuestions) {
     quizFinished();
@@ -65,7 +64,7 @@ function nextQuestion() {
 }
 
 function quizFinished() {
-  console.log("Quiz finito", JSON.stringify(responses, null, 2));
+  console.log(`Quiz finito: ${JSON.stringify(responses, null, 2)}`);
   const total = Object.keys(responses).length;
   const correctCount = Object.values(responses).filter(
     (r) => r === currentQuestion.correct
@@ -73,13 +72,21 @@ function quizFinished() {
   const percentCorrect =
     total > 0 ? ((correctCount / total) * 100).toFixed(1) : 0;
 
+  console.log(`📝 Risultati Quiz: ${JSON.stringify({
+    total,
+    correctCount,
+    percentCorrect,
+  }, null, 2)}`);
+
   io.emit("questionResult", {
     total,
     correctCount,
     percentCorrect,
   });
   io.emit("quizFinished");
+
   questionsCounter = 0;
+  responses = {};
 
   if (questionTimer) clearInterval(questionTimer);
 }
