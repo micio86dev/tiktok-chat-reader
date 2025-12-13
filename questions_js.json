@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "text": "Qual è il metodo per aggiungere un elemento a un array in JS?",
+    "options": ["push()", "add()", "append()", "insert()"],
+    "correct": "?1"
+  },
+  {
+    "id": 2,
+    "text": "Quale keyword dichiara una variabile con scope di blocco?",
+    "options": ["var", "let", "const", "function"],
+    "correct": "?2"
+  },
+  {
+    "id": 3,
+    "text": "Come si scrive una funzione arrow in JS?",
+    "options": ["function() {}", "() => {}", "fun => {}", "arrow() {}"],
+    "correct": "?2"
+  },
+  {
+    "id": 4,
+    "text": "Quale tag HTML serve per inserire un paragrafo?",
+    "options": ["<div>", "<p>", "<span>", "<paragraph>"],
+    "correct": "?2"
+  },
+  {
+    "id": 5,
+    "text": "Quale proprietà CSS cambia il colore del testo?",
+    "options": ["background-color", "color", "text-color", "font-color"],
+    "correct": "?2"
+  },
+  {
+    "id": 6,
+    "text": "Come si seleziona un elemento con id 'header' in JS?",
+    "options": [
+      "document.getElementById('header')",
+      "document.query('#header')",
+      "document.id('header')",
+      "document.querySelectorAll('#header')"
+    ],
+    "correct": "?1"
+  },
+  {
+    "id": 7,
+    "text": "Quale metodo converte un oggetto JSON in stringa?",
+    "options": [
+      "JSON.stringify()",
+      "JSON.parse()",
+      "toString()",
+      "JSON.objectify()"
+    ],
+    "correct": "?1"
+  },
+  {
+    "id": 8,
+    "text": "Come si aggiunge una classe 'active' a un elemento in JS?",
+    "options": [
+      "element.addClass('active')",
+      "element.classList.add('active')",
+      "element.add('active')",
+      "element.classAdd('active')"
+    ],
+    "correct": "?2"
+  },
+  {
+    "id": 9,
+    "text": "Quale proprietà CSS imposta il bordo di un elemento?",
+    "options": ["border", "outline", "frame", "stroke"],
+    "correct": "?1"
+  },
+  {
+    "id": 10,
+    "text": "Come si previene il comportamento di default di un evento in JS?",
+    "options": [
+      "event.stop()",
+      "event.preventDefault()",
+      "event.cancel()",
+      "event.stopPropagation()"
+    ],
+    "correct": "?2"
+  }
+]

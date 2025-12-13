@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "text": "Quale è il punto di ingresso di un programma Java?",
+    "options": ["start()", "init()", "main()", "run()"],
+    "correct": "?3"
+  },
+  {
+    "id": 2,
+    "text": "Come si stampa in console?",
+    "options": ["print()", "System.out.println()", "console.log()", "echo"],
+    "correct": "?2"
+  },
+  {
+    "id": 3,
+    "text": "Quale keyword si usa per l'ereditarietà?",
+    "options": ["implements", "inherits", "extends", "super"],
+    "correct": "?3"
+  },
+  {
+    "id": 4,
+    "text": "Qual è la dimensione di un 'int'?",
+    "options": ["8 bit", "16 bit", "32 bit", "64 bit"],
+    "correct": "?3"
+  },
+  {
+    "id": 5,
+    "text": "Come si dichiara una costante?",
+    "options": ["const", "final", "static", "immutable"],
+    "correct": "?2"
+  },
+  {
+    "id": 6,
+    "text": "Quale collezione non ammette duplicati?",
+    "options": ["List", "Map", "Set", "Array"],
+    "correct": "?3"
+  },
+  {
+    "id": 7,
+    "text": "Quale keyword crea un'istanza di classe?",
+    "options": ["create", "new", "make", "instance"],
+    "correct": "?2"
+  },
+  {
+    "id": 8,
+    "text": "Cosa è 'String' in Java?",
+    "options": ["Tipo primitivo", "Classe", "Array di char", "Interfaccia"],
+    "correct": "?2"
+  },
+  {
+    "id": 9,
+    "text": "Come si gestiscono le eccezioni?",
+    "options": ["if...else", "try...catch", "error...handle", "switch...case"],
+    "correct": "?2"
+  },
+  {
+    "id": 10,
+    "text": "Cosa significa 'static'?",
+    "options": ["Non modificabile", "Appartiene alla classe", "Privato", "Globale"],
+    "correct": "?2"
+  }
+]

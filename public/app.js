@@ -39,10 +39,23 @@ createApp({
             timer.value = `${m}:${s}`;
         };
 
+        const showMenu = ref(false);
+
         // Socket Events
         onMounted(() => {
+            // Show Menu
+            socket.on("showMenu", () => {
+                showMenu.value = true;
+                stats.value = null;
+                isQuizActive.value = false;
+                currentQuestion.value = null;
+                options.value = [];
+                timer.value = "00:00";
+            });
+
             // New Question
             socket.on("newQuestion", (q) => {
+                showMenu.value = false; // Ensure menu is hidden
                 console.log("New Question:", q);
                 currentQuestion.value = q.question;
                 options.value = q.options;
@@ -58,8 +71,6 @@ createApp({
                 isQuizActive.value = false;
                 clearInterval(countdownInterval);
             });
-
-
         });
 
         // Update Answer Counts
@@ -98,6 +109,11 @@ createApp({
             }
         };
 
+        const startQuiz = (topic) => {
+            showMenu.value = false;
+            socket.emit("startQuiz", topic);
+        };
+
         return {
             currentQuestion,
             options,
@@ -108,7 +124,10 @@ createApp({
             messages,
             isQuizActive,
             chatContainer,
-            resetQuiz
+            resetQuiz,
+
+            showMenu,
+            startQuiz
         };
     }
 }).mount('#app');

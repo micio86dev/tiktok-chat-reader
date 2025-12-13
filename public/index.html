@@ -51,6 +51,27 @@
           </div>
         </div>
 
+        <!-- Menu Overlay -->
+        <div class="stats-overlay" v-if="showMenu">
+          <div class="stats-content">
+            <h3 class="stats-title">Scegli Argomento</h3>
+            <div class="menu-grid">
+              <button class="topic-btn" @click="startQuiz('js')">
+                JavaScript
+              </button>
+              <button class="topic-btn" @click="startQuiz('php')">
+                PHP
+              </button>
+              <button class="topic-btn" @click="startQuiz('python')">
+                Python
+              </button>
+              <button class="topic-btn" @click="startQuiz('java')">
+                Java
+              </button>
+            </div>
+          </div>
+        </div>
+
         <!-- Stats Overlay -->
         <div class="stats-overlay" v-if="stats">
           <div class="stats-content">

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "text": "Quale keyword definisce una funzione in Python?",
+    "options": ["func", "def", "function", "define"],
+    "correct": "?2"
+  },
+  {
+    "id": 2,
+    "text": "Come si inserisce un commento in Python?",
+    "options": ["//", "/* */", "#", "<!-- -->"],
+    "correct": "?3"
+  },
+  {
+    "id": 3,
+    "text": "Qual è il tipo di dato per i numeri decimali?",
+    "options": ["int", "double", "float", "decimal"],
+    "correct": "?3"
+  },
+  {
+    "id": 4,
+    "text": "Come si stampa in console?",
+    "options": ["console.log()", "print()", "echo", "System.out.println()"],
+    "correct": "?2"
+  },
+  {
+    "id": 5,
+    "text": "Quale struttura dati usa le parentesi graffe {}?",
+    "options": ["List", "Tuple", "Dictionary", "Array"],
+    "correct": "?3"
+  },
+  {
+    "id": 6,
+    "text": "Come si controlla la lunghezza di una lista?",
+    "options": ["list.length", "len(list)", "list.size()", "count(list)"],
+    "correct": "?2"
+  },
+  {
+    "id": 7,
+    "text": "Quale keyword importa un modulo?",
+    "options": ["include", "require", "import", "using"],
+    "correct": "?3"
+  },
+  {
+    "id": 8,
+    "text": "Cosa fa 'range(5)'?",
+    "options": ["Genera [1,2,3,4,5]", "Genera [0,1,2,3,4]", "Genera 5 numeri random", "Errore"],
+    "correct": "?2"
+  },
+  {
+    "id": 9,
+    "text": "Come si converte una stringa in intero?",
+    "options": ["str()", "parse()", "int()", "Number()"],
+    "correct": "?3"
+  },
+  {
+    "id": 10,
+    "text": "Quale operatore verifica l'appartenenza?",
+    "options": ["has", "exists", "in", "contains"],
+    "correct": "?3"
+  }
+]

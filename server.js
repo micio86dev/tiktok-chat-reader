@@ -21,42 +21,73 @@ const timerDuration = 60; // Seconds
 const maxQuestions = 10;
 
 // --- QUIZ MULTIPLE DOMANDE ---
-const questions = require("./questions.json");
+// --- QUIZ MULTIPLE DOMANDE ---
+let questions = [];
 
 let currentQuestion = null;
 let responses = {};
 let globalScores = {};
 let questionStats = []; // Array to store stats for each question
+let gameState = "MENU"; // MENU, PLAYING, FINISHED
 
 // --- CONNESSIONE CLIENT ---
 io.on("connection", (socket) => {
   console.log("Nuovo client connesso");
 
-  // invia subito la domanda corrente e il timer rimanente
-  if (currentQuestion) {
+  if (gameState === "MENU") {
+    socket.emit("showMenu");
+  } else if (gameState === "PLAYING" && currentQuestion) {
+    // If playing, send current state
     socket.emit("newQuestion", {
       question: currentQuestion.text,
       options: currentQuestion.options,
       timer: timerDuration,
       counter: questionsCounter,
     });
+  } else if (gameState === "FINISHED") {
+    // Maybe emit last results? For now do nothing or show menu
+    socket.emit("showMenu");
   }
 
-  // Admin: Restart Quiz
+  // Start Quiz with selected topic
+  socket.on("startQuiz", (topic) => {
+    console.log(`🚀 Avvio Quiz: ${topic}`);
+    try {
+      if (topic === 'js') questions = require("./questions_js.json");
+      else if (topic === 'python') questions = require("./questions_python.json");
+      else if (topic === 'php') questions = require("./questions_php.json");
+      else if (topic === 'java') questions = require("./questions_java.json");
+      else questions = require("./questions.json"); // Fallback
+
+      gameState = "PLAYING";
+      questionsCounter = 0;
+      responses = {};
+      globalScores = {};
+      questionStats = [];
+      currentQuestion = null;
+
+      nextQuestion();
+
+      if (questionTimer) clearInterval(questionTimer);
+      questionTimer = setInterval(() => nextQuestion(), timerDuration * 1000);
+
+    } catch (e) {
+      console.error("Errore caricamento domande:", e);
+    }
+  });
+
+  // Admin: Restart/Reset to Menu
   socket.on("resetQuiz", () => {
-    console.log("🔄 Riavvio Quiz Manuale");
+    console.log("🔄 Reset a Menu");
+    gameState = "MENU";
     questionsCounter = 0;
     responses = {};
     globalScores = {};
     questionStats = [];
     currentQuestion = null;
-
-    // Start first question immediately
-    nextQuestion();
-
-    // Restart Interval
     if (questionTimer) clearInterval(questionTimer);
-    questionTimer = setInterval(() => nextQuestion(), timerDuration * 1000);
+
+    io.emit("showMenu");
   });
 });
 
@@ -184,11 +215,12 @@ function quizFinished() {
   io.emit("quizFinished");
 
   // Reset Game State
-  questionsCounter = 0;
-  responses = {};
-  globalScores = {};
-  questionStats = [];
+  // questionsCounter = 0; // Removed, now handled by reset
+  // responses = {};
+  // globalScores = {};
+  // questionStats = [];
   currentQuestion = null;
+  gameState = "FINISHED";
 
   if (questionTimer) clearInterval(questionTimer);
 }

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "text": "Come si inizia uno script PHP?",
+    "options": ["<script>", "<?php", "<php>", "<?"],
+    "correct": "?2"
+  },
+  {
+    "id": 2,
+    "text": "Come si dichiara una variabile?",
+    "options": ["var x", "$x", "let x", "x"],
+    "correct": "?2"
+  },
+  {
+    "id": 3,
+    "text": "Come si stampa del testo?",
+    "options": ["print()", "echo", "console.log()", "write()"],
+    "correct": "?2"
+  },
+  {
+    "id": 4,
+    "text": "Qual è il simbolo per la concatenazione di stringhe?",
+    "options": ["+", "&", ".", ","],
+    "correct": "?3"
+  },
+  {
+    "id": 5,
+    "text": "Come si accede a un elemento di un array associativo?",
+    "options": ["$arr[0]", "$arr['key']", "$arr.key", "$arr->key"],
+    "correct": "?2"
+  },
+  {
+    "id": 6,
+    "text": "Quale funzione conta gli elementi di un array?",
+    "options": ["count()", "length()", "size()", "sizeof()"],
+    "correct": "?1"
+  },
+  {
+    "id": 7,
+    "text": "Come si definisce una costante?",
+    "options": ["const", "define()", "final", "static"],
+    "correct": "?2"
+  },
+  {
+    "id": 8,
+    "text": "Quale variabile superglobale contiene i dati di un form POST?",
+    "options": ["$_GET", "$_POST", "$_REQUEST", "$_FORM"],
+    "correct": "?2"
+  },
+  {
+    "id": 9,
+    "text": "Come si termina una istruzione?",
+    "options": [".", ";", ":", "Non serve"],
+    "correct": "?2"
+  },
+  {
+    "id": 10,
+    "text": "Quale loop itera sugli array?",
+    "options": ["for", "while", "foreach", "do...while"],
+    "correct": "?3"
+  }
+]
