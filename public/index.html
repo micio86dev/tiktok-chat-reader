@@ -79,6 +79,28 @@
                 </div>
               </div>
             </div>
+            <!-- Question Stats Breakdown -->
+            <div class="question-stats-container" v-if="stats.questionStats && stats.questionStats.length > 0">
+              <h4>📊 Dettaglio Domande</h4>
+              <div class="questions-list">
+                <div class="question-stat-item" v-for="(qStat, index) in stats.questionStats" :key="index">
+                  <div class="qs-header">
+                    <span class="qs-id">#{{ index + 1 }}</span>
+                    <span class="qs-text">{{ qStat.text }}</span>
+                  </div>
+                  <div class="qs-details">
+                    <div class="qs-answer">
+                      ✅ {{ qStat.correctAnswer }}
+                    </div>
+                    <div class="qs-metrics">
+                      <span class="qs-metric highlight">{{ qStat.percentCorrect }}%</span>
+                      <span class="qs-metric-label">({{ qStat.correctCount }}/{{ qStat.totalAnswers }})</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="no-winners" v-else-if="stats.winners">
               Nessuna risposta corretta 😢
             </div>

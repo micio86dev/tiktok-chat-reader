@@ -26,6 +26,7 @@ const questions = require("./questions.json");
 let currentQuestion = null;
 let responses = {};
 let globalScores = {};
+let questionStats = []; // Array to store stats for each question
 
 // --- CONNESSIONE CLIENT ---
 io.on("connection", (socket) => {
@@ -47,6 +48,7 @@ io.on("connection", (socket) => {
     questionsCounter = 0;
     responses = {};
     globalScores = {};
+    questionStats = [];
     currentQuestion = null;
 
     // Start first question immediately
@@ -61,6 +63,28 @@ io.on("connection", (socket) => {
 // --- FUNZIONE CALCOLO PUNTEGGI ---
 function processRound() {
   if (!currentQuestion) return;
+
+  const responseList = Object.values(responses);
+  const totalAnswers = responseList.length;
+  const correctAnswers = responseList.filter(
+    (r) => r.answer === currentQuestion.correct
+  ).length;
+
+  const percentCorrect =
+    totalAnswers > 0 ? ((correctAnswers / totalAnswers) * 100).toFixed(1) : 0;
+
+  // Derive correct text from options (e.g. "?1" -> index 0)
+  const correctIndex = parseInt(currentQuestion.correct.replace("?", "")) - 1;
+  const correctText = currentQuestion.options[correctIndex] || currentQuestion.correct;
+
+  questionStats.push({
+    id: currentQuestion.id,
+    text: currentQuestion.text,
+    correctAnswer: correctText,
+    totalAnswers,
+    correctCount: correctAnswers,
+    percentCorrect,
+  });
 
   Object.entries(responses).forEach(([userId, data]) => {
     if (!globalScores[userId]) {
@@ -155,6 +179,7 @@ function quizFinished() {
     correctCount: totalCorrect,
     percentCorrect: percentCorrect,
     winners: winners,
+    questionStats: questionStats,
   });
   io.emit("quizFinished");
 
@@ -162,6 +187,7 @@ function quizFinished() {
   questionsCounter = 0;
   responses = {};
   globalScores = {};
+  questionStats = [];
   currentQuestion = null;
 
   if (questionTimer) clearInterval(questionTimer);
