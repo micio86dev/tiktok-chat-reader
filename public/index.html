@@ -1,160 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 
 <head>
-  <title>TikTok Live Quiz JS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Live Quiz</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Dependencies -->
   <script src="/socket.io/socket.io.js"></script>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 20px;
-      background: #111;
-      color: #fff;
-    }
-
-    #messages {
-      height: 200px;
-      overflow-y: auto;
-      margin-bottom: 20px;
-      border: 1px solid #444;
-      padding: 10px;
-    }
-
-    .chat {
-      margin-bottom: 5px;
-    }
-
-    .gift {
-      color: #ff0;
-    }
-
-    #quiz {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    #options {
-      margin: auto;
-      display: flex;
-      justify-content: center;
-      text-align: left;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .info {
-      font-weight: bold;
-      color: #0f0;
-    }
-
-    #timer {
-      font-size: 3em;
-      font-weight: bold;
-      color: #0f0;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    li {
-      margin: 5px 0;
-      font-size: 1.2em;
-    }
-  </style>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 <body>
-  <h1>
-    Live TikTok Quiz JS -
-    <span class="info">Scrivi "?" e il numero della risposta</span>
-  </h1>
-  <div id="messages"></div>
+  <div id="app">
+    <!-- Header -->
+    <header>
+      <h1>TikTok Live Quiz</h1>
+      <p class="subtitle">Scrivi <span class="highlight">?</span> seguito dal numero della risposta (es. <span
+          class="highlight">?1</span>)</p>
+    </header>
 
-  <div id="quiz">
-    <h2 id="question"></h2>
-    <div id="timer">00:00</div>
-    <ul id="options"></ul>
-    <ul id="stats"></ul>
+    <main>
+      <!-- Quiz Area -->
+      <div class="quiz-container">
+        <!-- Timer -->
+        <div class="timer">{{ timer }}</div>
+
+        <!-- Question -->
+        <h2 class="question" v-if="currentQuestion">{{ currentQuestion }}</h2>
+        <h2 class="question" v-else>In attesa della prossima domanda...</h2>
+
+        <!-- Options -->
+        <div class="options-grid" v-if="options.length > 0">
+          <div class="option-card" v-for="(opt, index) in options" :key="index">
+            <div class="option-index">?{{ index + 1 }}</div>
+            <span>{{ opt }}</span>
+          </div>
+        </div>
+
+        <!-- Stats Overlay -->
+        <div class="stats-overlay" v-if="stats">
+          <div class="stats-content">
+            <h3 class="stats-title">Risultati</h3>
+            <div class="stat-item">
+              <span>Totale Risposte:</span>
+              <span class="highlight">{{ stats.total }}</span>
+            </div>
+            <div class="stat-item">
+              <span>Corrette:</span>
+              <span class="highlight">{{ stats.correctCount }}</span>
+            </div>
+            <div class="stat-item">
+              <span>Precisione:</span>
+              <span class="highlight">{{ stats.percentCorrect }}%</span>
+            </div>
+
+            <!-- Leaderboard -->
+            <div class="leaderboard" v-if="stats.winners && stats.winners.length > 0">
+              <h4>🏆 Top Risposte Corrette</h4>
+              <div class="winners-list">
+                <div class="winner-item" v-for="(winner, index) in stats.winners" :key="index">
+                  <span class="winner-rank">#{{ index + 1 }}</span>
+                  <img :src="winner.avatar || 'https://via.placeholder.com/32'" class="winner-avatar" alt="Avatar">
+                  <span class="winner-name">{{ winner.nickname }}</span>
+                </div>
+              </div>
+            </div>
+            <div class="no-winners" v-else-if="stats.winners">
+              Nessuna risposta corretta 😢
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Feed -->
+      <div class="chat-container">
+        <div class="chat-header">
+          <div class="live-indicator"></div>
+          Live Chat
+        </div>
+        <div class="chat-messages" ref="chatContainer">
+          <div v-for="(msg, index) in messages" :key="index" class="chat-message"
+            :class="{ 'gift-message': msg.type === 'gift' }">
+            <img :src="msg.avatar || 'https://via.placeholder.com/32'" class="avatar" alt="Avatar">
+            <div class="chat-content" :class="{ 'gift-content': msg.type === 'gift' }">
+              <div class="nickname">{{ msg.nickname }}</div>
+              <div v-if="msg.type === 'chat'">{{ msg.text }}</div>
+              <div v-else-if="msg.type === 'gift'">🎁 Ha inviato {{ msg.gift }}!</div>
+              <div v-else>{{ JSON.stringify(msg.data) }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </div>
 
-  <script>
-    const socket = io();
-    const messages = document.getElementById("messages");
-    const questionEl = document.getElementById("question");
-    const optionsEl = document.getElementById("options");
-    const statsEl = document.getElementById("stats");
-    const timerEl = document.getElementById("timer");
-
-    let countdown = null;
-
-    // funzione per mostrare timer in formato MM:SS
-    function startTimer(seconds) {
-      clearInterval(countdown);
-      updateTimerDisplay(seconds);
-      countdown = setInterval(() => {
-        seconds--;
-        if (seconds < 0) {
-          clearInterval(countdown);
-          timerEl.textContent = "00:00";
-          return;
-        }
-        updateTimerDisplay(seconds);
-      }, 1000);
-    }
-
-    function updateTimerDisplay(seconds) {
-      const m = Math.floor(seconds / 60)
-        .toString()
-        .padStart(2, "0");
-      const s = (seconds % 60).toString().padStart(2, "0");
-      timerEl.textContent = `${m}:${s}`;
-    }
-
-    // nuova domanda
-    socket.on("newQuestion", (q) => {
-      questionEl.textContent = q.question;
-      optionsEl.innerHTML = "";
-      statsEl.innerHTML = "";
-
-      console.log(q, 'QUESTION');
-
-      q.options.forEach((opt, i) => {
-        const li = document.createElement("li");
-        li.textContent = `?${i + 1} - ${opt}`;
-        optionsEl.appendChild(li);
-      });
-      startTimer(q.timer); // timer N secondi
-    });
-
-    // risultati domanda
-    socket.on("questionResult", (res) => {
-      statsEl.innerHTML = `
-        <li>Totale risposte: ${res.total}</li>
-        <li>Risposte corrette: ${res.correctCount}</li>
-        <li>Percentuale corrette: ${res.percentCorrect}%</li>
-      `;
-    });
-
-    // messaggi live
-    socket.on("tiktokMessage", (msg) => {
-      console.log(msg, 'MSG');
-      const div = document.createElement("div");
-      div.className = msg.type;
-
-      if (msg.type === "chat") {
-        div.textContent = `${msg.nickname}: ${msg.text}`;
-      } else if (msg.type === "gift") {
-        div.textContent = `🎁 ${msg.nickname} ha inviato un regalo!`;
-      } else {
-        div.textContent = JSON.stringify(msg.data);
-      }
-
-      messages.appendChild(div);
-      messages.scrollTop = messages.scrollHeight;
-    });
-  </script>
+  <!-- App Logic -->
+  <script src="app.js"></script>
 </body>
 
 </html>

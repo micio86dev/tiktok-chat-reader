@@ -65,23 +65,41 @@ function nextQuestion() {
 
 function quizFinished() {
   console.log(`Quiz finito: ${JSON.stringify(responses, null, 2)}`);
-  const total = Object.keys(responses).length;
-  const correctCount = Object.values(responses).filter(
-    (r) => r === currentQuestion.correct
-  ).length;
+
+  const responseList = Object.values(responses);
+  const total = responseList.length;
+
+  // Filter correct answers
+  const correctAnswers = responseList.filter(
+    (r) => r.answer === currentQuestion.correct
+  );
+
+  const correctCount = correctAnswers.length;
   const percentCorrect =
     total > 0 ? ((correctCount / total) * 100).toFixed(1) : 0;
+
+  // Create leaderboard (winners)
+  // Sort by timestamp if available, otherwise just list them
+  // Assuming we want to show who answered correctly first
+  correctAnswers.sort((a, b) => a.timestamp - b.timestamp);
+
+  const winners = correctAnswers.map(r => ({
+    nickname: r.nickname,
+    avatar: r.avatar
+  }));
 
   console.log(`📝 Risultati Quiz: ${JSON.stringify({
     total,
     correctCount,
     percentCorrect,
+    winners
   }, null, 2)}`);
 
   io.emit("questionResult", {
     total,
     correctCount,
     percentCorrect,
+    winners
   });
   io.emit("quizFinished");
 
@@ -98,8 +116,14 @@ function sendChatMessage(data) {
 
   if (data.method === "WebcastChatMessage") {
     const answer = data.comment.trim();
+    // Only accept answer if user hasn't answered yet
     if (/^\?\d+$/.test(answer) && !responses[data.uniqueId]) {
-      responses[data.uniqueId] = answer;
+      responses[data.uniqueId] = {
+        answer: answer,
+        nickname: data.nickname,
+        avatar: data.profilePictureUrl,
+        timestamp: Date.now()
+      };
     }
 
     io.emit("tiktokMessage", {
