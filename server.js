@@ -57,6 +57,8 @@ io.on("connection", (socket) => {
       else if (topic === 'python') questions = require("./questions_python.json");
       else if (topic === 'php') questions = require("./questions_php.json");
       else if (topic === 'java') questions = require("./questions_java.json");
+      else if (topic === 'html') questions = require("./questions_html.json");
+      else if (topic === 'css') questions = require("./questions_css.json");
       else questions = require("./questions.json"); // Fallback
 
       gameState = "PLAYING";
