@@ -53,12 +53,13 @@ io.on("connection", (socket) => {
   socket.on("startQuiz", (topic) => {
     console.log(`🚀 Avvio Quiz: ${topic}`);
     try {
-      if (topic === 'js') questions = require("./questions_js.json");
-      else if (topic === 'python') questions = require("./questions_python.json");
-      else if (topic === 'php') questions = require("./questions_php.json");
-      else if (topic === 'java') questions = require("./questions_java.json");
-      else if (topic === 'html') questions = require("./questions_html.json");
-      else if (topic === 'css') questions = require("./questions_css.json");
+      if (topic === "js") questions = require("./questions_js.json");
+      else if (topic === "python")
+        questions = require("./questions_python.json");
+      else if (topic === "php") questions = require("./questions_php.json");
+      else if (topic === "java") questions = require("./questions_java.json");
+      else if (topic === "html") questions = require("./questions_html.json");
+      else if (topic === "css") questions = require("./questions_css.json");
       else questions = require("./questions.json"); // Fallback
 
       gameState = "PLAYING";
@@ -72,7 +73,6 @@ io.on("connection", (socket) => {
 
       if (questionTimer) clearInterval(questionTimer);
       questionTimer = setInterval(() => nextQuestion(), timerDuration * 1000);
-
     } catch (e) {
       console.error("Errore caricamento domande:", e);
     }
@@ -108,7 +108,8 @@ function processRound() {
 
   // Derive correct text from options (e.g. "?1" -> index 0)
   const correctIndex = parseInt(currentQuestion.correct.replace("?", "")) - 1;
-  const correctText = currentQuestion.options[correctIndex] || currentQuestion.correct;
+  const correctText =
+    currentQuestion.options[correctIndex] || currentQuestion.correct;
 
   questionStats.push({
     id: currentQuestion.id,
@@ -158,8 +159,7 @@ function nextQuestion() {
   questionsCounter++;
 
   console.log(
-    `📝 Nuova domanda ${questionsCounter}/${maxQuestions}: ${currentQuestion.text
-    }`
+    `📝 Nuova domanda ${questionsCounter}/${maxQuestions}: ${currentQuestion.text}`
   );
 
   io.emit("newQuestion", {
@@ -190,7 +190,7 @@ function quizFinished() {
     .map((p) => ({
       nickname: p.nickname,
       avatar: p.avatar,
-      score: p.score // Adding score just in case frontend wants it later
+      score: p.score, // Adding score just in case frontend wants it later
     }));
 
   console.log(
@@ -200,7 +200,7 @@ function quizFinished() {
         totalAttempts,
         totalCorrect,
         percentCorrect,
-        topWinners: winners.slice(0, 3)
+        topWinners: winners.slice(0, 3),
       },
       null,
       2
@@ -293,14 +293,14 @@ function connectLive() {
     retryDelay = Math.min(retryDelay * 2, maxRetryDelay);
   });
 
-  live.on("error", () => {
-    console.error("‼️ Errore");
+  live.on("error", (e) => {
+    console.error(`‼️ Errore ${JSON.stringify(e)}`);
     setTimeout(connectLive, retryDelay);
     retryDelay = Math.min(retryDelay * 2, maxRetryDelay);
   });
 
-  live.connect().catch(() => {
-    console.error("❌ Errore connessione iniziale");
+  live.connect().catch((e) => {
+    console.error("❌ Errore connessione iniziale", JSON.stringify(e));
     setTimeout(connectLive, retryDelay);
     retryDelay = Math.min(retryDelay * 2, maxRetryDelay);
   });
