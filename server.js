@@ -274,7 +274,8 @@ function connectLive() {
   live = new WebcastPushConnection(username);
   console.log(`🔗 Tentativo di connessione a ${username}...`);
 
-  if (questionTimer) clearInterval(questionTimer);
+  // Decomment to simulate
+  // if (questionTimer) clearInterval(questionTimer);
   // questionTimer = setInterval(() => nextQuestion(), timerDuration * 1000); // TEMP
 
   live.on("chat", (data) => {
@@ -284,7 +285,8 @@ function connectLive() {
   live.on("connected", (room) => {
     console.log(`✅ Connesso a ${username} (roomId: ${room.roomId})`);
     retryDelay = 5000;
-    questionTimer = setInterval(() => nextQuestion(), timerDuration * 1000); // TEMP
+    /*if (questionTimer) clearInterval(questionTimer);
+    questionTimer = setInterval(() => nextQuestion(), timerDuration * 1000);*/
   });
 
   live.on("disconnected", () => {
