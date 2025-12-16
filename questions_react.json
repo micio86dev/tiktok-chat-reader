@@ -1,0 +1,1102 @@
+[
+  {
+    "id": 1,
+    "text": "Stato in functional component?",
+    "options": [
+      "useState",
+      "this.state",
+      "setState",
+      "state"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2,
+    "text": "Effetti collaterali?",
+    "options": [
+      "useEffect",
+      "useSideEffect",
+      "componentDidMount",
+      "effect"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 3,
+    "text": "JSX sta per?",
+    "options": [
+      "JavaScript XML",
+      "Java Syntax",
+      "JSON X",
+      "JS Extension"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 4,
+    "text": "Passare dati ai figli?",
+    "options": [
+      "Props",
+      "State",
+      "Context",
+      "Redux"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "text": "Virtual DOM?",
+    "options": [
+      "Copia leggera del DOM",
+      "DOM reale",
+      "Shadow DOM",
+      "Browser DOM"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 6,
+    "text": "Componente classe metodo render?",
+    "options": [
+      "Obbligatorio",
+      "Opzionale",
+      "Deprecato",
+      "Vietato"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 7,
+    "text": "Cosa ritorna useState?",
+    "options": [
+      "Array [valore, setter]",
+      "Oggetto {val, set}",
+      "Solo valore",
+      "Solo setter"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 8,
+    "text": "useContext serve a?",
+    "options": [
+      "Condividere stato globale",
+      "Usare testo",
+      "Contesto canvas",
+      "Nulla"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 9,
+    "text": "useReducer simile a?",
+    "options": [
+      "Redux reducer",
+      "Array.reduce",
+      "State",
+      "Map"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 10,
+    "text": "useRef?",
+    "options": [
+      "Riferimento mutabile persistente",
+      "Riferimento DOM",
+      "Entrambi",
+      "Nessuno"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 11,
+    "text": "useMemo?",
+    "options": [
+      "Memoizza valore",
+      "Memoizza funzione",
+      "Memoria",
+      "Cache"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 12,
+    "text": "useCallback?",
+    "options": [
+      "Memoizza funzione",
+      "Callback asincrona",
+      "Chiama retro",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 13,
+    "text": "React Fragment?",
+    "options": [
+      "<>...</>",
+      "<div>",
+      "<fragment>",
+      "<section>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 14,
+    "text": "Key nelle liste?",
+    "options": [
+      "Identifica elementi unici",
+      "Chiave accesso",
+      "Opzionale",
+      "Indice"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 15,
+    "text": "Controlled component?",
+    "options": [
+      "Gestito da React state",
+      "Gestito dal DOM",
+      "Componente sicuro",
+      "Input"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 16,
+    "text": "Uncontrolled component?",
+    "options": [
+      "Gestito dal DOM (ref)",
+      "Gestito da state",
+      "Insicuro",
+      "Output"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 17,
+    "text": "Sollevare lo stato (Lifting state up)?",
+    "options": [
+      "Spostare state al padre comune",
+      "Alzare variabile",
+      "Redux",
+      "Context"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 18,
+    "text": "Prop drilling?",
+    "options": [
+      "Passare props in profondità",
+      "Trapano",
+      "Errore",
+      "Pattern"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 19,
+    "text": "Context API evita?",
+    "options": [
+      "Prop drilling",
+      "State",
+      "Effetti",
+      "Render"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "text": "React Router componente link?",
+    "options": [
+      "<Link>",
+      "<a>",
+      "<href>",
+      "<nav>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 21,
+    "text": "Switch (v5) / Routes (v6)?",
+    "options": [
+      "Raggruppa rotte",
+      "Cambia pagina",
+      "Pulsante",
+      "Scambio"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 22,
+    "text": "useHistory / useNavigate?",
+    "options": [
+      "Navigazione programmatica",
+      "Storia",
+      "Indietro",
+      "Avanti"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 23,
+    "text": "useParams?",
+    "options": [
+      "Parametri URL",
+      "Parametri funzione",
+      "Query string",
+      "Body"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 24,
+    "text": "Higher Order Component (HOC)?",
+    "options": [
+      "Funzione che prende comp e ritorna comp",
+      "Componente alto",
+      "Classe",
+      "Hook"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 25,
+    "text": "Render Props?",
+    "options": [
+      "Prop che è una funzione",
+      "Renderizza proprietà",
+      "Props visibili",
+      "Pattern vecchio"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 26,
+    "text": "Hooks introdotti in versione?",
+    "options": [
+      "16.8",
+      "16.0",
+      "17",
+      "15"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 27,
+    "text": "Regola degli Hooks?",
+    "options": [
+      "Solo al top level",
+      "Ovunque",
+      "Nei loop",
+      "Nelle classi"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 28,
+    "text": "Custom Hook nome inizia con?",
+    "options": [
+      "use",
+      "get",
+      "set",
+      "hook"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 29,
+    "text": "React.memo?",
+    "options": [
+      "Memoizza componente (PureComponent)",
+      "Memoria",
+      "Cache",
+      "Store"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 30,
+    "text": "PureComponent?",
+    "options": [
+      "Renderizza solo se props cambiano (shallow cmp)",
+      "Componente puro",
+      "Funzione",
+      "Classe"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 31,
+    "text": "shouldComponentUpdate?",
+    "options": [
+      "Controlla re-render",
+      "Aggiorna sempre",
+      "Lifecycle mount",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 32,
+    "text": "componentDidMount equivalente hook?",
+    "options": [
+      "useEffect(..., [])",
+      "useEffect(..., [prop])",
+      "useMount",
+      "onMount"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 33,
+    "text": "componentWillUnmount equivalente?",
+    "options": [
+      "return function in useEffect",
+      "useUnmount",
+      "onClose",
+      "delete"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 34,
+    "text": "Strict Mode?",
+    "options": [
+      "Evidenzia problemi potenziali",
+      "Blocca codice",
+      "Performance",
+      "Build"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 35,
+    "text": "Create React App (CRA)?",
+    "options": [
+      "Tool per setup progetto",
+      "Framework",
+      "Libreria",
+      "Server"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 36,
+    "text": "Next.js?",
+    "options": [
+      "Framework React Fullstack (SSR)",
+      "Libreria",
+      "Database",
+      "CMS"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 37,
+    "text": "Gatsby?",
+    "options": [
+      "Generatore siti statici",
+      "Framework",
+      "CMS",
+      "Blog"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 38,
+    "text": "SSR?",
+    "options": [
+      "Server Side Rendering",
+      "Super Side React",
+      "Simple Site React",
+      "Style"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 39,
+    "text": "Hydration?",
+    "options": [
+      "Aggiunge interattività a HTML server",
+      "Bere acqua",
+      "Caricamento dati",
+      "Cache"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 40,
+    "text": "Redux?",
+    "options": [
+      "State management",
+      "Database",
+      "Router",
+      "Server"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 41,
+    "text": "Store in Redux?",
+    "options": [
+      "Contiene stato applicazione",
+      "Negozio",
+      "Localstorage",
+      "Database"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 42,
+    "text": "Action in Redux?",
+    "options": [
+      "Oggetto con type e payload",
+      "Funzione",
+      "Metodo",
+      "Evento"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 43,
+    "text": "Reducer in Redux?",
+    "options": [
+      "Funzione pura (state, action) => newState",
+      "Riduce array",
+      "Modifica state",
+      "Cancella"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 44,
+    "text": "Dispatch?",
+    "options": [
+      "Invia azione a store",
+      "Spedisce",
+      "Chiama API",
+      "Route"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 45,
+    "text": "Redux Thunk / Saga?",
+    "options": [
+      "Middleware per async",
+      "Giochi",
+      "Database",
+      "Store"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 46,
+    "text": "Recoil / Jotai / Zustand?",
+    "options": [
+      "Alternative a Redux",
+      "Giochi",
+      "Framework CSS",
+      "Browser"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 47,
+    "text": "React Query / TanStack Query?",
+    "options": [
+      "Gestione stato server/data fetching",
+      "Database",
+      "Query SQL",
+      "Router"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 48,
+    "text": "Formik / React Hook Form?",
+    "options": [
+      "Gestione form",
+      "Grafica",
+      "Validazione server",
+      "Database"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 49,
+    "text": "Styled Components?",
+    "options": [
+      "CSS-in-JS",
+      "Componenti grafici",
+      "Libreria UI",
+      "Tema"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 50,
+    "text": "Prop children?",
+    "options": [
+      "Contenuto annidato",
+      "Figli biologici",
+      "Array",
+      "Testo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 51,
+    "text": "ReactDOM.render (o createRoot)?",
+    "options": [
+      "Monta app nel DOM",
+      "Crea componente",
+      "Renderizza HTML",
+      "Aggiorna"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 52,
+    "text": "Concurrent Mode?",
+    "options": [
+      "Rendering interrompibile",
+      "Multithread",
+      "Parallelo",
+      "Veloce"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 53,
+    "text": "Suspense?",
+    "options": [
+      "Gestione caricamento async",
+      "Thriller",
+      "Errore",
+      "Wait"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 54,
+    "text": "Lazy loading?",
+    "options": [
+      "React.lazy",
+      "Caricamento pigro",
+      "Lento",
+      "Veloce"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 55,
+    "text": "Error Boundaries?",
+    "options": [
+      "Catturano errori rendering",
+      "Confini",
+      "Try catch",
+      "Middleware"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 56,
+    "text": "Portals?",
+    "options": [
+      "Renderizza fuori gerarchia DOM",
+      "Teletrasporto",
+      "Link",
+      "Iframe"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 57,
+    "text": "SyntheticEvent?",
+    "options": [
+      "Wrapper eventi cross-browser",
+      "Evento finto",
+      "Simulazione",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 58,
+    "text": "PreventDefault?",
+    "options": [
+      "Previene comportamento default",
+      "Ferma propagazione",
+      "Blocca tutto",
+      "Nulla"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 59,
+    "text": "StopPropagation?",
+    "options": [
+      "Ferma bubbling",
+      "Ferma default",
+      "Ferma tutto",
+      "Nulla"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 60,
+    "text": "One-way data flow?",
+    "options": [
+      "Dati scendono (padre->figlio)",
+      "Dati salgono",
+      "Bidirezionale",
+      "Casuale"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 61,
+    "text": "Quale attributo HTML cambia in JSX?",
+    "options": [
+      "class -> className",
+      "id -> identifier",
+      "src -> source",
+      "href -> link"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 62,
+    "text": "For -> htmlFor?",
+    "options": [
+      "Label input",
+      "Ciclo for",
+      "Form",
+      "Link"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 63,
+    "text": "Style in JSX?",
+    "options": [
+      "Oggetto JS camelCase",
+      "Stringa CSS",
+      "File esterno",
+      "Sass"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 64,
+    "text": "DangerouslySetInnerHTML?",
+    "options": [
+      "Inserisce HTML raw",
+      "Pericoloso",
+      "Script",
+      "Style"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 65,
+    "text": "React Developer Tools?",
+    "options": [
+      "Estensione browser debug",
+      "IDE",
+      "Server",
+      "Compilatore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 66,
+    "text": "Profiler?",
+    "options": [
+      "Misura performance rendering",
+      "Profilo utente",
+      "Login",
+      "Debug"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 67,
+    "text": "Reconciliation?",
+    "options": [
+      "Algoritmo diffing React",
+      "Pace",
+      "Update DOM",
+      "Render"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 68,
+    "text": "Fiber?",
+    "options": [
+      "Nuovo motore riconciliazione",
+      "Fibra ottica",
+      "Veloce",
+      "Thread"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 69,
+    "text": "Server Components?",
+    "options": [
+      "Comp eseguiti solo su server",
+      "SSR",
+      "API",
+      "Backend"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 70,
+    "text": "Flux architecture?",
+    "options": [
+      "Pattern unidirezionale",
+      "Flusso",
+      "Redux",
+      "MVC"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 71,
+    "text": "MVC vs React?",
+    "options": [
+      "React è solo View",
+      "React è MVC",
+      "React è Controller",
+      "React è Model"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 72,
+    "text": "Testing Library?",
+    "options": [
+      "React Testing Library (RTL)",
+      "Jest",
+      "Mocha",
+      "Cypress"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 73,
+    "text": "Jest?",
+    "options": [
+      "Test runner",
+      "Libreria React",
+      "Mock",
+      "Server"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 74,
+    "text": "Snapshot testing?",
+    "options": [
+      "Confronta UI renderizzata",
+      "Foto",
+      "Screenshot",
+      "Video"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 75,
+    "text": "Enzyme?",
+    "options": [
+      "Vecchia lib test (Airbnb)",
+      "Nuova",
+      "Ufficiale",
+      "Core"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 76,
+    "text": "MUI (Material UI)?",
+    "options": [
+      "Libreria componenti",
+      "Framework CSS",
+      "Tema",
+      "Icone"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 77,
+    "text": "Tailwind con React?",
+    "options": [
+      "Utility-first CSS",
+      "Framework JS",
+      "Componenti",
+      "Props"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 78,
+    "text": "Storybook?",
+    "options": [
+      "Sviluppo componenti isolati",
+      "Libro storie",
+      "Doc",
+      "Test"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 79,
+    "text": "Vite?",
+    "options": [
+      "Build tool veloce",
+      "Framework",
+      "Libreria",
+      "Server"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 80,
+    "text": "Webpack?",
+    "options": [
+      "Module bundler",
+      "Server",
+      "Browser",
+      "Editor"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 81,
+    "text": "Babel?",
+    "options": [
+      "Transpiler JS/JSX",
+      "Traduttore",
+      "Server",
+      "DB"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 82,
+    "text": "Eslint plugin react?",
+    "options": [
+      "Regole linting React",
+      "Compilatore",
+      "Type checker",
+      "Formatter"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 83,
+    "text": "Prettier?",
+    "options": [
+      "Code formatter",
+      "Linter",
+      "Compiler",
+      "Minifier"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 84,
+    "text": "TypeScript con React?",
+    "options": [
+      "Tipi statici per props/state",
+      "Nuovo framework",
+      "Lento",
+      "Difficile"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 85,
+    "text": "Estensione file TS React?",
+    "options": [
+      ".tsx",
+      ".ts",
+      ".jsx",
+      ".react"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 86,
+    "text": "React.FC / FunctionComponent?",
+    "options": [
+      "Tipo per componenti funzionali",
+      "Classe",
+      "Hook",
+      "Prop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 87,
+    "text": "useContext con TS?",
+    "options": [
+      "Inferisce tipo contesto",
+      "Errore",
+      "Any",
+      "Void"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 88,
+    "text": "useReducer con TS?",
+    "options": [
+      "Tipizza state e actions",
+      "Automatico",
+      "Difficile",
+      "No"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 89,
+    "text": "Immer?",
+    "options": [
+      "Stato immutabile facile",
+      "Immersione",
+      "React",
+      "Hook"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 90,
+    "text": "Remix?",
+    "options": [
+      "Fullstack framework",
+      "Musica",
+      "Libreria",
+      "Tool"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 91,
+    "text": "React Native?",
+    "options": [
+      "App mobili native",
+      "Web app",
+      "Desktop",
+      "Server"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 92,
+    "text": "Electron con React?",
+    "options": [
+      "App desktop",
+      "Mobile",
+      "Web",
+      "Server"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 93,
+    "text": "State colocation?",
+    "options": [
+      "Stato vicino a dove serve",
+      "Stato globale",
+      "Redux",
+      "Server"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 94,
+    "text": "Compound components?",
+    "options": [
+      "Pattern componenti accoppiati (Select/Option)",
+      "Composti chimici",
+      "Liste",
+      "HOC"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 95,
+    "text": "Render props pattern?",
+    "options": [
+      "Logica condivisa tramite prop function",
+      "Renderizza",
+      "Props",
+      "Pattern"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 96,
+    "text": "Hooks vs Classi?",
+    "options": [
+      "Funnzionali e concisi vs Verbosi",
+      "Uguali",
+      "Classi più veloci",
+      "Hooks deprecati"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 97,
+    "text": "React.startTransition?",
+    "options": [
+      "Aggiornamenti stato non urgenti",
+      "Animazioni",
+      "Transizioni CSS",
+      "Router"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 98,
+    "text": "useDeferredValue?",
+    "options": [
+      "Valore ritardato (debouncing UI)",
+      "Async",
+      "Promise",
+      "Memo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 99,
+    "text": "useId?",
+    "options": [
+      "Genera ID univoci accessibili",
+      "User ID",
+      "Login",
+      "Key"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 100,
+    "text": "Creatore React?",
+    "options": [
+      "Jordan Walke (Facebook)",
+      "Google",
+      "Microsoft",
+      "Evan You"
+    ],
+    "correct": 1
+  }
+]

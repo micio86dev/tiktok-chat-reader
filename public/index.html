@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TikTok Live Quiz</title>
+  <title>TikTok/YouTube Live Quiz</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,14 +23,23 @@
   <div id="app">
     <!-- Header -->
     <header>
-      <h1>TikTok Live Quiz</h1>
-      <p class="subtitle">Scrivi <span class="highlight">?</span> seguito dal numero della risposta (es. <span
-          class="highlight">?1</span>)</p>
+      <h1>TikTok/YouTube Live Quiz</h1>
     </header>
 
     <main>
       <!-- Quiz Area -->
       <div class="quiz-container">
+        <!-- Instructions -->
+        <div class="quiz-instructions">
+          Scrivi il numero della risposta (es. <span class="highlight">1</span>)
+        </div>
+
+        <!-- Topic & Counter -->
+        <div class="topic-header" v-if="currentTopic">
+          <span class="topic-badge">{{ currentTopic }}</span>
+          <span class="question-counter">{{ questionCounter }}</span>
+        </div>
+
         <!-- Timer -->
         <div class="timer">{{ timer }}</div>
 
@@ -41,11 +50,11 @@
         <!-- Options -->
         <div class="options-grid" v-if="options.length > 0">
           <div class="option-card" v-for="(opt, index) in options" :key="index">
-            <div class="option-index">?{{ index + 1 }}</div>
+            <div class="option-index">{{ index + 1 }}</div>
             <div class="option-text-container">
               <span>{{ opt }}</span>
-              <div class="option-count" v-if="answerCounts && answerCounts['?' + (index + 1)]">
-                {{ answerCounts['?' + (index + 1)] }} voti
+              <div class="option-count" v-if="answerCounts && answerCounts[(index + 1)]">
+                {{ answerCounts[(index + 1)] }} voti
               </div>
             </div>
           </div>
@@ -74,6 +83,43 @@
               <button class="topic-btn" @click="startQuiz('css')">
                 CSS
               </button>
+              <button class="topic-btn" @click="startQuiz('cpp')">
+                C++
+              </button>
+              <button class="topic-btn" @click="startQuiz('csharp')">
+                C#
+              </button>
+              <button class="topic-btn" @click="startQuiz('dotnet')">
+                .NET
+              </button>
+              <button class="topic-btn" @click="startQuiz('c')">
+                C
+              </button>
+              <button class="topic-btn" @click="startQuiz('react')">
+                React
+              </button>
+              <button class="topic-btn" @click="startQuiz('vue')">
+                Vue
+              </button>
+              <button class="topic-btn" @click="startQuiz('node')">
+                Node.js
+              </button>
+              <button class="topic-btn" @click="startQuiz('go')">
+                Go
+              </button>
+              <button class="topic-btn" @click="startQuiz('rust')">
+                Rust
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Topic Selection Overlay -->
+        <div class="topic-selection-overlay" v-if="topicSelection.active">
+          <div class="topic-selection-content">
+            <h3>Estraendo prossimo argomento...</h3>
+            <div class="topic-spinner">
+              {{ topicSelection.current }}
             </div>
           </div>
         </div>
@@ -132,10 +178,12 @@
               Nessuna risposta corretta 😢
             </div>
 
-            <!-- Restart Button -->
-            <button class="restart-btn" @click="resetQuiz">
-              🔄 Nuovo Quiz
-            </button>
+            <!-- Restart Button and Auto-restart Timer -->
+            <div class="restart-container">
+              <button class="restart-btn" @click="resetQuiz">
+                🔄 Nuovo Quiz <span v-if="restartCountdown">({{ restartCountdown }}s)</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>

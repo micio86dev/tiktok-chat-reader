@@ -92,6 +92,36 @@ main {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
+/* Topic Header */
+.topic-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.topic-badge {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #FE2C55;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
+.question-counter {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.8rem;
+  border-radius: 6px;
+}
 .timer {
   font-size: 5rem;
   font-weight: 900;
@@ -326,6 +356,26 @@ main {
   border: 1px solid rgba(255, 215, 0, 0.3);
 }
 
+.quiz-instructions {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.quiz-instructions .highlight {
+  color: #FE2C55;
+  background: rgba(254, 44, 85, 0.1);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
 /* Animations */
 @keyframes pulse {
   0% { transform: scale(1); opacity: 1; }
@@ -543,4 +593,38 @@ main {
 
 .topic-btn:active {
   transform: scale(0.95);
+}
+
+/* Topic Selection Overlay */
+.topic-selection-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  animation: fadeIn 0.3s ease;
+}
+
+.topic-selection-content {
+  text-align: center;
+}
+
+.topic-selection-content h3 {
+  color: var(--text-secondary);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.topic-spinner {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--tiktok-cyan);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 30px rgba(105, 201, 208, 0.6);
+  animation: pulse 0.1s infinite alternate;
 }

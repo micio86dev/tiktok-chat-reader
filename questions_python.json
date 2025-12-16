@@ -1,102 +1,1102 @@
 [
-  { "id": 1, "text": "Quale keyword definisce una funzione in Python?", "options": ["define", "func", "def", "function"], "correct": "?3" },
-  { "id": 2, "text": "Come si inserisce un commento in Python?", "options": ["#", "<!-- -->", "//", "/* */"], "correct": "?1" },
-  { "id": 3, "text": "Qual è il tipo di dato per i numeri decimali?", "options": ["double", "float", "decimal", "int"], "correct": "?2" },
-  { "id": 4, "text": "Come si stampa in console?", "options": ["console.log()", "System.out.println()", "echo", "print()"], "correct": "?4" },
-  { "id": 5, "text": "Quale struttura dati usa le parentesi graffe {}?", "options": ["Dictionary", "Array", "List", "Tuple"], "correct": "?1" },
-  { "id": 6, "text": "Come si controlla la lunghezza di una lista?", "options": ["count(list)", "list.length", "len(list)", "list.size()"], "correct": "?3" },
-  { "id": 7, "text": "Quale keyword importa un modulo?", "options": ["require", "import", "using", "include"], "correct": "?2" },
-  { "id": 8, "text": "Cosa fa 'range(5)'?", "options": ["Genera 5 numeri random", "Errore", "Genera [1,2,3,4,5]", "Genera [0,1,2,3,4]"], "correct": "?4" },
-  { "id": 9, "text": "Come si converte una stringa in intero?", "options": ["Number()", "str()", "parse()", "int()"], "correct": "?4" },
-  { "id": 10, "text": "Quale operatore verifica l'appartenenza?", "options": ["exists", "in", "contains", "has"], "correct": "?2" },
-  { "id": 11, "text": "Qual è l'output di 2 ** 3?", "options": ["6", "8", "9", "5"], "correct": "?2" },
-  { "id": 12, "text": "Come si crea una lista vuota?", "options": ["[]", "{}", "()", "list()"], "correct": "?1" },
-  { "id": 13, "text": "Quale metodo aggiunge un elemento a una lista?", "options": ["insert()", "add()", "push()", "append()"], "correct": "?4" },
-  { "id": 14, "text": "Cosa restituisce type(10)?", "options": ["integer", "Number", "<class 'int'>", "int"], "correct": "?3" },
-  { "id": 15, "text": "Quale keyword si usa per le eccezioni?", "options": ["try...catch", "do...catch", "test...catch", "try...except"], "correct": "?4" },
-  { "id": 16, "text": "Come si scrive una condizione OR?", "options": ["or", "|", "OR", "||"], "correct": "?1" },
-  { "id": 17, "text": "Cosa indica l'indentazione in Python?", "options": ["Nulla", "Stile", "Blocchi di codice", "Commenti"], "correct": "?3" },
-  { "id": 18, "text": "Quale metodo converte in stringa?", "options": ["string()", "text()", "str()", "toString()"], "correct": "?3" },
-  { "id": 19, "text": "Come si commenta su più righe?", "options": ["# ... #", "''' ... '''", "/* ... */", "// ..."], "correct": "?2" },
-  { "id": 20, "text": "Cosa restituisce 10 // 3?", "options": ["3", "3.0", "4", "3.33"], "correct": "?1" },
-  { "id": 21, "text": "Quale struttura è immutabile?", "options": ["Set", "Tuple", "List", "Dictionary"], "correct": "?2" },
-  { "id": 22, "text": "Come si rimuove un elemento da una lista?", "options": ["discard()", "erase()", "remove()", "delete()"], "correct": "?3" },
-  { "id": 23, "text": "Cosa fa 'pass'?", "options": ["Ritorna", "Nulla", "Termina loop", "Salta iterazione"], "correct": "?2" },
-  { "id": 24, "text": "Quale metodo divide una stringa?", "options": ["split()", "divide()", "cut()", "slice()"], "correct": "?1" },
-  { "id": 25, "text": "Come si legge input dall'utente?", "options": ["get()", "input()", "read()", "scan()"], "correct": "?2" },
-  { "id": 26, "text": "Cosa è un decoratore?", "options": ["Classe astratta", "Commento speciale", "Funzione che modifica funzione", "Variabile globale"], "correct": "?3" },
-  { "id": 27, "text": "Quale libreria si usa per i grafici?", "options": ["requests", "matplotlib", "numpy", "pandas"], "correct": "?2" },
-  { "id": 28, "text": "Come si apre un file in lettura?", "options": ["open('file', 'r')", "open('file', 'w')", "read('file')", "file.open()"], "correct": "?1" },
-  { "id": 29, "text": "Qual è il valore booleano di []?", "options": ["Error", "True", "False", "None"], "correct": "?3" },
-  { "id": 30, "text": "Come si crea un set?", "options": ["[]", "()", "set()", "{}"], "correct": "?3" },
-  { "id": 31, "text": "Cosa fa 'break'?", "options": ["Stampa errore", "Esce dal loop", "Salta iterazione", "Ferma programma"], "correct": "?2" },
-  { "id": 32, "text": "Quale metodo unisce stringhe?", "options": ["join()", "concat()", "add()", "merge()"], "correct": "?1" },
-  { "id": 33, "text": "Come si inverte una lista?", "options": ["invert()", "flip()", "back()", "reverse()"], "correct": "?4" },
-  { "id": 34, "text": "Cosa è 'self' in una classe?", "options": ["Metodo statico", "Riferimento all'istanza", "Parola riservata", "Variabile globale"], "correct": "?2" },
-  { "id": 35, "text": "Quale operatore controlla l'identità?", "options": ["equals", "is", "==", "==="], "correct": "?2" },
-  { "id": 36, "text": "Come si importa solo 'sqrt' da math?", "options": ["from math import sqrt", "import sqrt from math", "import math.sqrt", "using math.sqrt"], "correct": "?1" },
-  { "id": 37, "text": "Cosa restituisce len('Ciao')?", "options": ["Error", "4", "5", "3"], "correct": "?2" },
-  { "id": 38, "text": "Come si scrive 'AND' logico?", "options": ["&", "AND", "and", "&&"], "correct": "?3" },
-  { "id": 39, "text": "Quale metodo rende maiuscola una stringa?", "options": ["uppercase()", "upper()", "toUpper()", "capitalize()"], "correct": "?2" },
-  { "id": 40, "text": "Cosa è Tkinter?", "options": ["Tkinter", "Libreria GUI", "Web framework", "Database"], "correct": "?2" },
-  { "id": 41, "text": "Come si crea un dizionario vuoto?", "options": ["map()", "{}", "[]", "dict()"], "correct": "?2" },
-  { "id": 42, "text": "Quale metodo aggiunge a un set?", "options": ["insert()", "push()", "add()", "append()"], "correct": "?3" },
-  { "id": 43, "text": "Cosa è 'None'?", "options": ["Empty string", "None", "0", "False"], "correct": "?2" },
-  { "id": 44, "text": "Come si ottiene il valore assoluto?", "options": ["abs()", "absolute()", "math.abs()", "fabs()"], "correct": "?1" },
-  { "id": 45, "text": "Quale eccezione per divisione per zero?", "options": ["MathError", "DivZero", "ValueError", "ZeroDivisionError"], "correct": "?4" },
-  { "id": 46, "text": "Cosa fa 'continue'?", "options": ["Ferma tutto", "Stampa", "Salta all'iterazione successiva", "Esce dal loop"], "correct": "?3" },
-  { "id": 47, "text": "Come si formatta una stringa (f-string)?", "options": ["Testo + var", "f'Testo {var}'", "format()", "%s"], "correct": "?2" },
-  { "id": 48, "text": "Quale libreria per Data Science?", "options": ["pandas", "django", "flask", "pygame"], "correct": "?1" },
-  { "id": 49, "text": "Cosa è 'PIP'?", "options": ["Processing Image", "Package Installer", "Python Interpreter", "Python Interface"], "correct": "?2" },
-  { "id": 50, "text": "Come si definisce una classe?", "options": ["object MyClass:", "class MyClass:", "def Class:", "struct MyClass:"], "correct": "?2" },
-  { "id": 51, "text": "Quale è l'estensione dei file Python?", "options": [".pi", ".py", ".python", ".pt"], "correct": "?2" },
-  { "id": 52, "text": "Cosa fa 'lambda'?", "options": ["Funzione anonima", "Variabile", "Loop", "Import"], "correct": "?1" },
-  { "id": 53, "text": "Come si arrotonda un numero?", "options": ["fix()", "round()", "floor()", "ceil()"], "correct": "?2" },
-  { "id": 54, "text": "Cosa è un iteratore?", "options": ["Lista", "Errore", "Oggetto navigabile", "Funzione"], "correct": "?3" },
-  { "id": 55, "text": "Come si installa un pacchetto?", "options": ["py install nome", "pip install nome", "npm install nome", "apt get nome"], "correct": "?2" },
-  { "id": 56, "text": "Quale funzione per ordinare una lista?", "options": ["sorted()", "sort()", "order()", "arrange()"], "correct": "?1" },
-  { "id": 57, "text": "Cosa è JSON?", "options": ["Sort", "Formato dati", "Libreria", "Funzione"], "correct": "?2" },
-  { "id": 58, "text": "Come si controlla se una chiave è nel dizionario?", "options": ["exists(key)", "dict.contains(key)", "key in dict", "dict.has(key)"], "correct": "?3" },
-  { "id": 59, "text": "Cosa fa 'zip()'?", "options": ["Filtra lista", "Unisce iterabili", "Comprime file", "Crea dizionario"], "correct": "?2" },
-  { "id": 60, "text": "Quale è l'operatore modulo?", "options": ["%", "/", "//", "mod"], "correct": "?1" },
-  { "id": 61, "text": "Come si scrive un loop infinito?", "options": ["loop:", "while True:", "for ever:", "do while:"], "correct": "?2" },
-  { "id": 62, "text": "Cosa è Django?", "options": ["Gioco", "Database", "Web Framework", "Libreria Grafica"], "correct": "?3" },
-  { "id": 63, "text": "Come ottenere la data corrente?", "options": ["Today()", "datetime.now()", "Date()", "time.now()"], "correct": "?2" },
-  { "id": 64, "text": "Quale metodo rimuove spazi bianchi?", "options": ["strip()", "trim()", "clean()", "cut()"], "correct": "?1" },
-  { "id": 65, "text": "Cosa è '__init__'?", "options": ["Main", "Costruttore", "Distruttore", "Import"], "correct": "?2" },
-  { "id": 66, "text": "Come si verifica il tipo?", "options": ["checkType()", "isType()", "isinstance()", "typeOf()"], "correct": "?3" },
-  { "id": 67, "text": "Cosa restituisce 3 * 'A'?", "options": ["A3", "3A", "Error", "'AAA'"], "correct": "?4" },
-  { "id": 68, "text": "Quale libreria per richieste HTTP?", "options": ["requests", "http", "fetch", "url"], "correct": "?1" },
-  { "id": 69, "text": "Come si esce da uno script?", "options": ["quit()", "exit()", "stop()", "close()"], "correct": "?2" },
-  { "id": 70, "text": "Cosa fa 'map()'?", "options": ["Filtra", "Ordina", "Applica funzione a iterabile", "Crea mappa"], "correct": "?3" },
-  { "id": 71, "text": "Come si genera un numero random?", "options": ["noise()", "random.random()", "Math.random()", "rand()"], "correct": "?2" },
-  { "id": 72, "text": "Quale metodo trova indice in lista?", "options": ["index()", "find()", "search()", "locate()"], "correct": "?1" },
-  { "id": 73, "text": "Cosa è NumPy?", "options": ["Web framework", "Libreria calcolo numerico", "Parser", "Server"], "correct": "?2" },
-  { "id": 74, "text": "Come si apre file in scrittura?", "options": ["'a'", "'x'", "'w'", "'r'"], "correct": "?3" },
-  { "id": 75, "text": "Cosa restituisce bool(0)?", "options": ["None", "Error", "True", "False"], "correct": "?4" },
-  { "id": 76, "text": "Quale keyord definisce variabili globali?", "options": ["global", "var", "extern", "public"], "correct": "?1" },
-  { "id": 77, "text": "Cosa fa 'pop()' su lista?", "options": ["Aggiunge", "Rimuove e ritorna ultimo", "Rimuove primo", "Copia"], "correct": "?2" },
-  { "id": 78, "text": "Quale metodo conta occorrenze?", "options": ["total()", "number()", "count()", "sum()"], "correct": "?3" },
-  { "id": 79, "text": "Cosa è un 'Slice'?", "options": ["Funzione", "Sotto-sequenza", "Torta", "Errore"], "correct": "?2" },
-  { "id": 80, "text": "Come si scrive 'diverso'?", "options": ["!=", "<>", "!==", "not="], "correct": "?1" },
-  { "id": 81, "text": "Cosa è un modulo?", "options": ["Una variabile", "File contenente codice", "Una funzione", "Una classe"], "correct": "?2" },
-  { "id": 82, "text": "Come si cancella una variabile?", "options": ["delete x", "clear x", "del x", "remove x"], "correct": "?3" },
-  { "id": 83, "text": "Quale libreria per Machine Learning?", "options": ["flask", "requests", "pillow", "scikit-learn"], "correct": "?4" },
-  { "id": 84, "text": "Cosa restituisce min([1,2,3])?", "options": ["1", "3", "2", "Error"], "correct": "?1" },
-  { "id": 85, "text": "Come si definisce blocco 'finally'?", "options": ["end:", "finally:", "final:", "finish:"], "correct": "?2" },
-  { "id": 86, "text": "Quale metodo sostituisce stringhe?", "options": ["change()", "swap()", "replace()", "sub()"], "correct": "?3" },
-  { "id": 87, "text": "Cosa è IDLE?", "options": ["Libreria", "Nulla", "IDE Python", "Gioco"], "correct": "?3" },
-  { "id": 88, "text": "Come si converte int in float?", "options": ["float()", "double()", "decimal()", "real()"], "correct": "?1" },
-  { "id": 89, "text": "Quale operatore per intersezione set?", "options": ["|", "&", "-", "^"], "correct": "?2" },
-  { "id": 90, "text": "Cosa fa 'dir()'?", "options": ["Cancella", "Muove", "Lista attributi", "Crea cartella"], "correct": "?3" },
-  { "id": 91, "text": "Quale metodo verifica inizio stringa?", "options": ["first()", "top()", "startswith()", "begin()"], "correct": "?3" },
-  { "id": 92, "text": "Come si scrive 'Not'?", "options": ["not", "!", "inverse", "neg"], "correct": "?1" },
-  { "id": 93, "text": "Cosa è PEP 8?", "options": ["Interprete", "Guida di stile", "Libreria", "Versione"], "correct": "?2" },
-  { "id": 94, "text": "Come si crea una tupla?", "options": ["[]", "{}", "()", "tuple{}"], "correct": "?3" },
-  { "id": 95, "text": "Cosa restituisce 'sorted()'?", "options": ["Modifica lista", "True", "Nulla", "Nuova lista ordinata"], "correct": "?4" },
-  { "id": 96, "text": "Quale libreria per Regex?", "options": ["re", "regex", "match", "pattern"], "correct": "?1" },
-  { "id": 97, "text": "Cosa fa 'enumerate()'?", "options": ["Conta elementi", "Aggiunge contatore", "Ordina", "Filtra"], "correct": "?2" },
-  { "id": 98, "text": "Come accedere all'ultimo elemento?", "options": ["[-1]", "[last]", "[end]", "[0]"], "correct": "?1" },
-  { "id": 99, "text": "Cosa è Flask?", "options": ["Database", "Net Framework", "Micro web framework", "Gioco"], "correct": "?3" },
-  { "id": 100, "text": "Quale metodo verifica fine stringa?", "options": ["finish()", "bottom()", "last()", "endswith()"], "correct": "?4" }
+  {
+    "id": 1,
+    "text": "Quale keyword definisce una funzione in Python?",
+    "options": [
+      "define",
+      "func",
+      "def",
+      "function"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 2,
+    "text": "Come si inserisce un commento in Python?",
+    "options": [
+      "#",
+      "<!-- -->",
+      "//",
+      "/* */"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 3,
+    "text": "Qual è il tipo di dato per i numeri decimali?",
+    "options": [
+      "double",
+      "float",
+      "decimal",
+      "int"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 4,
+    "text": "Come si stampa in console?",
+    "options": [
+      "console.log()",
+      "System.out.println()",
+      "echo",
+      "print()"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 5,
+    "text": "Quale struttura dati usa le parentesi graffe {}?",
+    "options": [
+      "Dictionary",
+      "Array",
+      "List",
+      "Tuple"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 6,
+    "text": "Come si controlla la lunghezza di una lista?",
+    "options": [
+      "count(list)",
+      "list.length",
+      "len(list)",
+      "list.size()"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 7,
+    "text": "Quale keyword importa un modulo?",
+    "options": [
+      "require",
+      "import",
+      "using",
+      "include"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 8,
+    "text": "Cosa fa 'range(5)'?",
+    "options": [
+      "Genera 5 numeri random",
+      "Errore",
+      "Genera [1,2,3,4,5]",
+      "Genera [0,1,2,3,4]"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 9,
+    "text": "Come si converte una stringa in intero?",
+    "options": [
+      "Number()",
+      "str()",
+      "parse()",
+      "int()"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 10,
+    "text": "Quale operatore verifica l'appartenenza?",
+    "options": [
+      "exists",
+      "in",
+      "contains",
+      "has"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 11,
+    "text": "Qual è l'output di 2 ** 3?",
+    "options": [
+      "6",
+      "8",
+      "9",
+      "5"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 12,
+    "text": "Come si crea una lista vuota?",
+    "options": [
+      "[]",
+      "{}",
+      "()",
+      "list()"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 13,
+    "text": "Quale metodo aggiunge un elemento a una lista?",
+    "options": [
+      "insert()",
+      "add()",
+      "push()",
+      "append()"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 14,
+    "text": "Cosa restituisce type(10)?",
+    "options": [
+      "integer",
+      "Number",
+      "<class 'int'>",
+      "int"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 15,
+    "text": "Quale keyword si usa per le eccezioni?",
+    "options": [
+      "try...catch",
+      "do...catch",
+      "test...catch",
+      "try...except"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 16,
+    "text": "Come si scrive una condizione OR?",
+    "options": [
+      "or",
+      "|",
+      "OR",
+      "||"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 17,
+    "text": "Cosa indica l'indentazione in Python?",
+    "options": [
+      "Nulla",
+      "Stile",
+      "Blocchi di codice",
+      "Commenti"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 18,
+    "text": "Quale metodo converte in stringa?",
+    "options": [
+      "string()",
+      "text()",
+      "str()",
+      "toString()"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 19,
+    "text": "Come si commenta su più righe?",
+    "options": [
+      "# ... #",
+      "''' ... '''",
+      "/* ... */",
+      "// ..."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 20,
+    "text": "Cosa restituisce 10 // 3?",
+    "options": [
+      "3",
+      "3.0",
+      "4",
+      "3.33"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 21,
+    "text": "Quale struttura è immutabile?",
+    "options": [
+      "Set",
+      "Tuple",
+      "List",
+      "Dictionary"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 22,
+    "text": "Come si rimuove un elemento da una lista?",
+    "options": [
+      "discard()",
+      "erase()",
+      "remove()",
+      "delete()"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 23,
+    "text": "Cosa fa 'pass'?",
+    "options": [
+      "Ritorna",
+      "Nulla",
+      "Termina loop",
+      "Salta iterazione"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 24,
+    "text": "Quale metodo divide una stringa?",
+    "options": [
+      "split()",
+      "divide()",
+      "cut()",
+      "slice()"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 25,
+    "text": "Come si legge input dall'utente?",
+    "options": [
+      "get()",
+      "input()",
+      "read()",
+      "scan()"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 26,
+    "text": "Cosa è un decoratore?",
+    "options": [
+      "Classe astratta",
+      "Commento speciale",
+      "Funzione che modifica funzione",
+      "Variabile globale"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 27,
+    "text": "Quale libreria si usa per i grafici?",
+    "options": [
+      "requests",
+      "matplotlib",
+      "numpy",
+      "pandas"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 28,
+    "text": "Come si apre un file in lettura?",
+    "options": [
+      "open('file', 'r')",
+      "open('file', 'w')",
+      "read('file')",
+      "file.open()"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 29,
+    "text": "Qual è il valore booleano di []?",
+    "options": [
+      "Error",
+      "True",
+      "False",
+      "None"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 30,
+    "text": "Come si crea un set?",
+    "options": [
+      "[]",
+      "()",
+      "set()",
+      "{}"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 31,
+    "text": "Cosa fa 'break'?",
+    "options": [
+      "Stampa errore",
+      "Esce dal loop",
+      "Salta iterazione",
+      "Ferma programma"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 32,
+    "text": "Quale metodo unisce stringhe?",
+    "options": [
+      "join()",
+      "concat()",
+      "add()",
+      "merge()"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 33,
+    "text": "Come si inverte una lista?",
+    "options": [
+      "invert()",
+      "flip()",
+      "back()",
+      "reverse()"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 34,
+    "text": "Cosa è 'self' in una classe?",
+    "options": [
+      "Metodo statico",
+      "Riferimento all'istanza",
+      "Parola riservata",
+      "Variabile globale"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 35,
+    "text": "Quale operatore controlla l'identità?",
+    "options": [
+      "equals",
+      "is",
+      "==",
+      "==="
+    ],
+    "correct": 2
+  },
+  {
+    "id": 36,
+    "text": "Come si importa solo 'sqrt' da math?",
+    "options": [
+      "from math import sqrt",
+      "import sqrt from math",
+      "import math.sqrt",
+      "using math.sqrt"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 37,
+    "text": "Cosa restituisce len('Ciao')?",
+    "options": [
+      "Error",
+      "4",
+      "5",
+      "3"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 38,
+    "text": "Come si scrive 'AND' logico?",
+    "options": [
+      "&",
+      "AND",
+      "and",
+      "&&"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 39,
+    "text": "Quale metodo rende maiuscola una stringa?",
+    "options": [
+      "uppercase()",
+      "upper()",
+      "toUpper()",
+      "capitalize()"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 40,
+    "text": "Cosa è Tkinter?",
+    "options": [
+      "Tkinter",
+      "Libreria GUI",
+      "Web framework",
+      "Database"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 41,
+    "text": "Come si crea un dizionario vuoto?",
+    "options": [
+      "map()",
+      "{}",
+      "[]",
+      "dict()"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 42,
+    "text": "Quale metodo aggiunge a un set?",
+    "options": [
+      "insert()",
+      "push()",
+      "add()",
+      "append()"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 43,
+    "text": "Cosa è 'None'?",
+    "options": [
+      "Empty string",
+      "None",
+      "0",
+      "False"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 44,
+    "text": "Come si ottiene il valore assoluto?",
+    "options": [
+      "abs()",
+      "absolute()",
+      "math.abs()",
+      "fabs()"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 45,
+    "text": "Quale eccezione per divisione per zero?",
+    "options": [
+      "MathError",
+      "DivZero",
+      "ValueError",
+      "ZeroDivisionError"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 46,
+    "text": "Cosa fa 'continue'?",
+    "options": [
+      "Ferma tutto",
+      "Stampa",
+      "Salta all'iterazione successiva",
+      "Esce dal loop"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 47,
+    "text": "Come si formatta una stringa (f-string)?",
+    "options": [
+      "Testo + var",
+      "f'Testo {var}'",
+      "format()",
+      "%s"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 48,
+    "text": "Quale libreria per Data Science?",
+    "options": [
+      "pandas",
+      "django",
+      "flask",
+      "pygame"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 49,
+    "text": "Cosa è 'PIP'?",
+    "options": [
+      "Processing Image",
+      "Package Installer",
+      "Python Interpreter",
+      "Python Interface"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 50,
+    "text": "Come si definisce una classe?",
+    "options": [
+      "object MyClass:",
+      "class MyClass:",
+      "def Class:",
+      "struct MyClass:"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 51,
+    "text": "Quale è l'estensione dei file Python?",
+    "options": [
+      ".pi",
+      ".py",
+      ".python",
+      ".pt"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 52,
+    "text": "Cosa fa 'lambda'?",
+    "options": [
+      "Funzione anonima",
+      "Variabile",
+      "Loop",
+      "Import"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 53,
+    "text": "Come si arrotonda un numero?",
+    "options": [
+      "fix()",
+      "round()",
+      "floor()",
+      "ceil()"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 54,
+    "text": "Cosa è un iteratore?",
+    "options": [
+      "Lista",
+      "Errore",
+      "Oggetto navigabile",
+      "Funzione"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 55,
+    "text": "Come si installa un pacchetto?",
+    "options": [
+      "py install nome",
+      "pip install nome",
+      "npm install nome",
+      "apt get nome"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 56,
+    "text": "Quale funzione per ordinare una lista?",
+    "options": [
+      "sorted()",
+      "sort()",
+      "order()",
+      "arrange()"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 57,
+    "text": "Cosa è JSON?",
+    "options": [
+      "Sort",
+      "Formato dati",
+      "Libreria",
+      "Funzione"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 58,
+    "text": "Come si controlla se una chiave è nel dizionario?",
+    "options": [
+      "exists(key)",
+      "dict.contains(key)",
+      "key in dict",
+      "dict.has(key)"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 59,
+    "text": "Cosa fa 'zip()'?",
+    "options": [
+      "Filtra lista",
+      "Unisce iterabili",
+      "Comprime file",
+      "Crea dizionario"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 60,
+    "text": "Quale è l'operatore modulo?",
+    "options": [
+      "%",
+      "/",
+      "//",
+      "mod"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 61,
+    "text": "Come si scrive un loop infinito?",
+    "options": [
+      "loop:",
+      "while True:",
+      "for ever:",
+      "do while:"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 62,
+    "text": "Cosa è Django?",
+    "options": [
+      "Gioco",
+      "Database",
+      "Web Framework",
+      "Libreria Grafica"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 63,
+    "text": "Come ottenere la data corrente?",
+    "options": [
+      "Today()",
+      "datetime.now()",
+      "Date()",
+      "time.now()"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 64,
+    "text": "Quale metodo rimuove spazi bianchi?",
+    "options": [
+      "strip()",
+      "trim()",
+      "clean()",
+      "cut()"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 65,
+    "text": "Cosa è '__init__'?",
+    "options": [
+      "Main",
+      "Costruttore",
+      "Distruttore",
+      "Import"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 66,
+    "text": "Come si verifica il tipo?",
+    "options": [
+      "checkType()",
+      "isType()",
+      "isinstance()",
+      "typeOf()"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 67,
+    "text": "Cosa restituisce 3 * 'A'?",
+    "options": [
+      "A3",
+      "3A",
+      "Error",
+      "'AAA'"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 68,
+    "text": "Quale libreria per richieste HTTP?",
+    "options": [
+      "requests",
+      "http",
+      "fetch",
+      "url"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 69,
+    "text": "Come si esce da uno script?",
+    "options": [
+      "quit()",
+      "exit()",
+      "stop()",
+      "close()"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 70,
+    "text": "Cosa fa 'map()'?",
+    "options": [
+      "Filtra",
+      "Ordina",
+      "Applica funzione a iterabile",
+      "Crea mappa"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 71,
+    "text": "Come si genera un numero random?",
+    "options": [
+      "noise()",
+      "random.random()",
+      "Math.random()",
+      "rand()"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 72,
+    "text": "Quale metodo trova indice in lista?",
+    "options": [
+      "index()",
+      "find()",
+      "search()",
+      "locate()"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 73,
+    "text": "Cosa è NumPy?",
+    "options": [
+      "Web framework",
+      "Libreria calcolo numerico",
+      "Parser",
+      "Server"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 74,
+    "text": "Come si apre file in scrittura?",
+    "options": [
+      "'a'",
+      "'x'",
+      "'w'",
+      "'r'"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 75,
+    "text": "Cosa restituisce bool(0)?",
+    "options": [
+      "None",
+      "Error",
+      "True",
+      "False"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 76,
+    "text": "Quale keyord definisce variabili globali?",
+    "options": [
+      "global",
+      "var",
+      "extern",
+      "public"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 77,
+    "text": "Cosa fa 'pop()' su lista?",
+    "options": [
+      "Aggiunge",
+      "Rimuove e ritorna ultimo",
+      "Rimuove primo",
+      "Copia"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 78,
+    "text": "Quale metodo conta occorrenze?",
+    "options": [
+      "total()",
+      "number()",
+      "count()",
+      "sum()"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 79,
+    "text": "Cosa è un 'Slice'?",
+    "options": [
+      "Funzione",
+      "Sotto-sequenza",
+      "Torta",
+      "Errore"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 80,
+    "text": "Come si scrive 'diverso'?",
+    "options": [
+      "!=",
+      "<>",
+      "!==",
+      "not="
+    ],
+    "correct": 1
+  },
+  {
+    "id": 81,
+    "text": "Cosa è un modulo?",
+    "options": [
+      "Una variabile",
+      "File contenente codice",
+      "Una funzione",
+      "Una classe"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 82,
+    "text": "Come si cancella una variabile?",
+    "options": [
+      "delete x",
+      "clear x",
+      "del x",
+      "remove x"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 83,
+    "text": "Quale libreria per Machine Learning?",
+    "options": [
+      "flask",
+      "requests",
+      "pillow",
+      "scikit-learn"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 84,
+    "text": "Cosa restituisce min([1,2,3])?",
+    "options": [
+      "1",
+      "3",
+      "2",
+      "Error"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 85,
+    "text": "Come si definisce blocco 'finally'?",
+    "options": [
+      "end:",
+      "finally:",
+      "final:",
+      "finish:"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 86,
+    "text": "Quale metodo sostituisce stringhe?",
+    "options": [
+      "change()",
+      "swap()",
+      "replace()",
+      "sub()"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 87,
+    "text": "Cosa è IDLE?",
+    "options": [
+      "Libreria",
+      "Nulla",
+      "IDE Python",
+      "Gioco"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 88,
+    "text": "Come si converte int in float?",
+    "options": [
+      "float()",
+      "double()",
+      "decimal()",
+      "real()"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 89,
+    "text": "Quale operatore per intersezione set?",
+    "options": [
+      "|",
+      "&",
+      "-",
+      "^"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 90,
+    "text": "Cosa fa 'dir()'?",
+    "options": [
+      "Cancella",
+      "Muove",
+      "Lista attributi",
+      "Crea cartella"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 91,
+    "text": "Quale metodo verifica inizio stringa?",
+    "options": [
+      "first()",
+      "top()",
+      "startswith()",
+      "begin()"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 92,
+    "text": "Come si scrive 'Not'?",
+    "options": [
+      "not",
+      "!",
+      "inverse",
+      "neg"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 93,
+    "text": "Cosa è PEP 8?",
+    "options": [
+      "Interprete",
+      "Guida di stile",
+      "Libreria",
+      "Versione"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 94,
+    "text": "Come si crea una tupla?",
+    "options": [
+      "[]",
+      "{}",
+      "()",
+      "tuple{}"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 95,
+    "text": "Cosa restituisce 'sorted()'?",
+    "options": [
+      "Modifica lista",
+      "True",
+      "Nulla",
+      "Nuova lista ordinata"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 96,
+    "text": "Quale libreria per Regex?",
+    "options": [
+      "re",
+      "regex",
+      "match",
+      "pattern"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 97,
+    "text": "Cosa fa 'enumerate()'?",
+    "options": [
+      "Conta elementi",
+      "Aggiunge contatore",
+      "Ordina",
+      "Filtra"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 98,
+    "text": "Come accedere all'ultimo elemento?",
+    "options": [
+      "[-1]",
+      "[last]",
+      "[end]",
+      "[0]"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 99,
+    "text": "Cosa è Flask?",
+    "options": [
+      "Database",
+      "Net Framework",
+      "Micro web framework",
+      "Gioco"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 100,
+    "text": "Quale metodo verifica fine stringa?",
+    "options": [
+      "finish()",
+      "bottom()",
+      "last()",
+      "endswith()"
+    ],
+    "correct": 4
+  }
 ]

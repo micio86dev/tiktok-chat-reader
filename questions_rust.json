@@ -1,0 +1,1102 @@
+[
+  {
+    "id": 1,
+    "text": "Sicurezza memoria?",
+    "options": [
+      "Ownership",
+      "GC",
+      "Manual",
+      "RefCount"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2,
+    "text": "Variabile mutabile?",
+    "options": [
+      "let mut",
+      "var",
+      "mut",
+      "let"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 3,
+    "text": "Package manager?",
+    "options": [
+      "Cargo",
+      "Rustm",
+      "Crate",
+      "Pacma"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 4,
+    "text": "Return type void?",
+    "options": [
+      "()",
+      "void",
+      "null",
+      "nil"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "text": "Stampa console?",
+    "options": [
+      "println!",
+      "printf",
+      "console.log",
+      "echo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 6,
+    "text": "Unwrap fa?",
+    "options": [
+      "Panic se Err/None",
+      "Ritorna Option",
+      "Null check",
+      "Cast"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 7,
+    "text": "Definisci funzione?",
+    "options": [
+      "fn",
+      "func",
+      "def",
+      "function"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 8,
+    "text": "Valori opzionali?",
+    "options": [
+      "Option<T>",
+      "Nullable<T>",
+      "Maybe<T>",
+      "T?"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 9,
+    "text": "Borrow checker?",
+    "options": [
+      "Controlla ownership",
+      "Linter",
+      "GC",
+      "Compiler"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 10,
+    "text": "Ha GC?",
+    "options": [
+      "No",
+      "Sì",
+      "Opzionale",
+      "Java-like"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 11,
+    "text": "Stringa statica?",
+    "options": [
+      "&str",
+      "String",
+      "char*",
+      "text"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 12,
+    "text": "Ciclo infinito?",
+    "options": [
+      "loop",
+      "while true",
+      "forever",
+      "for ;;"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 13,
+    "text": "Trait copia?",
+    "options": [
+      "Copy",
+      "Clone",
+      "Dup",
+      "Repl"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 14,
+    "text": "Config file?",
+    "options": [
+      "Cargo.toml",
+      "package.json",
+      "rust.conf",
+      "Makefile"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 15,
+    "text": "Struct pubblica?",
+    "options": [
+      "pub struct",
+      "struct",
+      "export struct",
+      "public struct"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 16,
+    "text": "Pattern matching?",
+    "options": [
+      "match",
+      "switch",
+      "case",
+      "select"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 17,
+    "text": "&mut indica?",
+    "options": [
+      "Ref mutabile",
+      "Puntatore",
+      "Copia",
+      "Ref static"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 18,
+    "text": "Immutabile default?",
+    "options": [
+      "Sì",
+      "No",
+      "Solo int",
+      "Mai"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 19,
+    "text": "Crate è?",
+    "options": [
+      "Package/Lib",
+      "Cassa",
+      "Funzione",
+      "Classe"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "text": "Formattatore?",
+    "options": [
+      "rustfmt",
+      "cargo-fmt",
+      "prettier",
+      "clang"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 21,
+    "text": "String vs &str?",
+    "options": [
+      "Heap vs Slice",
+      "Uguali",
+      "Stack vs Heap",
+      "Mutable vs Const"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 22,
+    "text": "Result type?",
+    "options": [
+      "Ok/Err",
+      "True/False",
+      "Value/Null",
+      "Succ/Fail"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 23,
+    "text": "Panic macro?",
+    "options": [
+      "panic!",
+      "throw!",
+      "error!",
+      "stop!"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 24,
+    "text": "Expect vs Unwrap?",
+    "options": [
+      "Expect messaggio custom",
+      "Uguali",
+      "Expect non panica",
+      "Unwrap è deprecato"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 25,
+    "text": "Operatore ? serve a?",
+    "options": [
+      "Propagare errori",
+      "Ternario",
+      "Null check",
+      "Debug"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 26,
+    "text": "Trait è simile a?",
+    "options": [
+      "Interfaccia",
+      "Classe",
+      "Struct",
+      "Enum"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 27,
+    "text": "Self vs self?",
+    "options": [
+      "Tipo vs Istanza",
+      "Uguali",
+      "Statico vs Dinamico",
+      "Nulla"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 28,
+    "text": "Keyword impl?",
+    "options": [
+      "Implementa metodi/trait",
+      "Importa",
+      "Inizializza",
+      "Eredita"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 29,
+    "text": "Lifetime sintassi?",
+    "options": [
+      "'a",
+      "*a",
+      "&a",
+      "#a"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 30,
+    "text": "Static lifetime?",
+    "options": [
+      "'static",
+      "static",
+      "global",
+      "perm"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 31,
+    "text": "Closures sintassi?",
+    "options": [
+      "|x| x+1",
+      "x => x+1",
+      "function(x)",
+      "[x]"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 32,
+    "text": "Move keyword?",
+    "options": [
+      "Sposta ownership in closure",
+      "Sposta file",
+      "Muove memoria",
+      "Copia"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 33,
+    "text": "Iteratori lazy?",
+    "options": [
+      "Sì",
+      "No",
+      "Solo array",
+      "Dipende"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 34,
+    "text": "Collect method?",
+    "options": [
+      "Consuma iteratore",
+      "Raccoglie garbage",
+      "Colleziona errori",
+      "Nulla"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 35,
+    "text": "Box<T>?",
+    "options": [
+      "Heap allocation",
+      "Stack allocation",
+      "Imballaggio",
+      "Ref"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 36,
+    "text": "Rc<T>?",
+    "options": [
+      "Reference Counting",
+      "Race Condition",
+      "Remote Control",
+      "Raw Char"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 37,
+    "text": "Arc<T>?",
+    "options": [
+      "Atomic Rc",
+      "Arch",
+      "Async Rc",
+      "Array Rc"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 38,
+    "text": "Mutex lock?",
+    "options": [
+      "Ritorna LockResult",
+      "Blocca thread",
+      "Ritorna Bool",
+      "Niente"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 39,
+    "text": "Mod keyword?",
+    "options": [
+      "Definisce modulo",
+      "Modulo mat",
+      "Modifica",
+      "Mode"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 40,
+    "text": "Use keyword?",
+    "options": [
+      "Importa path",
+      "Usa variabile",
+      "Consuma",
+      "Include C"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 41,
+    "text": "Prelude?",
+    "options": [
+      "Import automatici",
+      "Intro",
+      "Main",
+      "Header"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 42,
+    "text": "Test attribute?",
+    "options": [
+      "#[test]",
+      "@test",
+      "test:",
+      "[[test]]"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 43,
+    "text": "Assert macro?",
+    "options": [
+      "assert_eq!",
+      "check!",
+      "verify!",
+      "expect!"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 44,
+    "text": "Cargo build --release?",
+    "options": [
+      "Ottimizza binario",
+      "Debug build",
+      "Pubblica",
+      "Pulisce"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 45,
+    "text": "Target directory?",
+    "options": [
+      "Output build",
+      "Sorgenti",
+      "Target utente",
+      "Temp"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 46,
+    "text": "Cosa è rustc?",
+    "options": [
+      "Compilatore",
+      "Linter",
+      "Runner",
+      "Transpiler"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 47,
+    "text": "Edition 2021?",
+    "options": [
+      "Versione linguaggio",
+      "Anno rilascio",
+      "Libro",
+      "Plugin"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 48,
+    "text": "Vector tipo?",
+    "options": [
+      "Vec<T>",
+      "Array<T>",
+      "List<T>",
+      "Vector<T>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 49,
+    "text": "Hash Map?",
+    "options": [
+      "HashMap<K,V>",
+      "Map<K,V>",
+      "Dict<K,V>",
+      "Table<K,V>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 50,
+    "text": "Tuple struct?",
+    "options": [
+      "struct Color(i32, i32)",
+      "struct Color{};",
+      "tuple Color",
+      "(i32, i32)"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 51,
+    "text": "Unit type?",
+    "options": [
+      "()",
+      "void",
+      "unit",
+      "null"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 52,
+    "text": "Never type?",
+    "options": [
+      "!",
+      "void",
+      "never",
+      "noreturn"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 53,
+    "text": "As keyword?",
+    "options": [
+      "Casting",
+      "Alias",
+      "Async",
+      "Assembler"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 54,
+    "text": "Type alias?",
+    "options": [
+      "type X = Y",
+      "alias X = Y",
+      "using X = Y",
+      "typedef Y X"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 55,
+    "text": "Derive attribute?",
+    "options": [
+      "#[derive(Debug)]",
+      "@derive",
+      "derive:",
+      "impl Derive"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 56,
+    "text": "Debug print?",
+    "options": [
+      "{:?}",
+      "{}",
+      "%d",
+      "%v"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 57,
+    "text": "Display trait?",
+    "options": [
+      "Format utente {}",
+      "Debug",
+      "Log",
+      "Error"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 58,
+    "text": "Drop trait?",
+    "options": [
+      "Distruttore",
+      "Cancella",
+      "Lascio",
+      "Caduta"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 59,
+    "text": "From/Into traits?",
+    "options": [
+      "Conversioni",
+      "Copy",
+      "Move",
+      "IO"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 60,
+    "text": "Iterator next?",
+    "options": [
+      "Ritorna Option<Item>",
+      "Item",
+      "Null",
+      "Err"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 61,
+    "text": "If let?",
+    "options": [
+      "Pattern matching conciso",
+      "If normale",
+      "Errore",
+      "Loop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 62,
+    "text": "While let?",
+    "options": [
+      "Loop con pattern",
+      "While normale",
+      "Funzione",
+      "Macro"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 63,
+    "text": "Match guards?",
+    "options": [
+      "Condizioni extra in arm",
+      "Guardie sicurezza",
+      "Mutex",
+      "Errori"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 64,
+    "text": "Range syntax?",
+    "options": [
+      "1..5",
+      "1 to 5",
+      "range(1,5)",
+      "[1,5]"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 65,
+    "text": "Range inclusive?",
+    "options": [
+      "1..=5",
+      "1...5",
+      "1 to 5 inc",
+      "[1,5]"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 66,
+    "text": "Slices sono?",
+    "options": [
+      "View su memoria contigua",
+      "Copie",
+      "Liste linkate",
+      "Hash"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 67,
+    "text": "Turbofish syntax?",
+    "options": [
+      "::<T>",
+      "<T>",
+      "->T",
+      "as T"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 68,
+    "text": "Modules file system?",
+    "options": [
+      "mod.rs o nome.rs",
+      "index.rs",
+      "package.rs",
+      "main.rs"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 69,
+    "text": "Pub(crate)?",
+    "options": [
+      "Visibile nel crate",
+      "Pubblico mondiale",
+      "Privato",
+      "Protetto"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 70,
+    "text": "Raw pointers?",
+    "options": [
+      "*const T, *mut T",
+      "&T",
+      "Box<T>",
+      "Ref<T>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 71,
+    "text": "Unsafe block?",
+    "options": [
+      "Permette op insicure",
+      "Disabilita check",
+      "Crasha",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 72,
+    "text": "FFI?",
+    "options": [
+      "Foreign Function Interface",
+      "File Format",
+      "Fast Function",
+      "Free Interface"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 73,
+    "text": "Const fn?",
+    "options": [
+      "Valutata compile time",
+      "Costante",
+      "Funzione pura",
+      "Veloce"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 74,
+    "text": "Macro rules?",
+    "options": [
+      "macro_rules!",
+      "def macro",
+      "template",
+      "define"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 75,
+    "text": "Procedural macros?",
+    "options": [
+      "Codice che genera codice",
+      "Funzioni",
+      "Regole",
+      "Standard"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 76,
+    "text": "RefCell?",
+    "options": [
+      "Interior mutability",
+      "Cella",
+      "Ref",
+      "Box"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 77,
+    "text": "Cell?",
+    "options": [
+      "Copy interior mutability",
+      "RefCell",
+      "Box",
+      "Atom"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 78,
+    "text": "Cow?",
+    "options": [
+      "Copy on Write",
+      "Mucca",
+      "Clone on Write",
+      "Const on Write"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 79,
+    "text": "PhantomData?",
+    "options": [
+      "Segnaposto tipo",
+      "Fantasma",
+      "Ghost",
+      "Null"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 80,
+    "text": "Pin?",
+    "options": [
+      "Impedisce spostamento memoria",
+      "Spilla",
+      "Lock",
+      "Fix"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 81,
+    "text": "Future trait?",
+    "options": [
+      "Async programmimg",
+      "Previsione",
+      "Thread",
+      "Callback"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 82,
+    "text": "Await syntax?",
+    "options": [
+      ".await",
+      "await x",
+      "wait(x)",
+      "defer"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 83,
+    "text": "Tokio?",
+    "options": [
+      "Async runtime",
+      "Città",
+      "Libreria grafica",
+      "Web framework"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 84,
+    "text": "Serde?",
+    "options": [
+      "Serializzazione",
+      "Server",
+      "Search",
+      "Service"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 85,
+    "text": "Diesel/Sqlx?",
+    "options": [
+      "ORM/SQL libs",
+      "Carburante",
+      "Motori",
+      "Giochi"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 86,
+    "text": "Rocket/Actix?",
+    "options": [
+      "Web frameworks",
+      "Razimissili",
+      "Attori",
+      "Giochi"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 87,
+    "text": "Yew/Leptos?",
+    "options": [
+      "Frontend frameworks (WASM)",
+      "Alberi",
+      "Malattie",
+      "Libri"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 88,
+    "text": "WASM?",
+    "options": [
+      "WebAssembly",
+      "Web Asm",
+      "World Asm",
+      "Windows Asm"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 89,
+    "text": "Clippy?",
+    "options": [
+      "Linter ufficiale",
+      "Assistente",
+      "Graffetta",
+      "Debugger"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 90,
+    "text": "Cargo check?",
+    "options": [
+      "Verifica compilazione veloce",
+      "Test",
+      "Build release",
+      "Publish"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 91,
+    "text": "Cargo doc?",
+    "options": [
+      "Genera documentazione",
+      "Chiama dottore",
+      "Docker",
+      "Documenti"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 92,
+    "text": "Doc comments?",
+    "options": [
+      "///",
+      "//",
+      "/*",
+      "#"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 93,
+    "text": "Integration tests folder?",
+    "options": [
+      "tests/",
+      "src/tests",
+      "int/",
+      "spec/"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 94,
+    "text": "Benchmark folder?",
+    "options": [
+      "benches/",
+      "perf/",
+      "speed/",
+      "src/bench"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 95,
+    "text": "Build script?",
+    "options": [
+      "build.rs",
+      "make.rs",
+      "config.rs",
+      "setup.rs"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 96,
+    "text": "Cross compilation?",
+    "options": [
+      "Supportata nativamente",
+      "Impossibile",
+      "Difficile",
+      "Solo Linux"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 97,
+    "text": "Rustup?",
+    "options": [
+      "Installer/Version manager",
+      "Backup",
+      "Startup",
+      "Upgrade"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 98,
+    "text": "Channel mpsc?",
+    "options": [
+      "MultiProducer SingleConsumer",
+      "MultiP MultiC",
+      "SingleP SingleC",
+      "Mono"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 99,
+    "text": "Std library è?",
+    "options": [
+      "Standard library",
+      "Student",
+      "Studio",
+      "Static"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 100,
+    "text": "No_std?",
+    "options": [
+      "Embedded/Bare metal",
+      "Errore",
+      "Standard pro",
+      "Niente"
+    ],
+    "correct": 1
+  }
+]

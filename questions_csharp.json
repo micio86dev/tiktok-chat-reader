@@ -1,0 +1,1102 @@
+[
+  {
+    "id": 1,
+    "text": "Metodo ingresso?",
+    "options": [
+      "Main",
+      "Start",
+      "Init",
+      "Run"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2,
+    "text": "Var implicita?",
+    "options": [
+      "var",
+      "let",
+      "auto",
+      "dim"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 3,
+    "text": "Ereditarietà simbolo?",
+    "options": [
+      ":",
+      "extends",
+      "inherits",
+      "->"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 4,
+    "text": "Classe base di tutto?",
+    "options": [
+      "Object",
+      "Base",
+      "Root",
+      "Master"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "text": "Async keyword?",
+    "options": [
+      "Codice asincrono",
+      "Thread",
+      "Parallel",
+      "Sync"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 6,
+    "text": "Await serve a?",
+    "options": [
+      "Attendere Task",
+      "Aspettare",
+      "Pausa",
+      "Stop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 7,
+    "text": "Tipo per testo?",
+    "options": [
+      "string",
+      "String",
+      "Text",
+      "Char[]"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 8,
+    "text": "Tipo intero 64 bit?",
+    "options": [
+      "long",
+      "int",
+      "double",
+      "short"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 9,
+    "text": "Decimal vs Double?",
+    "options": [
+      "Precisione finanziaria vs Scientifica",
+      "Uguali",
+      "Double è meglio",
+      "Decimal obsoleto"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 10,
+    "text": "Nullable type?",
+    "options": [
+      "int?",
+      "int*",
+      "nullable<int>",
+      "null int"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 11,
+    "text": "Coalescing operator?",
+    "options": [
+      "??",
+      "?:",
+      "||",
+      "&&"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 12,
+    "text": "Lambda syntax?",
+    "options": [
+      "x => x + 1",
+      "function(x)",
+      "lambda x",
+      "(x) ->"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 13,
+    "text": "LINQ sta per?",
+    "options": [
+      "Language Integrated Query",
+      "Link",
+      "Linear Q",
+      "List"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 14,
+    "text": "Interfaccia prefisso?",
+    "options": [
+      "I",
+      "Int",
+      "If",
+      "Base"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 15,
+    "text": "Classe astratta?",
+    "options": [
+      "abstract class",
+      "virtual class",
+      "base class",
+      "interface"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 16,
+    "text": "Metodo virtuale?",
+    "options": [
+      "Sovrascrivibile",
+      "Finto",
+      "Online",
+      "Static"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 17,
+    "text": "Override keyword?",
+    "options": [
+      "Sovrascrive metodo base",
+      "Nuovo",
+      "Super",
+      "Over"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 18,
+    "text": "Sealed class?",
+    "options": [
+      "Non ereditabile",
+      "Sigillata",
+      "Privata",
+      "Sicura"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 19,
+    "text": "Struct vs Class?",
+    "options": [
+      "Value vs Reference type",
+      "Uguali",
+      "Struct deprecata",
+      "Class lenta"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "text": "Enum?",
+    "options": [
+      "Lista costanti",
+      "Numero",
+      "Classe",
+      "Array"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 21,
+    "text": "Property shortcut?",
+    "options": [
+      "prop + tab",
+      "getset",
+      "field",
+      "var"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 22,
+    "text": "Costruttore?",
+    "options": [
+      "NomeClasse()",
+      "init()",
+      "new()",
+      "create()"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 23,
+    "text": "Distruttore?",
+    "options": [
+      "~ClassName()",
+      "dispose()",
+      "delete()",
+      "end()"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 24,
+    "text": "IDisposable?",
+    "options": [
+      "Interfaccia per liberare risorse",
+      "Trash",
+      "GC",
+      "Memory"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 25,
+    "text": "Using statement?",
+    "options": [
+      "Dispose automatico / Import namespace",
+      "Usa",
+      "Loop",
+      "Variabile"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 26,
+    "text": "Static class?",
+    "options": [
+      "Solo membri statici",
+      "Ferma",
+      "Globale",
+      "Immutabile"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 27,
+    "text": "Extension method?",
+    "options": [
+      "Estende classe esistente",
+      "Plugin",
+      "Eredita",
+      "Nuova"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 28,
+    "text": "Partial class?",
+    "options": [
+      "Classe su più file",
+      "Metà",
+      "Incompleta",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 29,
+    "text": "Delegate?",
+    "options": [
+      "Puntatore a funzione tipo sicuro",
+      "Delegato",
+      "Rappresentante",
+      "Evento"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 30,
+    "text": "Event?",
+    "options": [
+      "Notifica azioni",
+      "Festa",
+      "Delegato speciale",
+      "Click"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 31,
+    "text": "Func<T>?",
+    "options": [
+      "Delegato che ritorna valore",
+      "Funzione",
+      "Metodo",
+      "Azione"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 32,
+    "text": "Action<T>?",
+    "options": [
+      "Delegato void",
+      "Film",
+      "Movimento",
+      "Func"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 33,
+    "text": "Predicate<T>?",
+    "options": [
+      "Ritorna bool",
+      "Predicato",
+      "Verbo",
+      "Nome"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 34,
+    "text": "Task vs Thread?",
+    "options": [
+      "Astrazione vs Low level",
+      "Uguali",
+      "Task più lento",
+      "Thread obsoleto"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 35,
+    "text": "Parallel.ForEach?",
+    "options": [
+      "Loop parallelo",
+      "Loop normale",
+      "Async",
+      "Veloce"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 36,
+    "text": "Lock keyword?",
+    "options": [
+      "Mutua esclusione",
+      "Chiude",
+      "Serratura",
+      "Sicurezza"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 37,
+    "text": "Monitor class?",
+    "options": [
+      "Primitiva sincronizzazione",
+      "Schermo",
+      "Video",
+      "Controllo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 38,
+    "text": "Volatile keyword?",
+    "options": [
+      "No cache CPU",
+      "Veloce",
+      "Memoria",
+      "Temp"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 39,
+    "text": "Ref keyword?",
+    "options": [
+      "Passaggio per riferimento",
+      "Arbitro",
+      "Refresh",
+      "Return"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 40,
+    "text": "Out keyword?",
+    "options": [
+      "Ritorno multiplo / ref senza init",
+      "Fuori",
+      "Exit",
+      "Print"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 41,
+    "text": "In keyword?",
+    "options": [
+      "Ref readonly",
+      "Dentro",
+      "Input",
+      "Include"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 42,
+    "text": "Params keyword?",
+    "options": [
+      "Argomenti variabili",
+      "Parametri",
+      "Config",
+      "Settings"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 43,
+    "text": "Dynamic type?",
+    "options": [
+      "Bypassa check compile-time",
+      "Dinamico",
+      "Veloce",
+      "Object"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 44,
+    "text": "Object type?",
+    "options": [
+      "Base class",
+      "Oggetto",
+      "Dinamico",
+      "String"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 45,
+    "text": "Var vs Object?",
+    "options": [
+      "Static type vs Base type",
+      "Uguali",
+      "Var è dynamic",
+      "Object è meglio"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 46,
+    "text": "Anonymous type?",
+    "options": [
+      "new { A=1 }",
+      "Senza nome",
+      "Nascosto",
+      "Privato"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 47,
+    "text": "Tuple?",
+    "options": [
+      "(1, \"a\")",
+      "Lista",
+      "Array",
+      "Dictionary"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 48,
+    "text": "Array size fisso?",
+    "options": [
+      "Sì",
+      "No",
+      "Dinamico",
+      "Mai"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 49,
+    "text": "List<T>?",
+    "options": [
+      "Array dinamico",
+      "Lista linkata",
+      "Set",
+      "Map"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 50,
+    "text": "Dictionary<K,V>?",
+    "options": [
+      "Mappa chiave-valore",
+      "Libro",
+      "Array",
+      "Lista"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 51,
+    "text": "HashSet<T>?",
+    "options": [
+      "Elementi unici",
+      "Lista veloce",
+      "Hash map",
+      "Set ordinato"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 52,
+    "text": "Queue<T>?",
+    "options": [
+      "FIFO",
+      "LIFO",
+      "Coda",
+      "Lista"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 53,
+    "text": "Stack<T>?",
+    "options": [
+      "LIFO",
+      "FIFO",
+      "Pila",
+      "Tower"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 54,
+    "text": "LinkedList<T>?",
+    "options": [
+      "Lista doppiamente linkata",
+      "Array",
+      "Veloce",
+      "Graph"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 55,
+    "text": "IEnumerable<T>?",
+    "options": [
+      "Iterabile",
+      "Lista",
+      "Array",
+      "Collection"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 56,
+    "text": "IQueryable<T>?",
+    "options": [
+      "Query verso DB (Expression Tree)",
+      "Lista memory",
+      "Veloce",
+      "SQL"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 57,
+    "text": "Yield return?",
+    "options": [
+      "Generatore iteratore",
+      "Ritorna",
+      "Pausa",
+      "Stop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 58,
+    "text": "Checked block?",
+    "options": [
+      "Check overflow aritmetico",
+      "Controllato",
+      "Test",
+      "Sicuro"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 59,
+    "text": "Unchecked block?",
+    "options": [
+      "Ignora overflow",
+      "Veloce",
+      "Non sicuro",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 60,
+    "text": "Sizeof opera su?",
+    "options": [
+      "Unmanaged types",
+      "Classi",
+      "Tutto",
+      "Stringhe"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 61,
+    "text": "Typeof?",
+    "options": [
+      "Ottiene Type a compile time",
+      "Tipo",
+      "Taglia",
+      "Nome"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 62,
+    "text": "GetType?",
+    "options": [
+      "Ottiene Type a runtime",
+      "Nome",
+      "Valore",
+      "Ref"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 63,
+    "text": "Is operator?",
+    "options": [
+      "Check tipo",
+      "Cast",
+      "Assegnazione",
+      "Uguaglianza"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 64,
+    "text": "As operator?",
+    "options": [
+      "Cast sicuro (null se fallisce)",
+      "Come",
+      "Simile",
+      "Forza"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 65,
+    "text": "Default(T)?",
+    "options": [
+      "Valore default tipo",
+      "Zero",
+      "Null",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 66,
+    "text": "String interpolation?",
+    "options": [
+      "$\"Val: {x}\"",
+      "@\"Raw\"",
+      "Format",
+      "Concat"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 67,
+    "text": "Verbatim string?",
+    "options": [
+      "@\"No escape sequence\"",
+      "$\"Interp\"",
+      "Raw",
+      "Text"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 68,
+    "text": "Raw string literal (C# 11)?",
+    "options": [
+      "\"\"\"...\"\"\"",
+      "'''...'''",
+      "```...```",
+      "---"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 69,
+    "text": "Region directive?",
+    "options": [
+      "#region",
+      "Group",
+      "Zone",
+      "Area"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 70,
+    "text": "Preprocessor if?",
+    "options": [
+      "#if",
+      "if",
+      "@if",
+      "$if"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 71,
+    "text": "Attribute syntax?",
+    "options": [
+      "[Key]",
+      "@Key",
+      "#Key",
+      "<Key>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 72,
+    "text": "Target attribute?",
+    "options": [
+      "Classi, Metodi, Prop...",
+      "Solo classi",
+      "File",
+      "Variabili"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 73,
+    "text": "Reflection assembly?",
+    "options": [
+      "Assembly.Load",
+      "Load",
+      "Import",
+      "Include"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 74,
+    "text": "Activator.CreateInstance?",
+    "options": [
+      "Crea oggetto da Type",
+      "New",
+      "Init",
+      "Start"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 75,
+    "text": "Interfaccia esplicita?",
+    "options": [
+      "void IInterface.Method()",
+      "public",
+      "private",
+      "static"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 76,
+    "text": "Covariance?",
+    "options": [
+      "Out T / Restituisce più derivato",
+      "In T",
+      "Invariante",
+      "Contro"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 77,
+    "text": "Contravariance?",
+    "options": [
+      "In T / Accetta meno derivato",
+      "Out T",
+      "Uguale",
+      "Co"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 78,
+    "text": "Deconstruct method?",
+    "options": [
+      "Scompone oggetto",
+      "Distrugge",
+      "Costruisce",
+      "Copia"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 79,
+    "text": "Pattern matching switch?",
+    "options": [
+      "case int i:",
+      "case 1:",
+      "case \"a\":",
+      "case default:"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 80,
+    "text": "Switch expression?",
+    "options": [
+      "x switch { ... }",
+      "switch(x)",
+      "case x",
+      "match x"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 81,
+    "text": "Property init only?",
+    "options": [
+      "init;",
+      "set;",
+      "get;",
+      "readonly;"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 82,
+    "text": "Required property (C# 11)?",
+    "options": [
+      "required public int X",
+      "mandatory",
+      "need",
+      "must"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 83,
+    "text": "Record struct?",
+    "options": [
+      "Value type record",
+      "Class",
+      "Nuovo",
+      "Veloce"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 84,
+    "text": "With expression?",
+    "options": [
+      "Copia record con modifiche",
+      "Con",
+      "Usa",
+      "Nuovo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 85,
+    "text": "Global using?",
+    "options": [
+      "global using X;",
+      "using global",
+      "import",
+      "include"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 86,
+    "text": "File scoped namespace?",
+    "options": [
+      "namespace X;",
+      "namespace X { }",
+      "package X",
+      "module X"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 87,
+    "text": "Top-level statements?",
+    "options": [
+      "Codice senza classe Program",
+      "Script",
+      "Main",
+      "Head"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 88,
+    "text": "Primary constuctor?",
+    "options": [
+      "class C(int x)",
+      "C(x)",
+      "new C",
+      "init"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 89,
+    "text": "Collection expression (C# 12)?",
+    "options": [
+      "[1, 2, 3]",
+      "{1, 2}",
+      "List(1)",
+      "Array(1)"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 90,
+    "text": "Spread operator collections?",
+    "options": [
+      "[..a, ..b]",
+      "...a",
+      "a+b",
+      "concat"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 91,
+    "text": "Nameof?",
+    "options": [
+      "Ritorna nome simbolo",
+      "Stringa",
+      "Tipo",
+      "Valore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 92,
+    "text": "CallerMemberName?",
+    "options": [
+      "Nome chiamante (attributo)",
+      "Log",
+      "Debug",
+      "Stack"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 93,
+    "text": "ExpandoObject?",
+    "options": [
+      "Oggetto dinamico",
+      "Espandibile",
+      "Map",
+      "Dict"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 94,
+    "text": "Lazy<T>?",
+    "options": [
+      "Inizializzazione ritardata",
+      "Pigro",
+      "Lento",
+      "Async"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 95,
+    "text": "ThreadStatic?",
+    "options": [
+      "Statico per thread",
+      "Globale",
+      "Locale",
+      "Bloccato"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 96,
+    "text": "Interlocked class?",
+    "options": [
+      "Operazioni atomiche",
+      "Lock",
+      "Mutex",
+      "Thread"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 97,
+    "text": "MemoryMarshal?",
+    "options": [
+      "Manipolazione memoria low-level",
+      "Polizia",
+      "Gestore",
+      "Heap"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 98,
+    "text": "Unsafe code?",
+    "options": [
+      "Puntatori, memoria diretta",
+      "Pericoloso",
+      "Virus",
+      "Hacker"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 99,
+    "text": "Fixed statement?",
+    "options": [
+      "Blocca GC per puntatori",
+      "Fissa",
+      "Costante",
+      "Statico"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 100,
+    "text": "GC.Collect()?",
+    "options": [
+      "Forza garbage collection",
+      "Pulisce",
+      "Distrugge",
+      "Chiude"
+    ],
+    "correct": 1
+  }
+]

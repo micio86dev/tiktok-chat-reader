@@ -1,0 +1,1102 @@
+[
+  {
+    "id": 1,
+    "text": "Direttiva condizionale?",
+    "options": [
+      "v-if",
+      "v-show",
+      "Entrambi",
+      "Nessuno"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 2,
+    "text": "Loop direttiva?",
+    "options": [
+      "v-for",
+      "v-loop",
+      "v-each",
+      "v-map"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 3,
+    "text": "Binding attributi?",
+    "options": [
+      "v-bind",
+      "v-attr",
+      "v-prop",
+      "bind"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 4,
+    "text": "Short v-bind?",
+    "options": [
+      ":",
+      "@",
+      "#",
+      "$"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "text": "Event listener?",
+    "options": [
+      "v-on",
+      "v-event",
+      "v-click",
+      "v-listen"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 6,
+    "text": "Short v-on?",
+    "options": [
+      "@",
+      ":",
+      "#",
+      "&"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 7,
+    "text": "Two-way binding?",
+    "options": [
+      "v-model",
+      "v-bind",
+      "v-sync",
+      "v-two"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 8,
+    "text": "Computed properties?",
+    "options": [
+      "Valori calcolati/cachati",
+      "Metodi",
+      "Datas",
+      "Watchers"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 9,
+    "text": "Watchers?",
+    "options": [
+      "Osservano cambiamenti dati",
+      "Guardano video",
+      "Timer",
+      "Render"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 10,
+    "text": "Lifecycle mounted?",
+    "options": [
+      "Dopo inserimento DOM",
+      "Prima create",
+      "Distrutto",
+      "Update"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 11,
+    "text": "Lifecycle created?",
+    "options": [
+      "Dopo inizializzazione, no DOM",
+      "Montato",
+      "Distrutto",
+      "Aggiornato"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 12,
+    "text": "Vue CLI comando?",
+    "options": [
+      "vue create",
+      "vue new",
+      "vue start",
+      "vue init"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 13,
+    "text": "Single File Component?",
+    "options": [
+      ".vue",
+      ".js",
+      ".html",
+      ".jsx"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 14,
+    "text": "Sezioni .vue?",
+    "options": [
+      "template, script, style",
+      "html, js, css",
+      "view, model, ctrl",
+      "code, design"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 15,
+    "text": "Scoped styles?",
+    "options": [
+      "<style scoped>",
+      "<style local>",
+      "<css scope>",
+      "scoped"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 16,
+    "text": "Data in component?",
+    "options": [
+      "Deve essere funzione return obj",
+      "Oggetto",
+      "Stringa",
+      "Array"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 17,
+    "text": "Props?",
+    "options": [
+      "Dati da padre a figlio",
+      "Stato locale",
+      "Metodi",
+      "Eventi"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 18,
+    "text": "Emit?",
+    "options": [
+      "Eventi da figlio a padre",
+      "Props",
+      "Stato",
+      "Log"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 19,
+    "text": "Vue Router?",
+    "options": [
+      "Gestione routing",
+      "Database",
+      "Server",
+      "State"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "text": "Router link?",
+    "options": [
+      "<router-link>",
+      "<a>",
+      "<link>",
+      "<go>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 21,
+    "text": "Router view?",
+    "options": [
+      "<router-view>",
+      "<view>",
+      "<div>",
+      "<render>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 22,
+    "text": "Vuex/Pinia?",
+    "options": [
+      "State management",
+      "Router",
+      "API",
+      "Auth"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 23,
+    "text": "Pinia vs Vuex?",
+    "options": [
+      "Pinia è il successore",
+      "Vuex è nuovo",
+      "Uguali",
+      "Incompatibili"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 24,
+    "text": "Composition API?",
+    "options": [
+      "setup(), ref, reactive",
+      "Options API",
+      "Class API",
+      "Old"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 25,
+    "text": "Options API?",
+    "options": [
+      "data, methods, computed...",
+      "setup()",
+      "Hooks",
+      "New"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 26,
+    "text": "ref() vs reactive()?",
+    "options": [
+      "Primitivi vs Oggetti",
+      "Uguali",
+      "Ref solo oggetti",
+      "Reactive solo int"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 27,
+    "text": "Accedere a ref in JS?",
+    "options": [
+      ".value",
+      ".val",
+      "diretto",
+      ".get()"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 28,
+    "text": "Teleport?",
+    "options": [
+      "Sposta DOM in altra parte",
+      "Viaggio",
+      "Animazione",
+      "Rete"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 29,
+    "text": "Suspense?",
+    "options": [
+      "Async components loading",
+      "Errore",
+      "Attesa",
+      "Stop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 30,
+    "text": "KeepAlive?",
+    "options": [
+      "Mantiene stato comp. inattivi",
+      "Cache HTTP",
+      "Server",
+      "Database"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 31,
+    "text": "Slots?",
+    "options": [
+      "Inserimento contenuto (template)",
+      "Slot machine",
+      "Array",
+      "Props"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 32,
+    "text": "Named slots?",
+    "options": [
+      "<slot name='header'>",
+      "Slot id",
+      "Slot key",
+      "Slot ref"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 33,
+    "text": "v-model modifiers?",
+    "options": [
+      ".lazy, .number, .trim",
+      ".stop",
+      ".prevent",
+      ".click"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 34,
+    "text": "Event modifiers?",
+    "options": [
+      ".prevent, .stop, .once",
+      ".lazy",
+      ".trim",
+      ".model"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 35,
+    "text": "Key modifier?",
+    "options": [
+      "@keyup.enter",
+      "@click.enter",
+      "key='enter'",
+      "mod"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 36,
+    "text": "v-once?",
+    "options": [
+      "Renderizza una volta sola",
+      "Evento one time",
+      "Errore",
+      "Loop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 37,
+    "text": "v-html?",
+    "options": [
+      "Inserisce HTML raw",
+      "Testo",
+      "Code",
+      "Link"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 38,
+    "text": "v-text?",
+    "options": [
+      "Inserisce testo (innerText)",
+      "HTML",
+      "Input",
+      "Value"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 39,
+    "text": "v-pre?",
+    "options": [
+      "Salta compilazione",
+      "Preview",
+      "Preload",
+      "Prev"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 40,
+    "text": "v-cloak?",
+    "options": [
+      "Nasconde fino a compilazione",
+      "Mantello",
+      "Clock",
+      "Click"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 41,
+    "text": "Mixins?",
+    "options": [
+      "Riutilizzo codice (deprecated per comp. api)",
+      "Css",
+      "Plugin",
+      "Router"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 42,
+    "text": "Custom Directives?",
+    "options": [
+      "v-custom",
+      "Direct",
+      "Component",
+      "Prop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 43,
+    "text": "Provide/Inject?",
+    "options": [
+      "Dependency injection (no prop drill)",
+      "Service",
+      "Database",
+      "Api"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 44,
+    "text": "NextTick?",
+    "options": [
+      "Wait for DOM update",
+      "Timer",
+      "Next loop",
+      "Tick"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 45,
+    "text": "Vue 2 vs Vue 3?",
+    "options": [
+      "Proxy based reactivity (V3)",
+      "Uguali",
+      "V3 più lento",
+      "V2 non ha v-if"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 46,
+    "text": "Vite?",
+    "options": [
+      "Build tool standard Vue 3",
+      "Lento",
+      "Webpack",
+      "Browser"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 47,
+    "text": "Creatore Vue?",
+    "options": [
+      "Evan You",
+      "Facebook",
+      "Google",
+      "Twitter"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 48,
+    "text": "Virtual DOM in Vue?",
+    "options": [
+      "Sì",
+      "No",
+      "Solo V1",
+      "Opzionale"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 49,
+    "text": "Watcher deep?",
+    "options": [
+      "Osserva oggetti annidati",
+      "Profondo",
+      "Solo root",
+      "Array"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 50,
+    "text": "Watcher immediate?",
+    "options": [
+      "Esegue subito",
+      "Mai",
+      "Ritardo",
+      "Dopo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 51,
+    "text": "Dynamic components?",
+    "options": [
+      "<component :is='...'>",
+      "<dynamic>",
+      "v-is",
+      "import"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 52,
+    "text": "Async components?",
+    "options": [
+      "Caricamento a richiesta",
+      "Sincroni",
+      "Lenti",
+      "Bloccanti"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 53,
+    "text": "Transition component?",
+    "options": [
+      "Animazioni entrata/uscita",
+      "Transazioni",
+      "Router",
+      "State"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 54,
+    "text": "TransitionGroup?",
+    "options": [
+      "Animazione liste",
+      "Gruppo",
+      "Form",
+      "Table"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 55,
+    "text": "Class binding array?",
+    "options": [
+      ":class='[a, b]'",
+      "class='a b'",
+      "v-class",
+      "style"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 56,
+    "text": "Class binding object?",
+    "options": [
+      ":class='{active: isActive}'",
+      "if active",
+      "v-if",
+      "map"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 57,
+    "text": "Style binding?",
+    "options": [
+      ":style='{color: c}'",
+      "style='c'",
+      "v-style",
+      "css"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 58,
+    "text": "Props validation?",
+    "options": [
+      "Type, Required, Default",
+      "Solo nome",
+      "No",
+      "Automatico"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 59,
+    "text": "Prop immutabilità?",
+    "options": [
+      "One-way down",
+      "Two-way",
+      "Modificabile",
+      "Loop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 60,
+    "text": "Non-prop attributes?",
+    "options": [
+      "Fallthrough (class, style)",
+      "Persi",
+      "Errore",
+      "Props"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 61,
+    "text": "v-bind='$attrs'?",
+    "options": [
+      "Passa tutti attributi",
+      "Lega",
+      "Niente",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 62,
+    "text": "Setup script syntax?",
+    "options": [
+      "<script setup>",
+      "setup()",
+      "init",
+      "script"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 63,
+    "text": "Definire props in setup?",
+    "options": [
+      "defineProps",
+      "props:",
+      "getProps",
+      "useProps"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 64,
+    "text": "Definire emits in setup?",
+    "options": [
+      "defineEmits",
+      "emits:",
+      "useEmits",
+      "fire"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 65,
+    "text": "useAttrs?",
+    "options": [
+      "Accede attributi setup",
+      "Props",
+      "Data",
+      "State"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 66,
+    "text": "useSlots?",
+    "options": [
+      "Accede slots setup",
+      "Template",
+      "View",
+      "Render"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 67,
+    "text": "SSR Vue?",
+    "options": [
+      "Nuxt.js",
+      "Next.js",
+      "Nest",
+      "Node"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 68,
+    "text": "Nuxt.js?",
+    "options": [
+      "Framework Vue Fullstack",
+      "Libreria",
+      "CMS",
+      "DB"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 69,
+    "text": "Vue DevTools?",
+    "options": [
+      "Estensione debug",
+      "IDE",
+      "Server",
+      "Gioco"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 70,
+    "text": "Reactivity system?",
+    "options": [
+      "Proxy (V3) / Getter-Setter (V2)",
+      "Observer",
+      "Polling",
+      "Magic"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 71,
+    "text": "ToRef vs ToRefs?",
+    "options": [
+      "Crea ref singola vs oggetto di refs",
+      "Uguali",
+      "Copia",
+      "Muove"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 72,
+    "text": "Deep readonly?",
+    "options": [
+      "readonly()",
+      "const",
+      "freeze",
+      "static"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 73,
+    "text": "Computed scrivibile?",
+    "options": [
+      "Sì (get/set)",
+      "No",
+      "Mai",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 74,
+    "text": "Filter (Vue 2)?",
+    "options": [
+      "Rossi in Vue 3",
+      "Esistono",
+      "Nuovi",
+      "Pipe"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 75,
+    "text": "Fragments V3?",
+    "options": [
+      "Root multipli supportati",
+      "No",
+      "Solo div",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 76,
+    "text": "Portals in Vue 3?",
+    "options": [
+      "Teleport",
+      "Portal",
+      "Move",
+      "Jump"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 77,
+    "text": "Global properties?",
+    "options": [
+      "app.config.globalProperties",
+      "Vue.prototype",
+      "Window",
+      "Global"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 78,
+    "text": "Plugins Vue?",
+    "options": [
+      "Estendono funzionalità",
+      "Plugin browser",
+      "Estensioni file",
+      "Audio"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 79,
+    "text": "app.use()?",
+    "options": [
+      "Installa plugin",
+      "Usa componente",
+      "Router",
+      "Start"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 80,
+    "text": "app.mount()?",
+    "options": [
+      "Monta app nel DOM",
+      "Start server",
+      "Installa",
+      "Build"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 81,
+    "text": "createApp?",
+    "options": [
+      "Inizializza app Vue 3",
+      "new Vue",
+      "init",
+      "start"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 82,
+    "text": "Unmount?",
+    "options": [
+      "app.unmount()",
+      "destroy",
+      "kill",
+      "stop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 83,
+    "text": "Directive hooks?",
+    "options": [
+      "created, mounted, updated...",
+      "bind, update",
+      "init, run",
+      "start, stop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 84,
+    "text": "Effect scope?",
+    "options": [
+      "Gestione side effects",
+      "Scope var",
+      "Css",
+      "Animation"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 85,
+    "text": "ShallowRef?",
+    "options": [
+      "Reattività solo .value",
+      "Deep",
+      "Normale",
+      "Lento"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 86,
+    "text": "TriggerRef?",
+    "options": [
+      "Forza aggiornamento shallow",
+      "Trigger evento",
+      "Click",
+      "Ref"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 87,
+    "text": "Custom events validazione?",
+    "options": [
+      "emits option function",
+      "No",
+      "Si, props",
+      "Auto"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 88,
+    "text": "V-model argomenti?",
+    "options": [
+      "v-model:name",
+      "v-model-name",
+      "model",
+      "name"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 89,
+    "text": "V-model multipli?",
+    "options": [
+      "Sì in Vue 3",
+      "No",
+      "Solo array",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 90,
+    "text": "State hydration mismatch?",
+    "options": [
+      "SSR vs Client DOM diversi",
+      "Errore acqua",
+      "Sete",
+      "Cache"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 91,
+    "text": "Vue Server Renderer?",
+    "options": [
+      "Package SSR",
+      "Server",
+      "Hosting",
+      "API"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 92,
+    "text": "Pinia stores?",
+    "options": [
+      "Option o Setup stores",
+      "Solo Option",
+      "Solo Setup",
+      "Redux"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 93,
+    "text": "Pinia actions?",
+    "options": [
+      "Sync e Async",
+      "Solo Sync",
+      "Solo Async",
+      "Niente"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 94,
+    "text": "Pinia getters?",
+    "options": [
+      "Computed properties store",
+      "Metodi",
+      "Fetch",
+      "Setters"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 95,
+    "text": "VueUse?",
+    "options": [
+      "Collezione utilities Composition API",
+      "Core",
+      "Router",
+      "UI"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 96,
+    "text": "Volar?",
+    "options": [
+      "Estensione VSCode Vue 3",
+      "Vite",
+      "Server",
+      "Tema"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 97,
+    "text": "DefineComponent?",
+    "options": [
+      "Helper TypeScript",
+      "Crea",
+      "Init",
+      "Definisce"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 98,
+    "text": "PropTypes?",
+    "options": [
+      "Validazione runtime",
+      "TS",
+      "Build",
+      "Lint"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 99,
+    "text": "CSS Modules?",
+    "options": [
+      "<style module>",
+      "Scoped",
+      "Global",
+      "Sass"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 100,
+    "text": "Functional components?",
+    "options": [
+      "Stateless, istance-less",
+      "Stateful",
+      "Lenti",
+      "Normali"
+    ],
+    "correct": 1
+  }
+]

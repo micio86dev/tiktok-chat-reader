@@ -1,0 +1,1102 @@
+[
+  {
+    "id": 1,
+    "text": "Modulo nativo Node?",
+    "options": [
+      "CommonJS",
+      "ESM",
+      "AMD",
+      "SystemJS"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2,
+    "text": "Oggetto processo?",
+    "options": [
+      "process",
+      "global",
+      "window",
+      "root"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 3,
+    "text": "Modulo file system?",
+    "options": [
+      "fs",
+      "file",
+      "path",
+      "io"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 4,
+    "text": "Node.js è single thread?",
+    "options": [
+      "Sì (event loop)",
+      "No",
+      "Dipende",
+      "Solo su Linux"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "text": "Framework popolare?",
+    "options": [
+      "Express",
+      "Django",
+      "Flask",
+      "Laravel"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 6,
+    "text": "Gestore pacchetti?",
+    "options": [
+      "npm",
+      "pip",
+      "maven",
+      "gradle"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 7,
+    "text": "Event Loop fasi?",
+    "options": [
+      "Timers, Pending, Poll...",
+      "Start, Stop",
+      "Init, Run",
+      "Load, Exec"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 8,
+    "text": "Buffer?",
+    "options": [
+      "Dati binari",
+      "Stringhe",
+      "Cache",
+      "Queue"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 9,
+    "text": "Stream tipi?",
+    "options": [
+      "Readable, Writable...",
+      "File, Net",
+      "In, Out",
+      "Up, Down"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 10,
+    "text": "EventEmitter?",
+    "options": [
+      "Gestione eventi",
+      "Errori",
+      "Timer",
+      "Socket"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 11,
+    "text": "global object?",
+    "options": [
+      "global",
+      "window",
+      "document",
+      "self"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 12,
+    "text": "__dirname?",
+    "options": [
+      "Directory corrente",
+      "Nome file",
+      "Root",
+      "Home"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 13,
+    "text": "__filename?",
+    "options": [
+      "File corrente",
+      "Dir corrente",
+      "Eseguibile",
+      "Path"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 14,
+    "text": "require()?",
+    "options": [
+      "Importa modulo",
+      "Richiede permesso",
+      "Installa",
+      "Esporta"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 15,
+    "text": "module.exports?",
+    "options": [
+      "Esporta modulo",
+      "Importa",
+      "Cancella",
+      "Aggiorna"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 16,
+    "text": "package.json?",
+    "options": [
+      "Manifesto progetto",
+      "Codice",
+      "Binario",
+      "Log"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 17,
+    "text": "node_modules?",
+    "options": [
+      "Dipendenze",
+      "Codice sorgente",
+      "Config",
+      "Test"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 18,
+    "text": "npx?",
+    "options": [
+      "Esegue pacchetti",
+      "Installa",
+      "Rimuove",
+      "Aggiorna"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 19,
+    "text": "process.env?",
+    "options": [
+      "Variabili ambiente",
+      "Processo ID",
+      "Memoria",
+      "Time"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "text": "fs.readFile asincrono?",
+    "options": [
+      "Sì",
+      "No",
+      "Solo sync",
+      "Mai"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 21,
+    "text": "fs.readFileSync?",
+    "options": [
+      "Bloccante",
+      "Non bloccante",
+      "Async",
+      "Promise"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 22,
+    "text": "path.join?",
+    "options": [
+      "Unisce percorsi",
+      "Divide",
+      "Crea dir",
+      "Formatta"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 23,
+    "text": "os module?",
+    "options": [
+      "Info sistema operativo",
+      "Open Source",
+      "Output Stream",
+      "Object Store"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 24,
+    "text": "http module?",
+    "options": [
+      "Server/Client HTTP",
+      "Solo Client",
+      "Solo Server",
+      "HTML"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 25,
+    "text": "crypto module?",
+    "options": [
+      "Crittografia",
+      "Valuta",
+      "Mining",
+      "Password check"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 26,
+    "text": "zlib?",
+    "options": [
+      "Compressione",
+      "Zero library",
+      "Zoom",
+      "Zone"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 27,
+    "text": "child_process?",
+    "options": [
+      "Processi figli",
+      "Bambini",
+      "Thread",
+      "Worker"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 28,
+    "text": "cluster module?",
+    "options": [
+      "Multi-core scaling",
+      "Database",
+      "Rete",
+      "Storage"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 29,
+    "text": "worker_threads?",
+    "options": [
+      "Multithreading",
+      "Web Workers",
+      "Service Workers",
+      "Processi"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 30,
+    "text": "process.nextTick?",
+    "options": [
+      "Microtask queue",
+      "Next loop",
+      "Timeout",
+      "Immediate"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 31,
+    "text": "setImmediate?",
+    "options": [
+      "Check phase loop",
+      "Subito",
+      "Dopo timeout",
+      "Mai"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 32,
+    "text": "V8 engine?",
+    "options": [
+      "JavaScript engine",
+      "Motore auto",
+      "Database",
+      "Server"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 33,
+    "text": "Libuv?",
+    "options": [
+      "Async I/O library",
+      "Libreria UV",
+      "Video",
+      "Utilità"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 34,
+    "text": "REPL?",
+    "options": [
+      "Read Eval Print Loop",
+      "Repeat",
+      "Replace",
+      "Reply"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 35,
+    "text": "npm init?",
+    "options": [
+      "Crea package.json",
+      "Installa node",
+      "Avvia server",
+      "Reset"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 36,
+    "text": "npm install?",
+    "options": [
+      "Scarica dipendenze",
+      "Crea file",
+      "Compila",
+      "Esegue"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 37,
+    "text": "npm run?",
+    "options": [
+      "Esegue script",
+      "Corre",
+      "Installa",
+      "Test"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 38,
+    "text": "devDependencies?",
+    "options": [
+      "Dipendenze sviluppo",
+      "Produzione",
+      "Opzionali",
+      "Peer"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 39,
+    "text": "npm start?",
+    "options": [
+      "Script start",
+      "Avvia PC",
+      "Chiude",
+      "Installa"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 40,
+    "text": "Semantic Versioning?",
+    "options": [
+      "Major.Minor.Patch",
+      "Ver.Rev",
+      "Date",
+      "Num"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 41,
+    "text": "Middleware (Express)?",
+    "options": [
+      "Funzioni intermedie",
+      "Hardware",
+      "Database",
+      "Frontend"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 42,
+    "text": "req, res?",
+    "options": [
+      "Request, Response",
+      "Require, Resolve",
+      "Read, Rest",
+      "Run, Return"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 43,
+    "text": "body-parser?",
+    "options": [
+      "Parsa body richiesta",
+      "Formatta HTML",
+      "Crea corpo",
+      "Analizza utenti"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 44,
+    "text": "ORM popolari Node?",
+    "options": [
+      "Prisma, TypeORM, Sequelize",
+      "Hibernate",
+      "Entity Framework",
+      "Eloquent"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 45,
+    "text": "JWT?",
+    "options": [
+      "JSON Web Token",
+      "Java Web Tool",
+      "Jumbo Text",
+      "Joined With Time"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 46,
+    "text": "WebSockets lib?",
+    "options": [
+      "Socket.io, ws",
+      "http",
+      "net",
+      "tcp"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 47,
+    "text": "Passport.js?",
+    "options": [
+      "Autenticazione",
+      "Visti",
+      "Viaggi",
+      "Mappe"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 48,
+    "text": "Multer?",
+    "options": [
+      "Upload file",
+      "Database",
+      "Email",
+      "Multi thread"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 49,
+    "text": "PM2?",
+    "options": [
+      "Process Manager",
+      "Package Manager",
+      "Project Maker",
+      "Private Msg"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 50,
+    "text": "nodemon?",
+    "options": [
+      "Riavvio automatico dev",
+      "Monitor",
+      "Pokemon",
+      "Server"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 51,
+    "text": "dotenv?",
+    "options": [
+      "Variabili .env",
+      "Dot net",
+      "Envoy",
+      "Environment"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 52,
+    "text": "EventEmitter.on?",
+    "options": [
+      "Ascolta evento",
+      "Emette",
+      "Rimuove",
+      "Crea"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 53,
+    "text": "EventEmitter.emit?",
+    "options": [
+      "Emette evento",
+      "Ascolta",
+      "Chiude",
+      "Logga"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 54,
+    "text": "Stream pipe()?",
+    "options": [
+      "Connette stream",
+      "Fuma",
+      "Tubo",
+      "Filtra"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 55,
+    "text": "Callback hell?",
+    "options": [
+      "Annidamento eccessivo",
+      "Errore callback",
+      "Paradiso",
+      "Funzione"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 56,
+    "text": "Promisify?",
+    "options": [
+      "Callback -> Promise",
+      "Promise -> Callback",
+      "Crea promessa",
+      "Attende"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 57,
+    "text": "async/await?",
+    "options": [
+      "Zucchero sintattico Promise",
+      "Thread",
+      "Callback",
+      "Eventi"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 58,
+    "text": "try/catch asincrono?",
+    "options": [
+      "Funziona con await",
+      "Non funziona",
+      "Solo sync",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 59,
+    "text": "Node LTS?",
+    "options": [
+      "Long Term Support",
+      "Latest",
+      "Low Time Speed",
+      "Loop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 60,
+    "text": "Buffer.from?",
+    "options": [
+      "Crea buffer",
+      "Legge",
+      "Converte str",
+      "Nulla"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 61,
+    "text": "NODE_ENV?",
+    "options": [
+      "Ambiente (dev/prod)",
+      "Versione",
+      "Path",
+      "Nome"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 62,
+    "text": "assert module?",
+    "options": [
+      "Test asserzioni",
+      "Certezze",
+      "Output",
+      "Log"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 63,
+    "text": "Console.time?",
+    "options": [
+      "Misura tempo",
+      "Data corrente",
+      "Orologio",
+      "Timeout"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 64,
+    "text": "Debugger Node?",
+    "options": [
+      "inspect",
+      "debug",
+      "test",
+      "run"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 65,
+    "text": "Error first callback?",
+    "options": [
+      "(err, data)",
+      "(data, err)",
+      "(res, req)",
+      "(ok, fail)"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 66,
+    "text": "Process.exit()?",
+    "options": [
+      "Termina processo",
+      "Esce funzione",
+      "Chiude finestra",
+      "Riavvia"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 67,
+    "text": "Process.argv?",
+    "options": [
+      "Argomenti CLI",
+      "Variabili",
+      "Env",
+      "Pid"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 68,
+    "text": "Process.pid?",
+    "options": [
+      "Process ID",
+      "Path",
+      "Parent",
+      "Priority"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 69,
+    "text": "Process.cwd()?",
+    "options": [
+      "Current Working Dir",
+      "Create",
+      "Change",
+      "Close"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 70,
+    "text": "util.promisify?",
+    "options": [
+      "Converte callback in promise",
+      "Utility",
+      "Promise veloce",
+      "Log"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 71,
+    "text": "path.resolve?",
+    "options": [
+      "Path assoluto",
+      "Risolve DNS",
+      "Trova file",
+      "Link"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 72,
+    "text": "fs.watch?",
+    "options": [
+      "Monitora file",
+      "Orologio",
+      "Guarda video",
+      "Debug"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 73,
+    "text": "net module?",
+    "options": [
+      "TCP/IPC",
+      "HTTP",
+      "Internet",
+      "Reti pesca"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 74,
+    "text": "dgram module?",
+    "options": [
+      "UDP",
+      "Diagrammi",
+      "Database",
+      "Grammatica"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 75,
+    "text": "dns module?",
+    "options": [
+      "Risoluzione nomi",
+      "Dominio",
+      "Server",
+      "Database"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 76,
+    "text": "repl module?",
+    "options": [
+      "Crea REPL custom",
+      "Replica",
+      "Replace",
+      "Report"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 77,
+    "text": "vm module?",
+    "options": [
+      "Virtual Machine context",
+      "Virtual Memory",
+      "Vue Model",
+      "Video"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 78,
+    "text": "Strict mode?",
+    "options": [
+      "'use strict'",
+      "strict()",
+      "mode: strict",
+      "type strict"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 79,
+    "text": "ES modules estensione?",
+    "options": [
+      ".mjs",
+      ".jsm",
+      ".es",
+      ".node"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 80,
+    "text": "CommonJS estensione?",
+    "options": [
+      ".cjs",
+      ".js",
+      ".common",
+      ".node"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 81,
+    "text": "Top-level await?",
+    "options": [
+      "Sì (in ESM)",
+      "No",
+      "Solo in func",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 82,
+    "text": "Node-gyp?",
+    "options": [
+      "Compila addon nativi",
+      "Gioco",
+      "Utility",
+      "Python"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 83,
+    "text": "C++ Addons?",
+    "options": [
+      "Estensioni native",
+      "Plugin",
+      "Librerie JS",
+      "Temi"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 84,
+    "text": "N-API?",
+    "options": [
+      "API per addons stabili",
+      "Node API",
+      "New API",
+      "Net API"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 85,
+    "text": "Buffer.alloc?",
+    "options": [
+      "Alloca buffer zeri",
+      "Alloca e riempie",
+      "Non sicuro",
+      "Libera"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 86,
+    "text": "Buffer.allocUnsafe?",
+    "options": [
+      "Non inizializzato (veloce)",
+      "Sicuro",
+      "Lento",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 87,
+    "text": "Microservices?",
+    "options": [
+      "Architettura",
+      "Modulo",
+      "Piccoli servizi",
+      "Funzioni"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 88,
+    "text": "Serverless?",
+    "options": [
+      "FaaS (Lambda ecc)",
+      "Senza server fisico",
+      "Peer to peer",
+      "Offline"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 89,
+    "text": "GraphQL?",
+    "options": [
+      "Query language",
+      "Database",
+      "Grafo",
+      "SQL"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 90,
+    "text": "Apollo Server?",
+    "options": [
+      "Server GraphQL",
+      "Razzo",
+      "Client",
+      "Db"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 91,
+    "text": "NestJS?",
+    "options": [
+      "Framework Angular-style",
+      "Uccello",
+      "React",
+      "Vue"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 92,
+    "text": "Koa?",
+    "options": [
+      "Web framework (da team Express)",
+      "Animale",
+      "Database",
+      "Client"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 93,
+    "text": "Fastify?",
+    "options": [
+      "Framework veloce",
+      "Cibo",
+      "Test",
+      "Lint"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 94,
+    "text": "Socket.io rooms?",
+    "options": [
+      "Canali privati",
+      "Stanze chat",
+      "Spazio",
+      "Variabili"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 95,
+    "text": "Socket.io namespaces?",
+    "options": [
+      "Endpoint separati",
+      "Nomi",
+      "Spazi",
+      "Classi"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 96,
+    "text": "Cors?",
+    "options": [
+      "Cross-Origin Resource Sharing",
+      "Corso",
+      "Colore",
+      "Core"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 97,
+    "text": "Helmet?",
+    "options": [
+      "Sicurezza header HTTP",
+      "Casco",
+      "Frontend",
+      "CSS"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 98,
+    "text": "Morgan?",
+    "options": [
+      "Logger HTTP",
+      "Nome",
+      "Banca",
+      "Database"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 99,
+    "text": "Winston?",
+    "options": [
+      "Logger universale",
+      "Sigarette",
+      "Personaggio",
+      "Città"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 100,
+    "text": "Node.js creatore?",
+    "options": [
+      "Ryan Dahl",
+      "Brendan Eich",
+      "Linus Torvalds",
+      "Bill Gates"
+    ],
+    "correct": 1
+  }
+]

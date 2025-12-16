@@ -1,0 +1,1102 @@
+[
+  {
+    "id": 1,
+    "text": "Binding bidirezionale?",
+    "options": [
+      "ng-model",
+      "ng-bind",
+      "ng-init",
+      "ng-click"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2,
+    "text": "Avviare app?",
+    "options": [
+      "ng-app",
+      "ng-start",
+      "ng-init",
+      "ng-run"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 3,
+    "text": "Controller?",
+    "options": [
+      "ng-controller",
+      "ng-ctrl",
+      "ng-c",
+      "ng-function"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 4,
+    "text": "Visualizza condizionale?",
+    "options": [
+      "ng-if",
+      "ng-view",
+      "ng-show",
+      "ng-hide"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "text": "Ciclo su array?",
+    "options": [
+      "ng-repeat",
+      "ng-for",
+      "ng-loop",
+      "ng-cycle"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 6,
+    "text": "Click evento?",
+    "options": [
+      "ng-click",
+      "ng-on",
+      "ng-tap",
+      "ng-press"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 7,
+    "text": "Espressione AngularJS?",
+    "options": [
+      "{{ }}",
+      "[[ ]]",
+      "(( ))",
+      "<? ?>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 8,
+    "text": "Dependency Injection?",
+    "options": [
+      "Integrata nativamente",
+      "Non esiste",
+      "Esterna",
+      "Opzionale"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 9,
+    "text": "Servizio HTTP?",
+    "options": [
+      "$http",
+      "$fetch",
+      "$ajax",
+      "$net"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 10,
+    "text": "Scope oggetto?",
+    "options": [
+      "$scope",
+      "scope",
+      "$this",
+      "$data"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 11,
+    "text": "Root scope?",
+    "options": [
+      "$rootScope",
+      "root",
+      "$parent",
+      "$global"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 12,
+    "text": "Filtro uppercase?",
+    "options": [
+      "| uppercase",
+      "| up",
+      "| upper",
+      "| caps"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 13,
+    "text": "Filtro currency?",
+    "options": [
+      "Formatta valuta",
+      "Calcola",
+      "Cambio",
+      "Banca"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 14,
+    "text": "ng-show vs ng-if?",
+    "options": [
+      "Display:none vs Rimuove DOM",
+      "Uguali",
+      "Inverso",
+      "Animazione"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 15,
+    "text": "ng-class?",
+    "options": [
+      "Classi dinamiche",
+      "Stile",
+      "ID",
+      "Tag"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 16,
+    "text": "ng-style?",
+    "options": [
+      "CSS in-line dinamico",
+      "Classi",
+      "Tema",
+      "Font"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 17,
+    "text": "Modulo definizione?",
+    "options": [
+      "angular.module",
+      "new Module",
+      "ng.mod",
+      "create"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 18,
+    "text": "Factory vs Service?",
+    "options": [
+      "Return object vs New instance",
+      "Uguali",
+      "Factory deprecata",
+      "Service lento"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 19,
+    "text": "Provider?",
+    "options": [
+      "Configurabile nel config phase",
+      "Solo run",
+      "Statico",
+      "Servizio"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "text": "Direttive custom?",
+    "options": [
+      "Estendono HTML",
+      "Controller",
+      "Filtri",
+      "Router"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 21,
+    "text": "restrict: 'E'?",
+    "options": [
+      "Elemento",
+      "Attributo",
+      "Classe",
+      "Commento"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 22,
+    "text": "restrict: 'A'?",
+    "options": [
+      "Attributo",
+      "Elemento",
+      "All",
+      "Area"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 23,
+    "text": "Isolate scope?",
+    "options": [
+      "scope: { ... }",
+      "scope: true",
+      "scope: false",
+      "private"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 24,
+    "text": "Binding stringa ('@')?",
+    "options": [
+      "Valore testuale",
+      "Due vie",
+      "Espressione",
+      "Metodo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 25,
+    "text": "Binding two-way ('=')?",
+    "options": [
+      "Bidirezionale",
+      "Testo",
+      "Funzione",
+      "One-way"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 26,
+    "text": "Binding function ('&')?",
+    "options": [
+      "Esegue funzione padre",
+      "Link",
+      "And",
+      "Indirizzo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 27,
+    "text": "Transclude?",
+    "options": [
+      "Include contenuto originale",
+      "Esclude",
+      "Sposta",
+      "Nasconde"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 28,
+    "text": "Compile vs Link?",
+    "options": [
+      "Manipola template vs Lega dati",
+      "Uguali",
+      "Compile dopo link",
+      "Solo Link"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 29,
+    "text": "$watch?",
+    "options": [
+      "Osserva cambiamenti var",
+      "Orologio",
+      "Timer",
+      "Debug"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 30,
+    "text": "$apply?",
+    "options": [
+      "Forza digest cycle",
+      "Applica stile",
+      "Salva",
+      "Invia"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 31,
+    "text": "$digest?",
+    "options": [
+      "Processo aggiornamento view",
+      "Digerisce cibo",
+      "Hash",
+      "MD5"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 32,
+    "text": "ng-src?",
+    "options": [
+      "Caricamento immagini sicuro",
+      "Source",
+      "Script",
+      "Stile"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 33,
+    "text": "ng-href?",
+    "options": [
+      "Link sicuro",
+      "Help",
+      "Head",
+      "Html"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 34,
+    "text": "ng-disabled?",
+    "options": [
+      "Disabilita elemento",
+      "Abilita",
+      "Nasconde",
+      "Rompe"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 35,
+    "text": "ng-readonly?",
+    "options": [
+      "Solo lettura",
+      "Scrittura",
+      "Rosso",
+      "Ready"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 36,
+    "text": "ng-checked?",
+    "options": [
+      "Checkbox stato",
+      "Controllato",
+      "Test",
+      "Radio"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 37,
+    "text": "ng-selected?",
+    "options": [
+      "Option select",
+      "Evidenziato",
+      "Scelto",
+      "Set"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 38,
+    "text": "ng-submit?",
+    "options": [
+      "Gestione invio form",
+      "Sottometti",
+      "Salva",
+      "Stop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 39,
+    "text": "ng-change?",
+    "options": [
+      "Evento cambio input",
+      "Monete",
+      "Router",
+      "Vista"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 40,
+    "text": "ng-blur?",
+    "options": [
+      "Perdita focus",
+      "Sfocato",
+      "Blue",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 41,
+    "text": "ng-focus?",
+    "options": [
+      "Elemento attivo",
+      "Camera",
+      "Punta",
+      "Zoom"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 42,
+    "text": "$timeout?",
+    "options": [
+      "Wrapper setTimeout",
+      "Tempo scaduto",
+      "Pausa",
+      "Stop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 43,
+    "text": "$interval?",
+    "options": [
+      "Wrapper setInterval",
+      "Intervallo",
+      "Spazio",
+      "Loop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 44,
+    "text": "$location?",
+    "options": [
+      "Gestione URL",
+      "Posizione GPS",
+      "Mappa",
+      "Indirizzo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 45,
+    "text": "$window?",
+    "options": [
+      "Wrapper window object",
+      "Finestra",
+      "OS",
+      "View"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 46,
+    "text": "$document?",
+    "options": [
+      "Wrapper document object",
+      "File",
+      "PDF",
+      "Txt"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 47,
+    "text": "$log?",
+    "options": [
+      "Logging service",
+      "Legno",
+      "Login",
+      "Logo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 48,
+    "text": "$q?",
+    "options": [
+      "Servizio Promise",
+      "Query",
+      "Question",
+      "Queue"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 49,
+    "text": "Promise resolve?",
+    "options": [
+      "Successo",
+      "Fallimento",
+      "Attesa",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 50,
+    "text": "Promise reject?",
+    "options": [
+      "Fallimento",
+      "Successo",
+      "Rifiuto",
+      "Eject"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 51,
+    "text": "ng-route?",
+    "options": [
+      "Modulo routing base",
+      "Strada",
+      "Root",
+      "Rate"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 52,
+    "text": "$routeProvider?",
+    "options": [
+      "Configura rotte",
+      "Provider",
+      "Mappa",
+      "Guida"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 53,
+    "text": "ng-view?",
+    "options": [
+      "Placeholder vista route",
+      "Vedi",
+      "Video",
+      "Vue"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 54,
+    "text": "ui-router?",
+    "options": [
+      "Router avanzato stati",
+      "UI",
+      "Basic",
+      "React"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 55,
+    "text": "SPA?",
+    "options": [
+      "Single Page Application",
+      "Centro benessere",
+      "Space",
+      "Simple"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 56,
+    "text": "ng-include?",
+    "options": [
+      "Carica template esterno",
+      "Incluso",
+      "Inietta",
+      "Import"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 57,
+    "text": "ng-cloak?",
+    "options": [
+      "Nasconde raw template",
+      "Mantello",
+      "Clock",
+      "Click"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 58,
+    "text": "$compile?",
+    "options": [
+      "Compila HTML string",
+      "Esegue",
+      "Build",
+      "Parse"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 59,
+    "text": "$parse?",
+    "options": [
+      "Converte espressione",
+      "Parse int",
+      "String",
+      "Data"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 60,
+    "text": "$interpolate?",
+    "options": [
+      "Gestisce {{ }}",
+      "Interpol",
+      "Media",
+      "Punto"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 61,
+    "text": "$sce?",
+    "options": [
+      "Strict Contextual Escaping",
+      "Sicurezza",
+      "Scene",
+      "See"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 62,
+    "text": "ng-bind-html?",
+    "options": [
+      "Renderizza HTML sicuro",
+      "Testo",
+      "Link",
+      "Code"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 63,
+    "text": "$templateCache?",
+    "options": [
+      "Cache template HTML",
+      "Memoria",
+      "Store",
+      "Temp"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 64,
+    "text": "ng-options?",
+    "options": [
+      "Opzioni per select",
+      "Opzioni app",
+      "Settings",
+      "Menu"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 65,
+    "text": "LimitTo filter?",
+    "options": [
+      "Limita array/stringa",
+      "Limite",
+      "Stop",
+      "Top"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 66,
+    "text": "OrderBy filter?",
+    "options": [
+      "Ordina array",
+      "Ordine",
+      "Comando",
+      "Buy"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 67,
+    "text": "Json filter?",
+    "options": [
+      "Formatta JSON",
+      "Parsa",
+      "File",
+      "Oggetto"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 68,
+    "text": "Date filter?",
+    "options": [
+      "Formatta data",
+      "Appuntamento",
+      "Oggi",
+      "Time"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 69,
+    "text": "Number filter?",
+    "options": [
+      "Formatta numeri",
+      "Conta",
+      "Somma",
+      "Int"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 70,
+    "text": "Controller as syntax?",
+    "options": [
+      "Nome alias controller",
+      "Come",
+      "Simile",
+      "Clone"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 71,
+    "text": "Decorators?",
+    "options": [
+      "Modifica servizi esistenti",
+      "Arreda",
+      "Stile",
+      "Festa"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 72,
+    "text": "Interceptors?",
+    "options": [
+      "Intercetta req/res HTTP",
+      "Polizia",
+      "Stop",
+      "Mezzo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 73,
+    "text": "Constant?",
+    "options": [
+      "Valore fisso config/run",
+      "Variabile",
+      "Let",
+      "Mutation"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 74,
+    "text": "Value?",
+    "options": [
+      "Valore modificabile",
+      "Costo",
+      "Prezzo",
+      "Dato"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 75,
+    "text": "Run block?",
+    "options": [
+      "Eseguito post-injector",
+      "Corri",
+      "Start",
+      "Init"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 76,
+    "text": "Config block?",
+    "options": [
+      "Eseguito pre-injector",
+      "Setup",
+      "Installa",
+      "End"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 77,
+    "text": "Manual bootstrap?",
+    "options": [
+      "angular.bootstrap",
+      "Avvio a mano",
+      "Scarpe",
+      "CSS"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 78,
+    "text": "JQLite?",
+    "options": [
+      "Subset jQuery integrato",
+      "Luce",
+      "Database",
+      "Query"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 79,
+    "text": "AngularJS vs Angular?",
+    "options": [
+      "JS vs TypeScript (Rewrite)",
+      "Uguali",
+      "Update",
+      "Patch"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 80,
+    "text": "Versione corrente?",
+    "options": [
+      "LTS / EOL",
+      "18",
+      "20",
+      "Next"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 81,
+    "text": "Google?",
+    "options": [
+      "Creatore Angular",
+      "Facebook",
+      "Microsoft",
+      "Twitter"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 82,
+    "text": "MVC?",
+    "options": [
+      "Model View Controller",
+      "Music",
+      "Move",
+      "Code"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 83,
+    "text": "MVVM?",
+    "options": [
+      "Model View ViewModel",
+      "Video",
+      "Virtual",
+      "Machine"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 84,
+    "text": "Dirty checking?",
+    "options": [
+      "Meccanismo digest",
+      "Sporco",
+      "Pulito",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 85,
+    "text": "$destroy event?",
+    "options": [
+      "Cleanup scope/directive",
+      "Distruzione",
+      "Boom",
+      "Fine"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 86,
+    "text": "ng-bing-template?",
+    "options": [
+      "Bind multiplo",
+      "Template",
+      "File",
+      "Import"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 87,
+    "text": "ng-non-bindable?",
+    "options": [
+      "Ignora compilazione",
+      "Non lega",
+      "Libero",
+      "Error"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 88,
+    "text": "ng-open?",
+    "options": [
+      "Dettagli aperti",
+      "Open source",
+      "File",
+      "Apri"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 89,
+    "text": "ng-pattern?",
+    "options": [
+      "Regex validazione",
+      "Design pattern",
+      "Disegno",
+      "Modello"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 90,
+    "text": "ng-required?",
+    "options": [
+      "Campo obbligatorio",
+      "Richiesto",
+      "Importante",
+      "Serve"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 91,
+    "text": "ng-minlength?",
+    "options": [
+      "Lunghezza minima",
+      "Minimo",
+      "Piccolo",
+      "Corto"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 92,
+    "text": "ng-maxlength?",
+    "options": [
+      "Lunghezza massima",
+      "Massimo",
+      "Grande",
+      "Lungo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 93,
+    "text": "form.$valid?",
+    "options": [
+      "Form valido",
+      "Vero",
+      "Ok",
+      "Si"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 94,
+    "text": "form.$invalid?",
+    "options": [
+      "Form non valido",
+      "Falso",
+      "No",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 95,
+    "text": "form.$pristine?",
+    "options": [
+      "Non modificato",
+      "Nuovo",
+      "Pulito",
+      "Primo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 96,
+    "text": "form.$dirty?",
+    "options": [
+      "Modificato",
+      "Sporco",
+      "Vecchio",
+      "Usato"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 97,
+    "text": "form.$touched?",
+    "options": [
+      "Campo cliccato/perso focus",
+      "Toccato",
+      "Visto",
+      "Letto"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 98,
+    "text": "ng-messages?",
+    "options": [
+      "Gestione errori form",
+      "Messaggi",
+      "Chat",
+      "Email"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 99,
+    "text": "ng-animate?",
+    "options": [
+      "Modulo animazioni",
+      "Cartone",
+      "Video",
+      "Flash"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 100,
+    "text": "$cookies?",
+    "options": [
+      "Gestione cookie",
+      "Biscotti",
+      "Cache",
+      "Web"
+    ],
+    "correct": 1
+  }
+]

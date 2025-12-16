@@ -1,0 +1,1102 @@
+[
+  {
+    "id": 1,
+    "text": "Quale funzione stampa?",
+    "options": [
+      "print()",
+      "printf()",
+      "cout",
+      "echo"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 2,
+    "text": "Dimensione char?",
+    "options": [
+      "1 byte",
+      "2 byte",
+      "4 byte",
+      "8 byte"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 3,
+    "text": "Puntatore nullo?",
+    "options": [
+      "nil",
+      "null",
+      "NULL",
+      "0"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 4,
+    "text": "Commento singola riga?",
+    "options": [
+      "//",
+      "#",
+      "/*",
+      "--"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "text": "Dichiarazione main?",
+    "options": [
+      "void main()",
+      "int main()",
+      "main()",
+      "public static main"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 6,
+    "text": "Terminatore stringa?",
+    "options": [
+      "\\n",
+      "\\0",
+      "\\r",
+      "EOF"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 7,
+    "text": "Operatore indirizzo?",
+    "options": [
+      "*",
+      "&",
+      "@",
+      "->"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 8,
+    "text": "Operatore deferenziazione?",
+    "options": [
+      "&",
+      "*",
+      "->",
+      "."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 9,
+    "text": "Libreria I/O standard?",
+    "options": [
+      "stdio.h",
+      "iostream",
+      "conio.h",
+      "stdlib.h"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 10,
+    "text": "Allocazione dinamica?",
+    "options": [
+      "new",
+      "alloc",
+      "malloc",
+      "create"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 11,
+    "text": "Liberare memoria?",
+    "options": [
+      "delete",
+      "remove",
+      "free",
+      "clear"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 12,
+    "text": "Reallocare memoria?",
+    "options": [
+      "realloc",
+      "resize",
+      "alloc",
+      "memcp"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 13,
+    "text": "Sizeof ritorna?",
+    "options": [
+      "Bit",
+      "Byte",
+      "Word",
+      "Kb"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 14,
+    "text": "Struttura dati?",
+    "options": [
+      "class",
+      "object",
+      "struct",
+      "interface"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 15,
+    "text": "Unione dati?",
+    "options": [
+      "struct",
+      "union",
+      "enum",
+      "bitfield"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 16,
+    "text": "Tipo booleano nativo C89?",
+    "options": [
+      "bool",
+      "boolean",
+      "Non esiste (usa int)",
+      "_Bool"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 17,
+    "text": "Macro definition?",
+    "options": [
+      "macro",
+      "#define",
+      "const",
+      "let"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 18,
+    "text": "Inclusione locale?",
+    "options": [
+      "#include <file>",
+      "#include \"file\"",
+      "import file",
+      "use file"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 19,
+    "text": "Switch case break?",
+    "options": [
+      "Opzionale",
+      "Obbligatorio per non fallthrough",
+      "Inutile",
+      "Errore"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 20,
+    "text": "Operatore ternario?",
+    "options": [
+      "?:",
+      "??",
+      "||",
+      "if-else"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 21,
+    "text": "Preprocessore inizia con?",
+    "options": [
+      "@",
+      "$",
+      "#",
+      "%"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 22,
+    "text": "scanf formato int?",
+    "options": [
+      "%d",
+      "%c",
+      "%s",
+      "%f"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 23,
+    "text": "scanf formato float?",
+    "options": [
+      "%d",
+      "%f",
+      "%lf",
+      "%s"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 24,
+    "text": "scanf formato stringa?",
+    "options": [
+      "%str",
+      "%s",
+      "%c",
+      "%text"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 25,
+    "text": "Ciclo while(0)?",
+    "options": [
+      "Infinito",
+      "Eseguito 1 volta",
+      "Mai eseguito",
+      "Errore"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 26,
+    "text": "Ciclo do-while?",
+    "options": [
+      "Eseguito almeno 1 volta",
+      "0 o più",
+      "Infinito",
+      "Mai"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 27,
+    "text": "Incremento puntatore?",
+    "options": [
+      "Aumenta di 1 byte",
+      "Aumenta di sizeof(tipo)",
+      "Aumenta indirizzo random",
+      "Errore"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 28,
+    "text": "Array nome è?",
+    "options": [
+      "Stringa",
+      "Variabile",
+      "Puntatore costante al primo elem",
+      "Intero"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 29,
+    "text": "Passaggio array funzione?",
+    "options": [
+      "Per valore (copia)",
+      "Per riferimento (puntatore)",
+      "Non possibile",
+      "Errore"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 30,
+    "text": "Indice array parte da?",
+    "options": [
+      "1",
+      "0",
+      "-1",
+      "n"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 31,
+    "text": "Accesso membro struct?",
+    "options": [
+      ".",
+      "->",
+      "::",
+      ":"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 32,
+    "text": "Accesso membro puntatore struct?",
+    "options": [
+      ".",
+      "->",
+      "*.",
+      "&."
+    ],
+    "correct": 2
+  },
+  {
+    "id": 33,
+    "text": "Funzione ricorsiva deve avere?",
+    "options": [
+      "Caso base",
+      "Loop",
+      "Puntatore",
+      "Array"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 34,
+    "text": "Stack overflow causa?",
+    "options": [
+      "Troppa memoria heap",
+      "Ricorsione infinita",
+      "Disco pieno",
+      "CPU 100%"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 35,
+    "text": "Variabile static funzione?",
+    "options": [
+      "Si azzera ogni chiamata",
+      "Mantiene valore tra chiamate",
+      "Globale",
+      "Errore"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 36,
+    "text": "Variabile extern?",
+    "options": [
+      "Definita in altro file",
+      "Esterna al blocco",
+      "Esportata",
+      "Extra"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 37,
+    "text": "Volatile keyword?",
+    "options": [
+      "Evita ottimizzazioni compiler",
+      "Memoria volatile",
+      "Veloce",
+      "Temporanea"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 38,
+    "text": "Const puntatore?",
+    "options": [
+      "Indirizzo fisso",
+      "Valore fisso",
+      "Nullo",
+      "Costante"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 39,
+    "text": "Void pointer?",
+    "options": [
+      "Puntatore nullo",
+      "Puntatore generico",
+      "Funzione void",
+      "Errore"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 40,
+    "text": "Cast esplicito?",
+    "options": [
+      "(tipo)var",
+      "cast(var, tipo)",
+      "convert(var)",
+      "tipo(var)"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 41,
+    "text": "Libreria matematica?",
+    "options": [
+      "math.h",
+      "calc.h",
+      "algebra.h",
+      "stdio.h"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 42,
+    "text": "Modulo operatore?",
+    "options": [
+      "mod",
+      "%",
+      "/",
+      "rem"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 43,
+    "text": "Bitwise AND?",
+    "options": [
+      "&&",
+      "&",
+      "and",
+      "$"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 44,
+    "text": "Bitwise OR?",
+    "options": [
+      "||",
+      "|",
+      "or",
+      "!"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 45,
+    "text": "Bitwise XOR?",
+    "options": [
+      "^",
+      "xor",
+      "~",
+      "#"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 46,
+    "text": "Shift left?",
+    "options": [
+      "<<",
+      "<",
+      "shift",
+      "LSHIFT"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 47,
+    "text": "File open mode lettura?",
+    "options": [
+      "\"w\"",
+      "\"r\"",
+      "\"a\"",
+      "\"rw\""
+    ],
+    "correct": 2
+  },
+  {
+    "id": 48,
+    "text": "File open mode scrittura?",
+    "options": [
+      "\"r\"",
+      "\"w\"",
+      "\"a\"",
+      "\"x\""
+    ],
+    "correct": 2
+  },
+  {
+    "id": 49,
+    "text": "File open mode append?",
+    "options": [
+      "\"w+\"",
+      "\"r+\"",
+      "\"a\"",
+      "\"p\""
+    ],
+    "correct": 3
+  },
+  {
+    "id": 50,
+    "text": "EOF valore?",
+    "options": [
+      "0",
+      "1",
+      "-1",
+      "null"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 51,
+    "text": "fgetc?",
+    "options": [
+      "Legge carattere",
+      "Legge stringa",
+      "Scrive char",
+      "Chiude file"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 52,
+    "text": "fgets?",
+    "options": [
+      "Legge riga/stringa",
+      "Legge int",
+      "Scrive",
+      "Format"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 53,
+    "text": "fprintf?",
+    "options": [
+      "Stampa su file",
+      "Stampa a video",
+      "Formatta",
+      "Legge"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 54,
+    "text": "fclose?",
+    "options": [
+      "Chiude file",
+      "Pulisce",
+      "Salva",
+      "Formatta"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 55,
+    "text": "SEEK_SET?",
+    "options": [
+      "Inizio file",
+      "Fine file",
+      "Corrente",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 56,
+    "text": "ftell?",
+    "options": [
+      "Posizione corrente file",
+      "Dimensione file",
+      "Scrive",
+      "Sposta"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 57,
+    "text": "Typedef?",
+    "options": [
+      "Crea alias tipo",
+      "Definisce tipo",
+      "Macro",
+      "Struct"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 58,
+    "text": "Enum?",
+    "options": [
+      "Costanti intere denominate",
+      "Stringhe",
+      "Liste",
+      "Classi"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 59,
+    "text": "Argomenti main?",
+    "options": [
+      "argc, argv",
+      "args",
+      "vars",
+      "inputs"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 60,
+    "text": "argv[0]?",
+    "options": [
+      "Nome programma",
+      "Primo argomento",
+      "Null",
+      "Path"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 61,
+    "text": "atoi?",
+    "options": [
+      "String to Int",
+      "Int to String",
+      "Array to Int",
+      "Char to Int"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 62,
+    "text": "atof?",
+    "options": [
+      "String to Float",
+      "File",
+      "Format",
+      "Find"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 63,
+    "text": "strcmp return 0?",
+    "options": [
+      "Stringhe uguali",
+      "Diverse",
+      "Errore",
+      "Null"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 64,
+    "text": "strcpy?",
+    "options": [
+      "Copia stringa",
+      "Confronta",
+      "Concatena",
+      "Lunghezza"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 65,
+    "text": "strlen conta terminatore?",
+    "options": [
+      "No",
+      "Sì",
+      "Dipende",
+      "A volte"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 66,
+    "text": "strcat?",
+    "options": [
+      "Concatena stringhe",
+      "Taglia",
+      "Copia",
+      "Cerca"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 67,
+    "text": "memcpy?",
+    "options": [
+      "Copia blocco memoria",
+      "Copia stringa",
+      "Sposta",
+      "Pulisce"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 68,
+    "text": "memset?",
+    "options": [
+      "Imposta byte memoria",
+      "Copia",
+      "Sposta",
+      "Legge"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 69,
+    "text": "exit(0)?",
+    "options": [
+      "Terminazione successo",
+      "Errore",
+      "Pausa",
+      "Riavvia"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 70,
+    "text": "exit(1)?",
+    "options": [
+      "Terminazione errore",
+      "Successo",
+      "Main",
+      "Null"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 71,
+    "text": "system()?",
+    "options": [
+      "Esegue comando shell",
+      "Info sistema",
+      "Time",
+      "Exit"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 72,
+    "text": "rand()?",
+    "options": [
+      "Numero casuale",
+      "Range",
+      "Read",
+      "Round"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 73,
+    "text": "srand()?",
+    "options": [
+      "Inizializza seed random",
+      "String rand",
+      "Sort",
+      "Search"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 74,
+    "text": "time(NULL)?",
+    "options": [
+      "Secondi da Epoch (1970)",
+      "Ora locale",
+      "Data",
+      "Timer"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 75,
+    "text": "assert() macro?",
+    "options": [
+      "Verifica condizione debug",
+      "Stampa",
+      "Errore",
+      "Assign"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 76,
+    "text": "Goto?",
+    "options": [
+      "Salto incondizionato",
+      "Loop",
+      "Funzione",
+      "Variabile"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 77,
+    "text": "Inline function?",
+    "options": [
+      "Suggerimento espansione codice",
+      "In linea",
+      "Interna",
+      "Input"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 78,
+    "text": "Variadic function?",
+    "options": [
+      "Num argomenti variabile",
+      "Variabile",
+      "Variazione",
+      "Void"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 79,
+    "text": "va_list?",
+    "options": [
+      "Gestione argomenti variadici",
+      "Lista valori",
+      "Variabile",
+      "Vector"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 80,
+    "text": "__FILE__ macro?",
+    "options": [
+      "Nome file sorgente",
+      "File object",
+      "Path",
+      "Directory"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 81,
+    "text": "__LINE__ macro?",
+    "options": [
+      "Numero riga corrente",
+      "Linea",
+      "Disegno",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 82,
+    "text": "#ifdef?",
+    "options": [
+      "Compilazione condizionale",
+      "Definizione",
+      "Include",
+      "If"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 83,
+    "text": "#ifndef?",
+    "options": [
+      "If not defined",
+      "If defined",
+      "Define",
+      "Error"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 84,
+    "text": "Header guards?",
+    "options": [
+      "Prevengono inclusione multipla",
+      "Sicurezza",
+      "Difesa",
+      "Stile"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 85,
+    "text": "Pragma once?",
+    "options": [
+      "Include una sola volta",
+      "Pragmatico",
+      "Loop",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 86,
+    "text": "Compilazione fasi?",
+    "options": [
+      "Preproc, Comp, Asm, Link",
+      "Run, Build",
+      "Make, Do",
+      "Write, Read"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 87,
+    "text": "Linker error?",
+    "options": [
+      "Simbolo non definito",
+      "Sintassi",
+      "Runtime",
+      "Logic"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 88,
+    "text": "Segmentation fault?",
+    "options": [
+      "Accesso memoria illegale",
+      "Errore disco",
+      "Bug video",
+      "Rete"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 89,
+    "text": "Memory leak?",
+    "options": [
+      "Memoria non liberata",
+      "Perdita dati",
+      "Errore RAM",
+      "Leak file"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 90,
+    "text": "Buffer overflow?",
+    "options": [
+      "Scrittura oltre limiti array",
+      "Troppi dati",
+      "Buffer pieno",
+      "Errore I/O"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 91,
+    "text": "Dangling pointer?",
+    "options": [
+      "Punta a memoria liberata",
+      "Puntatore nullo",
+      "Puntatore valido",
+      "Dondolante"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 92,
+    "text": "Wild pointer?",
+    "options": [
+      "Non inizializzato",
+      "RANDOM",
+      "Selvaggio",
+      "Nullo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 93,
+    "text": "Restrict keyword?",
+    "options": [
+      "Puntatori non sovrapposti",
+      "Restrizione",
+      "Privato",
+      "Const"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 94,
+    "text": "C standard recente?",
+    "options": [
+      "C23",
+      "C11",
+      "C99",
+      "C89"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 95,
+    "text": "Dennis Ritchie?",
+    "options": [
+      "Creatore C",
+      "Creatore Java",
+      "Linux",
+      "Windows"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 96,
+    "text": "UNIX e C?",
+    "options": [
+      "Strettamente legati",
+      "Separati",
+      "Opposti",
+      "Nessuno"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 97,
+    "text": "Ken Thompson?",
+    "options": [
+      "Co-creatore UNIX/B",
+      "Creatore C++",
+      "Python",
+      "Ruby"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 98,
+    "text": "K&R?",
+    "options": [
+      "Kernighan & Ritchie (libro)",
+      "Key & Read",
+      "Knowledge",
+      "Kernel"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 99,
+    "text": "C++ è superset C?",
+    "options": [
+      "Quasi (con eccezioni)",
+      "Sì totale",
+      "No",
+      "Inverso"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 100,
+    "text": "Hello World C?",
+    "options": [
+      "printf(\"Hello World\");",
+      "cout << ...",
+      "System.out...",
+      "print"
+    ],
+    "correct": 1
+  }
+]

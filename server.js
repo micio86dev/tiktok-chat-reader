@@ -8,11 +8,14 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
 
+
 app.use(express.static("public"));
 
 const username = process.env.TIKTOK_USERNAME;
 let retryDelay = 5000;
 const maxRetryDelay = 60000;
+let tiktokAttempts = 0;
+const MAX_TIKTOK_ATTEMPTS = 3;
 const receivedMsgs = new Set();
 let live = null;
 let questionsCounter = 0;
@@ -29,6 +32,7 @@ let responses = {};
 let globalScores = {};
 let questionStats = []; // Array to store stats for each question
 let gameState = "MENU"; // MENU, PLAYING, FINISHED
+let currentTopic = "";
 
 // --- CONNESSIONE CLIENT ---
 io.on("connection", (socket) => {
@@ -43,6 +47,8 @@ io.on("connection", (socket) => {
       options: currentQuestion.options,
       timer: timerDuration,
       counter: questionsCounter,
+      topic: currentTopic,
+      total: maxQuestions,
     });
   } else if (gameState === "FINISHED") {
     // Maybe emit last results? For now do nothing or show menu
@@ -50,43 +56,28 @@ io.on("connection", (socket) => {
   }
 
   // Start Quiz with selected topic
+  // Start Quiz with selected topic
   socket.on("startQuiz", (topic) => {
-    console.log(`🚀 Avvio Quiz: ${topic}`);
-    try {
-      if (topic === "js") questions = require("./questions_js.json");
-      else if (topic === "python")
-        questions = require("./questions_python.json");
-      else if (topic === "php") questions = require("./questions_php.json");
-      else if (topic === "java") questions = require("./questions_java.json");
-      else if (topic === "html") questions = require("./questions_html.json");
-      else if (topic === "css") questions = require("./questions_css.json");
-      else questions = require("./questions.json"); // Fallback
-
-      gameState = "PLAYING";
-      questionsCounter = 0;
-      responses = {};
-      globalScores = {};
-      questionStats = [];
-      currentQuestion = null;
-
-      nextQuestion();
-
-      if (questionTimer) clearInterval(questionTimer);
-      questionTimer = setInterval(() => nextQuestion(), timerDuration * 1000);
-    } catch (e) {
-      console.error("Errore caricamento domande:", e);
-    }
+    startQuiz(topic);
   });
 
   // Admin: Restart/Reset to Menu
+  // Admin: Restart/Reset to Menu
   socket.on("resetQuiz", () => {
     console.log("🔄 Reset a Menu");
+    // Clear auto restart timer if active
+    if (autoRestartTimer) {
+      clearTimeout(autoRestartTimer);
+      autoRestartTimer = null;
+    }
+
     gameState = "MENU";
     questionsCounter = 0;
     responses = {};
     globalScores = {};
     questionStats = [];
     currentQuestion = null;
+    currentTopic = null;
     if (questionTimer) clearInterval(questionTimer);
 
     io.emit("showMenu");
@@ -99,15 +90,18 @@ function processRound() {
 
   const responseList = Object.values(responses);
   const totalAnswers = responseList.length;
+
+  // Normalize correct value to integer (handles "1", 1, "?1")
+  const correctVal = parseInt(currentQuestion.correct.toString().replace("?", ""));
+
   const correctAnswers = responseList.filter(
-    (r) => r.answer === currentQuestion.correct
+    (r) => parseInt(r.answer) === correctVal
   ).length;
 
   const percentCorrect =
     totalAnswers > 0 ? ((correctAnswers / totalAnswers) * 100).toFixed(1) : 0;
 
-  // Derive correct text from options (e.g. "?1" -> index 0)
-  const correctIndex = parseInt(currentQuestion.correct.replace("?", "")) - 1;
+  const correctIndex = correctVal - 1;
   const correctText =
     currentQuestion.options[correctIndex] || currentQuestion.correct;
 
@@ -134,7 +128,7 @@ function processRound() {
     globalScores[userId].nickname = data.nickname;
     globalScores[userId].avatar = data.avatar;
 
-    if (data.answer === currentQuestion.correct) {
+    if (parseInt(data.answer) === correctVal) {
       globalScores[userId].score++;
     }
   });
@@ -168,9 +162,104 @@ function nextQuestion() {
     options: currentQuestion.options,
     counter: questionsCounter,
     timer: timerDuration,
+    topic: currentTopic,
+    total: maxQuestions,
   });
 
   // simulateChat();
+}
+
+
+
+let autoRestartTimer = null;
+
+function startQuiz(topic) {
+  console.log(`🚀 Avvio Quiz: ${topic}`);
+  currentTopic = topic;
+  try {
+    if (topic === "js") questions = require("./questions_js.json");
+    else if (topic === "python")
+      questions = require("./questions_python.json");
+    else if (topic === "php") questions = require("./questions_php.json");
+    else if (topic === "java") questions = require("./questions_java.json");
+    else if (topic === "html") questions = require("./questions_html.json");
+    else if (topic === "css") questions = require("./questions_css.json");
+    else if (topic === "cpp") questions = require("./questions_cpp.json");
+    else if (topic === "csharp") questions = require("./questions_csharp.json");
+    let questionsFile;
+    switch (topic) {
+      case "js":
+        questionsFile = require("./questions_js.json");
+        break;
+      case "python":
+        questionsFile = require("./questions_python.json");
+        break;
+      case "php":
+        questionsFile = require("./questions_php.json");
+        break;
+      case "java":
+        questionsFile = require("./questions_java.json");
+        break;
+      case "html":
+        questionsFile = require("./questions_html.json");
+        break;
+      case "css":
+        questionsFile = require("./questions_css.json");
+        break;
+      case "cpp":
+        questionsFile = require("./questions_cpp.json");
+        break;
+      case "csharp":
+        questionsFile = require("./questions_csharp.json");
+        break;
+      case "dotnet":
+        questionsFile = require("./questions_dotnet.json");
+        break;
+      case "c":
+        questionsFile = require("./questions_c.json");
+        break;
+      case "react":
+        questionsFile = require("./questions_react.json");
+        break;
+      case "vue":
+        questionsFile = require("./questions_vue.json");
+        break;
+      case "node":
+        questionsFile = require("./questions_node.json");
+        break;
+      case "go":
+        questionsFile = require("./questions_go.json");
+        break;
+      case "rust":
+        questionsFile = require("./questions_rust.json");
+        break;
+      case "angular":
+        questionsFile = require("./questions_angular.json");
+        break;
+      default:
+        questionsFile = require("./questions.json"); // Fallback
+    }
+    questions = questionsFile;
+
+    if (autoRestartTimer) {
+      clearTimeout(autoRestartTimer);
+      autoRestartTimer = null;
+    }
+
+    gameState = "PLAYING";
+    questionsCounter = 0;
+    responses = {};
+    globalScores = {};
+    questionStats = [];
+    currentQuestion = null;
+
+    nextQuestion();
+
+    if (questionTimer) clearInterval(questionTimer);
+    questionTimer = setInterval(() => nextQuestion(), timerDuration * 1000);
+  } catch (e) {
+    console.error("Errore caricamento domande:", e);
+  }
 }
 
 function quizFinished() {
@@ -217,14 +306,47 @@ function quizFinished() {
   io.emit("quizFinished");
 
   // Reset Game State
-  // questionsCounter = 0; // Removed, now handled by reset
-  // responses = {};
-  // globalScores = {};
-  // questionStats = [];
   currentQuestion = null;
+  currentTopic = null;
   gameState = "FINISHED";
 
   if (questionTimer) clearInterval(questionTimer);
+
+  // Auto Restart Logic
+  const restartDelay = 60;
+  io.emit("autoRestartCountdown", { seconds: restartDelay });
+
+  autoRestartTimer = setTimeout(() => {
+    const topics = [
+      "js",
+      "python",
+      "php",
+      "java",
+      "html",
+      "css",
+      "cpp",
+      "csharp",
+      "dotnet",
+      "c",
+      "react",
+      "vue",
+      "node",
+      "go",
+      "rust",
+      "angular"
+    ];
+    const randomTopic = topics[Math.floor(Math.random() * topics.length)];
+
+    // Notify clients to start animation
+    const animationDuration = 4000;
+    io.emit("startTopicSelection", { target: randomTopic, duration: animationDuration });
+
+    // Wait for animation then start
+    setTimeout(() => {
+      startQuiz(randomTopic);
+    }, animationDuration);
+
+  }, restartDelay * 1000);
 }
 
 function sendChatMessage(data) {
@@ -233,22 +355,32 @@ function sendChatMessage(data) {
   receivedMsgs.add(data.msgId);
 
   if (data.method === "WebcastChatMessage") {
-    const answer = data.comment.trim();
-    // Only accept answer if user hasn't answered yet
-    if (/^\?\d+$/.test(answer) && !responses[data.uniqueId]) {
-      responses[data.uniqueId] = {
-        answer: answer,
-        nickname: data.nickname,
-        avatar: data.profilePictureUrl,
-        timestamp: Date.now(),
-      };
+    let answer = data.comment.trim();
 
-      // Calculate and emit answer counts
-      const counts = {};
-      Object.values(responses).forEach((r) => {
-        counts[r.answer] = (counts[r.answer] || 0) + 1;
-      });
-      io.emit("updateAnswerCounts", counts);
+    // Normalize user answer: remove '?' prefix if present
+    answer = answer.replace(/^\?/, "");
+
+    // Check if it's a valid number format
+    if (/^\d+$/.test(answer) && !responses[data.uniqueId]) {
+
+      const answerInt = parseInt(answer, 10);
+
+      // Check if currentQuestion exists and the answer is within valid options range
+      if (currentQuestion && currentQuestion.options && answerInt > 0 && answerInt <= currentQuestion.options.length) {
+        responses[data.uniqueId] = {
+          answer: answerInt, // Store as integer
+          nickname: data.nickname,
+          avatar: data.profilePictureUrl,
+          timestamp: Date.now(),
+        };
+
+        // Calculate and emit answer counts
+        const counts = {};
+        Object.values(responses).forEach((r) => {
+          counts[r.answer] = (counts[r.answer] || 0) + 1;
+        });
+        io.emit("updateAnswerCounts", counts); // Keys will be "1", "2", etc.
+      }
     }
 
     io.emit("tiktokMessage", {
@@ -271,8 +403,16 @@ function sendChatMessage(data) {
 
 // --- CONNESSIONE LIVE TIKTOK ---
 function connectLive() {
+  if (tiktokAttempts >= MAX_TIKTOK_ATTEMPTS) {
+    console.log(`❌ Rinuncio alla connessione TikTok dopo ${MAX_TIKTOK_ATTEMPTS} tentativi.`);
+    return;
+  }
+
+  tiktokAttempts++;
   live = new WebcastPushConnection(username);
-  console.log(`🔗 Tentativo di connessione a ${username}...`);
+  console.log(
+    `🔗 Tentativo di connessione a ${username} (${tiktokAttempts}/${MAX_TIKTOK_ATTEMPTS})...`
+  );
 
   // Decomment to simulate
   // if (questionTimer) clearInterval(questionTimer);
@@ -285,26 +425,36 @@ function connectLive() {
   live.on("connected", (room) => {
     console.log(`✅ Connesso a ${username} (roomId: ${room.roomId})`);
     retryDelay = 5000;
+    tiktokAttempts = 0; // Reset attempts on success
     /*if (questionTimer) clearInterval(questionTimer);
     questionTimer = setInterval(() => nextQuestion(), timerDuration * 1000);*/
   });
 
+  const scheduleRetry = () => {
+    if (tiktokAttempts < MAX_TIKTOK_ATTEMPTS) {
+      console.log(`❌ Ritento in ${retryDelay / 1000}s...`);
+      setTimeout(connectLive, retryDelay);
+      retryDelay = Math.min(retryDelay * 2, maxRetryDelay);
+    } else {
+      console.log(
+        `❌ Numero massimo di tentativi (${MAX_TIKTOK_ATTEMPTS}) raggiunto. Stop TikTok.`
+      );
+    }
+  };
+
   live.on("disconnected", () => {
-    console.log(`❌ Disconnesso. Ritento in ${retryDelay / 1000}s`);
-    setTimeout(connectLive, retryDelay);
-    retryDelay = Math.min(retryDelay * 2, maxRetryDelay);
+    console.log(`❌ Disconnesso.`);
+    scheduleRetry();
   });
 
   live.on("error", (e) => {
     console.error(`‼️ Errore ${JSON.stringify(e)}`);
-    setTimeout(connectLive, retryDelay);
-    retryDelay = Math.min(retryDelay * 2, maxRetryDelay);
+    scheduleRetry();
   });
 
   live.connect().catch((e) => {
     console.error("❌ Errore connessione iniziale", JSON.stringify(e));
-    setTimeout(connectLive, retryDelay);
-    retryDelay = Math.min(retryDelay * 2, maxRetryDelay);
+    scheduleRetry();
   });
 }
 
@@ -327,7 +477,24 @@ function simulateChat() {
   }
 }
 
+// --- CONNESSIONE YOUTUBE ---
+const { connectYouTube } = require("./youtube");
+
+function handleYouTubeMessage(msg) {
+  const data = {
+    method: "WebcastChatMessage",
+    msgId: msg.id,
+    userId: msg.authorDetails.channelId,
+    uniqueId: msg.authorDetails.channelId,
+    nickname: msg.authorDetails.displayName,
+    profilePictureUrl: msg.authorDetails.profileImageUrl,
+    comment: msg.snippet.displayMessage,
+  };
+  sendChatMessage(data);
+}
+
 connectLive();
+connectYouTube(handleYouTubeMessage);
 
 server.listen(3000, () =>
   console.log("🌐 Server in ascolto su http://localhost:3000")

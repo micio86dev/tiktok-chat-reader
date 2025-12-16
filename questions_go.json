@@ -1,0 +1,1102 @@
+[
+  {
+    "id": 1,
+    "text": "Come si dichiara una variabile in Go?",
+    "options": [
+      "var x int",
+      "int x",
+      "let x",
+      "x := int"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2,
+    "text": "Qual è la keyword per avviare una goroutine?",
+    "options": [
+      "thread",
+      "async",
+      "go",
+      "start"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 3,
+    "text": "Come si gestiscono gli errori in Go?",
+    "options": [
+      "try/catch",
+      "return error",
+      "throw",
+      "panic"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 4,
+    "text": "Quale visibilità ha una funzione che inizia con la maiuscola?",
+    "options": [
+      "Privata",
+      "Pubblica",
+      "Protetta",
+      "Interna"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 5,
+    "text": "Cosa sostituisce i cicli while in Go?",
+    "options": [
+      "loop",
+      "do-while",
+      "for",
+      "repeat"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 6,
+    "text": "Come si inizializza un modulo Go?",
+    "options": [
+      "go start",
+      "go init",
+      "go mod init",
+      "go create"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 7,
+    "text": "Cosa è uno slice?",
+    "options": [
+      "Array fisso",
+      "Riferimento a array",
+      "Primitivo",
+      "Puntatore"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 8,
+    "text": "Keyword per ritardare esecuzione?",
+    "options": [
+      "wait",
+      "defer",
+      "delay",
+      "later"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 9,
+    "text": "len('ciao') ritorna?",
+    "options": [
+      "4",
+      "5",
+      "8",
+      "16"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 10,
+    "text": "Go supporta ereditarietà?",
+    "options": [
+      "Sì",
+      "No (composizione)",
+      "Solo singola",
+      "Multipla"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 11,
+    "text": "Import multipli sintassi?",
+    "options": [
+      "import (...)",
+      "import {...}",
+      "require(...)",
+      "using ..."
+    ],
+    "correct": 1
+  },
+  {
+    "id": 12,
+    "text": "Zero value di puntatore?",
+    "options": [
+      "0",
+      "undefined",
+      "nil",
+      "null"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 13,
+    "text": "Cosa fa make()?",
+    "options": [
+      "Compila",
+      "Crea slice/map/chan",
+      "Alloca grezzo",
+      "Definisce struct"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 14,
+    "text": "fmt.Println(1+1) output?",
+    "options": [
+      "11",
+      "2",
+      "Errore",
+      "undefined"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 15,
+    "text": "Formattatore standard?",
+    "options": [
+      "Prettier",
+      "gofmt",
+      "eslint",
+      "clang"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 16,
+    "text": "Supporto Generics?",
+    "options": [
+      "No",
+      "Sì (1.18+)",
+      "Sì da sempre",
+      "Solo interface{}"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 17,
+    "text": "Cos'è un rune?",
+    "options": [
+      "ASCII char",
+      "int32 (Unicode)",
+      "Stringa",
+      "Byte"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 18,
+    "text": "Argomenti variabili?",
+    "options": [
+      "No",
+      "Sì (...Type)",
+      "Sì (*Type)",
+      "Sì ([]Type)"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 19,
+    "text": "Operatore canale?",
+    "options": [
+      "->",
+      "<-",
+      ">>",
+      "=>"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 20,
+    "text": "Costanti keyword?",
+    "options": [
+      "final",
+      "const",
+      "static",
+      "let"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 21,
+    "text": "Cos'è 'interface{}'?",
+    "options": [
+      "Interfaccia vuota (any)",
+      "Errore",
+      "Classe base",
+      "Void"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 22,
+    "text": "Map è thread-safe?",
+    "options": [
+      "Sì",
+      "No",
+      "Solo in lettura",
+      "Dipende"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 23,
+    "text": "Cosa fa 'panic'?",
+    "options": [
+      "Ferma goroutine corrente",
+      "Ferma PC",
+      "Eccezione gestita",
+      "Warning"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 24,
+    "text": "Cosa fa 'recover'?",
+    "options": [
+      "Recupera da panic",
+      "Riavvia PC",
+      "Salva file",
+      "Niente"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 25,
+    "text": "Struct tag syntax?",
+    "options": [
+      "`json:\"name\"`",
+      "'json:name'",
+      "\"json:name\"",
+      "{json:name}"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 26,
+    "text": "Keyword per switch?",
+    "options": [
+      "check",
+      "switch",
+      "case",
+      "select"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 27,
+    "text": "Go è compilato o interpretato?",
+    "options": [
+      "Compilato",
+      "Interpretato",
+      "JIT",
+      "Solo bytecode"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 28,
+    "text": "Estensione file Go?",
+    "options": [
+      ".golang",
+      ".go",
+      ".g",
+      ".goo"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 29,
+    "text": "Main package name?",
+    "options": [
+      "index",
+      "app",
+      "main",
+      "root"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 30,
+    "text": "Commento singola riga?",
+    "options": [
+      "//",
+      "#",
+      "--",
+      "/*"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 31,
+    "text": "Workspace path variabile?",
+    "options": [
+      "GOROOT",
+      "GOPATH",
+      "GOENV",
+      "GOHOME"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 32,
+    "text": "Download dipendenze?",
+    "options": [
+      "go install",
+      "go get",
+      "go fetch",
+      "go pull"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 33,
+    "text": "Build comando?",
+    "options": [
+      "go make",
+      "go build",
+      "go compile",
+      "go run"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 34,
+    "text": "Esegui test?",
+    "options": [
+      "go test",
+      "go check",
+      "go verify",
+      "go spec"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 35,
+    "text": "Puntatore a se stesso (metodi)?",
+    "options": [
+      "this",
+      "self",
+      "receiver (es. m *MyRule)",
+      "me"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 36,
+    "text": "Ciclo 'while' esiste?",
+    "options": [
+      "Sì",
+      "No (usa for)",
+      "Sì come alias",
+      "Deprecato"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 37,
+    "text": "Switch ha break automatico?",
+    "options": [
+      "Sì",
+      "No",
+      "Solo numeri",
+      "Mai"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 38,
+    "text": "Keyword per ereditare in switch?",
+    "options": [
+      "continue",
+      "fallthrough",
+      "next",
+      "break"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 39,
+    "text": "Tipo per booleani?",
+    "options": [
+      "boolean",
+      "bool",
+      "bit",
+      "logic"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 40,
+    "text": "Cast esplicito o implicito?",
+    "options": [
+      "Solo esplicito",
+      "Implicito",
+      "Entrambi",
+      "Nessuno"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 41,
+    "text": "Valore zero int?",
+    "options": [
+      "0",
+      "-1",
+      "null",
+      "undefined"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 42,
+    "text": "Valore zero string?",
+    "options": [
+      "null",
+      "\"\"",
+      "undefined",
+      "0"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 43,
+    "text": "Operatore modulo?",
+    "options": [
+      "mod",
+      "%",
+      "rem",
+      "/"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 44,
+    "text": "Incremento postfisso?",
+    "options": [
+      "i++",
+      "++i",
+      "i+=1",
+      "tutti"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 45,
+    "text": "Esiste ++i?",
+    "options": [
+      "Sì",
+      "No",
+      "Deprecato",
+      "Solo in unsafe"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 46,
+    "text": "Swap variabili?",
+    "options": [
+      "a, b = b, a",
+      "tmp=a;a=b;b=tmp",
+      "swap(a,b)",
+      "a.swap(b)"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 47,
+    "text": "Dichiarazione short?",
+    "options": [
+      ":=",
+      "=",
+      "var",
+      "auto"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 48,
+    "text": "Cos'è iota?",
+    "options": [
+      "Generatore costanti",
+      "Errore",
+      "Libreria I/O",
+      "Tipo dati"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 49,
+    "text": "Init function?",
+    "options": [
+      "main()",
+      "start()",
+      "init()",
+      "setup()"
+    ],
+    "correct": 3
+  },
+  {
+    "id": 50,
+    "text": "Visibilità pacchetto?",
+    "options": [
+      "Maiuscola (Public)",
+      "Minuscola (Public)",
+      "underscore",
+      "export keyword"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 51,
+    "text": "Canale bufferizzato?",
+    "options": [
+      "make(chan int)",
+      "make(chan int, 5)",
+      "new(chan)",
+      "chan.buffer(5)"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 52,
+    "text": "Chiudere canale?",
+    "options": [
+      "close(c)",
+      "end(c)",
+      "stop(c)",
+      "delete(c)"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 53,
+    "text": "Select serve per?",
+    "options": [
+      "Database",
+      "Canali multipli",
+      "Switch",
+      "Ordinare"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 54,
+    "text": "Range loop su?",
+    "options": [
+      "Array/Slice/Map/Chan",
+      "Solo array",
+      "Solo map",
+      "Solo file"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 55,
+    "text": "Ignorare valore ritorno?",
+    "options": [
+      "_",
+      "void",
+      "null",
+      "skip"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 56,
+    "text": "Tipi numerici complessi?",
+    "options": [
+      "complex64/128",
+      "imaginary",
+      "cfloat",
+      "nessuno"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 57,
+    "text": "Go ha le eccezioni?",
+    "options": [
+      "Sì",
+      "No (panic/recover)",
+      "Solo try",
+      "Solo catch"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 58,
+    "text": "New vs Make?",
+    "options": [
+      "New=puntatore zero, Make=inizializza",
+      "Sinonimi",
+      "New per slice",
+      "Make per struct"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 59,
+    "text": "Libreria test standard?",
+    "options": [
+      "testing",
+      "junit",
+      "pytest",
+      "mocha"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 60,
+    "text": "Benchmark tool?",
+    "options": [
+      "go bench",
+      "go test -bench",
+      "go speed",
+      "go perf"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 61,
+    "text": "Esiste l'overloading operatori?",
+    "options": [
+      "Sì",
+      "No",
+      "Solo +",
+      "Solo -"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 62,
+    "text": "Esiste overload metodi?",
+    "options": [
+      "Sì",
+      "No",
+      "Solo privati",
+      "Solo interfacce"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 63,
+    "text": "Parametri per valore o riferimento?",
+    "options": [
+      "Per valore",
+      "Per riferimento",
+      "Misto",
+      "Dipende"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 64,
+    "text": "Map valore non presente?",
+    "options": [
+      "Errore",
+      "Zero value",
+      "Null",
+      "Panic"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 65,
+    "text": "Controllare esistenza chiave map?",
+    "options": [
+      "val, ok := m[key]",
+      "m.has(key)",
+      "key in m",
+      "m.contains(key)"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 66,
+    "text": "Eliminare chiave map?",
+    "options": [
+      "delete(m, k)",
+      "remove(m, k)",
+      "m.delete(k)",
+      "kill(k)"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 67,
+    "text": "Cosa stampa println?",
+    "options": [
+      "Stderr standard",
+      "Stdout",
+      "Log",
+      "Debug"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 68,
+    "text": "Package fmt usa?",
+    "options": [
+      "Reflection",
+      "Magic",
+      "C bindings",
+      "Macros"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 69,
+    "text": "Json marshal?",
+    "options": [
+      "Converte struct in JSON",
+      "JSON in struct",
+      "Formatta",
+      "Valida"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 70,
+    "text": "Unmarshal?",
+    "options": [
+      "JSON in struct",
+      "Struct in JSON",
+      "Legge file",
+      "Scrive file"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 71,
+    "text": "Defer ordine esecuzione?",
+    "options": [
+      "FIFO",
+      "LIFO (stack)",
+      "Random",
+      "Parallelo"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 72,
+    "text": "Go routine stack iniziale?",
+    "options": [
+      "2KB",
+      "1MB",
+      "4KB",
+      "8KB"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 73,
+    "text": "Race detector flag?",
+    "options": [
+      "-race",
+      "-detect",
+      "-check",
+      "-safe"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 74,
+    "text": "Vendoring directory?",
+    "options": [
+      "node_modules",
+      "vendor",
+      "libs",
+      "packages"
+    ],
+    "correct": 2
+  },
+  {
+    "id": 75,
+    "text": "Go sum file?",
+    "options": [
+      "go.sum",
+      "package-lock",
+      "yarn.lock",
+      "checksum"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 76,
+    "text": "Alias di tipo?",
+    "options": [
+      "type T = int",
+      "alias T int",
+      "typedef int T",
+      "using T = int"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 77,
+    "text": "Definizione nuovo tipo?",
+    "options": [
+      "type T int",
+      "struct T",
+      "class T",
+      "new T"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 78,
+    "text": "Raw string literal?",
+    "options": [
+      "`...`",
+      "'...'",
+      "\"...\"",
+      "r\"...\""
+    ],
+    "correct": 1
+  },
+  {
+    "id": 79,
+    "text": "Format verb %v?",
+    "options": [
+      "Default format",
+      "Int",
+      "String",
+      "Bool"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 80,
+    "text": "Format verbType %T?",
+    "options": [
+      "Tipo variabile",
+      "Time",
+      "Text",
+      "True"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 81,
+    "text": "Format verb pointer %p?",
+    "options": [
+      "Puntatore hex",
+      "Print",
+      "Percent",
+      "Padding"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 82,
+    "text": "Context serve a?",
+    "options": [
+      "Timeout/Cancelation",
+      "Database",
+      "Grafica",
+      "Logging"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 83,
+    "text": "WaitGrup?",
+    "options": [
+      "Attende goroutines",
+      "Blocca thread main",
+      "Sincronizza HTTP",
+      "Timer"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 84,
+    "text": "Mutex?",
+    "options": [
+      "Mutual exclusion",
+      "Memory xor",
+      "Multi text",
+      "Math ext"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 85,
+    "text": "RWMutex?",
+    "options": [
+      "Read/Write lock",
+      "Raw Mutex",
+      "Real Mutex",
+      "Remote Mutex"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 86,
+    "text": "Atomic package?",
+    "options": [
+      "Operazioni atomiche",
+      "Nucleare",
+      "Bomb",
+      "Energy"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 87,
+    "text": "OS args?",
+    "options": [
+      "os.Args",
+      "sys.Args",
+      "flag.Args",
+      "env.Args"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 88,
+    "text": "Flag package?",
+    "options": [
+      "Command line parsing",
+      "Bandiera",
+      "Bool variables",
+      "Settings"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 89,
+    "text": "http.ListenAndServe?",
+    "options": [
+      "Avvia server web",
+      "Client request",
+      "Chiude server",
+      "Legge file"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 90,
+    "text": "HandlerFun?",
+    "options": [
+      "Adatta func a Handler",
+      "Gestisce errori",
+      "Funzione divertente",
+      "Callback"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 91,
+    "text": "Variadica sintassi?",
+    "options": [
+      "...T",
+      "T...",
+      "args T",
+      "[]T"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 92,
+    "text": "Append return?",
+    "options": [
+      "Nuova slice",
+      "Void",
+      "Int",
+      "Error"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 93,
+    "text": "Capacità slice?",
+    "options": [
+      "cap()",
+      "len()",
+      "size()",
+      "max()"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 94,
+    "text": "Lunghezza slice?",
+    "options": [
+      "len()",
+      "cap()",
+      "count()",
+      "size()"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 95,
+    "text": "Sort package?",
+    "options": [
+      "Ordina collezioni",
+      "Filtra",
+      "Mappa",
+      "Reduce"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 96,
+    "text": "Time package?",
+    "options": [
+      "Gestione tempo",
+      "Cronometro",
+      "Sleep",
+      "Tutti"
+    ],
+    "correct": 4
+  },
+  {
+    "id": 97,
+    "text": "Duration type?",
+    "options": [
+      "Nanosecondi (int64)",
+      "Secondi",
+      "String",
+      "Object"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 98,
+    "text": "Since()?",
+    "options": [
+      "Tempo trascorso",
+      "Tempo futuro",
+      "Data odierna",
+      "Ieri"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 99,
+    "text": "Ticker?",
+    "options": [
+      "Evento periodico",
+      "Azioni borsa",
+      "Orologio",
+      "Timer singolo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 100,
+    "text": "Mascotte Go?",
+    "options": [
+      "Gopher",
+      "Serpente",
+      "Elefante",
+      "Caffè"
+    ],
+    "correct": 1
+  }
+]

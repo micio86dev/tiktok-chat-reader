@@ -1,0 +1,1102 @@
+[
+  {
+    "id": 1,
+    "text": "Significato CLR?",
+    "options": [
+      "Common Language Runtime",
+      "C Lang Run",
+      "Code Lib",
+      "Core"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2,
+    "text": "Package manager?",
+    "options": [
+      "NuGet",
+      "NPM",
+      "Pip",
+      "Gem"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 3,
+    "text": "Compilatore JIT?",
+    "options": [
+      "Just-In-Time",
+      "Java-In-Time",
+      "Just-In-Test",
+      "Jack"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 4,
+    "text": "Framework Web moderno?",
+    "options": [
+      "ASP.NET Core",
+      "WebForms",
+      "MVC 5",
+      "Silverlight"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "text": "Comando nuovo progetto?",
+    "options": [
+      "dotnet new",
+      "dotnet create",
+      "dotnet init",
+      "dotnet start"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 6,
+    "text": "Linguaggio principale?",
+    "options": [
+      "C#",
+      "VB",
+      "F#",
+      "Tutti"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 7,
+    "text": "Intermediate Language?",
+    "options": [
+      "MSIL / CIL",
+      "Bytecode Java",
+      "Assembly",
+      "Machine Code"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 8,
+    "text": "Garbage Collector?",
+    "options": [
+      "Automatico",
+      "Manuale",
+      "Non esiste",
+      "Opzionale"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 9,
+    "text": "Entry point applicazione?",
+    "options": [
+      "Main()",
+      "Start()",
+      "Init()",
+      "Run()"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 10,
+    "text": "File progetto estensione?",
+    "options": [
+      ".csproj",
+      ".proj",
+      ".sln",
+      ".cs"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 11,
+    "text": "File soluzione?",
+    "options": [
+      ".sln",
+      ".sol",
+      ".proj",
+      ".all"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 12,
+    "text": "ORM Microsoft?",
+    "options": [
+      "Entity Framework",
+      "Hibernate",
+      "Dapper",
+      "Prisma"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 13,
+    "text": "Micro ORM popolare?",
+    "options": [
+      "Dapper",
+      "EF",
+      "ADO",
+      "SQL"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 14,
+    "text": "Framework UI Desktop?",
+    "options": [
+      "WPF / WinUI",
+      "React",
+      "Vue",
+      "Swing"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 15,
+    "text": "Framework Cross-Platform UI?",
+    "options": [
+      "MAUI / Xamarin",
+      "Flutter",
+      "Ionic",
+      "Cordova"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 16,
+    "text": "Razor?",
+    "options": [
+      "View Engine",
+      "Database",
+      "Server",
+      "API"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 17,
+    "text": "Blazor?",
+    "options": [
+      "Web UI C# (WASM/Server)",
+      "Gioco",
+      "Browser",
+      "Linter"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 18,
+    "text": "Kestrel?",
+    "options": [
+      "Web Server cross-platform",
+      "Uccello",
+      "DB",
+      "Client"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 19,
+    "text": "IIS?",
+    "options": [
+      "Internet Information Services",
+      "Server Linux",
+      "Cloud",
+      "DB"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "text": "Dependency Injection?",
+    "options": [
+      "Nativa in .NET Core",
+      "Opzionale",
+      "Esterna",
+      "No"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 21,
+    "text": "appsettings.json?",
+    "options": [
+      "Configurazione",
+      "Codice",
+      "Log",
+      "Database"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 22,
+    "text": "Startup.cs / Program.cs?",
+    "options": [
+      "Configurazione avvio",
+      "File temp",
+      "Test",
+      "View"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 23,
+    "text": "Middleware pipeline?",
+    "options": [
+      "Gestione richieste HTTP",
+      "Tubi",
+      "Hardware",
+      "Database"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 24,
+    "text": "CLI tool?",
+    "options": [
+      "dotnet",
+      "csc",
+      "msbuild",
+      "nuget"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 25,
+    "text": "Standard Library?",
+    "options": [
+      ".NET Standard",
+      "Core Lib",
+      "Base Lib",
+      "Root"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 26,
+    "text": "Autenticazione standard?",
+    "options": [
+      "Identity",
+      "Passport",
+      "Auth0",
+      "Login"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 27,
+    "text": "SignalR?",
+    "options": [
+      "Real-time web",
+      "Segnali",
+      "Radio",
+      "Database"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 28,
+    "text": "Web API controller base?",
+    "options": [
+      "ControllerBase",
+      "Controller",
+      "API",
+      "Base"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 29,
+    "text": "MVC controller base?",
+    "options": [
+      "Controller",
+      "View",
+      "Model",
+      "Base"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 30,
+    "text": "LINQ?",
+    "options": [
+      "Language Integrated Query",
+      "Link",
+      "List",
+      "Loop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 31,
+    "text": "GAC?",
+    "options": [
+      "Global Assembly Cache",
+      "Game",
+      "Gui",
+      "General"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 32,
+    "text": "Strong naming?",
+    "options": [
+      "Firma assembly univoca",
+      "Nome forte",
+      "Bold",
+      "Security"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 33,
+    "text": "Reflection?",
+    "options": [
+      "Ispezione metadati runtime",
+      "Specchio",
+      "Riflesso",
+      "Clone"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 34,
+    "text": "Attributes?",
+    "options": [
+      "Metadati [Attribute]",
+      "Commenti",
+      "Variabili",
+      "Classi"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 35,
+    "text": "Roslyn?",
+    "options": [
+      "Compiler Platform",
+      "Rose",
+      "Nome code",
+      "IDE"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 36,
+    "text": "Metapackage?",
+    "options": [
+      "Pacchetto di pacchetti",
+      "Meta dati",
+      "Facebook",
+      "Grosso"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 37,
+    "text": "LTS version?",
+    "options": [
+      "Supporto lungo termine",
+      "Ultima",
+      "Beta",
+      "Alpha"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 38,
+    "text": "Current version?",
+    "options": [
+      "Supporto breve termine",
+      "Vecchia",
+      "LTS",
+      "Stabile"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 39,
+    "text": "JIT compilation avviene?",
+    "options": [
+      "Al runtime",
+      "Build time",
+      "Coding time",
+      "Never"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 40,
+    "text": "AOT compilation?",
+    "options": [
+      "Ahead-of-Time",
+      "At One Time",
+      "Always",
+      "After"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 41,
+    "text": "Native AOT?",
+    "options": [
+      "Compilazione nativa (no JIT)",
+      "Ibrida",
+      "Web",
+      "Mobile"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 42,
+    "text": "IL Trimming?",
+    "options": [
+      "Riduce dimensione app",
+      "Taglia capelli",
+      "Formatta",
+      "Pulisce"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 43,
+    "text": "Single File Publish?",
+    "options": [
+      "Tutto in un exe",
+      "Zip",
+      "Installer",
+      "Folder"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 44,
+    "text": "Self-contained deployment?",
+    "options": [
+      "Include runtime .NET",
+      "Serve .NET installato",
+      "Web only",
+      "Docker"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 45,
+    "text": "Framework-dependent?",
+    "options": [
+      "Richiede runtime installato",
+      "Include tutto",
+      "Portable",
+      "USB"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 46,
+    "text": "Docker support?",
+    "options": [
+      "Ottimo (immagini ufficiali)",
+      "Nullo",
+      "Scarso",
+      "Solo Windows"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 47,
+    "text": "Windows Forms?",
+    "options": [
+      "UI Desktop Legacy",
+      "Web",
+      "Mobile",
+      "Console"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 48,
+    "text": "WCF?",
+    "options": [
+      "Windows Communication Foundation",
+      "Web",
+      "Wifi",
+      "World"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 49,
+    "text": "gRPC in .NET?",
+    "options": [
+      "Supportato e veloce",
+      "No",
+      "Lento",
+      "Solo client"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 50,
+    "text": "OpenAPI / Swagger?",
+    "options": [
+      "Documentazione API",
+      "Open source",
+      "Database",
+      "Sicurezza"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 51,
+    "text": "Minimal APIs?",
+    "options": [
+      "API senza controller",
+      "Micro",
+      "Piccole",
+      "Private"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 52,
+    "text": "Hot Reload?",
+    "options": [
+      "Modifiche codice live",
+      "Riavvio pc",
+      "Riscaldamento",
+      "Cache"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 53,
+    "text": "Top-level statements?",
+    "options": [
+      "Main senza boilerplate",
+      "Variabili globali",
+      "Import",
+      "Classi"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 54,
+    "text": "Global usings?",
+    "options": [
+      "Import globali per progetto",
+      "Mondo",
+      "Variabili",
+      "Metodi"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 55,
+    "text": "Implicit usings?",
+    "options": [
+      "Namespace comuni auto-importati",
+      "Nascosti",
+      "Errori",
+      "Magia"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 56,
+    "text": "Record types?",
+    "options": [
+      "Dati immutabili concisi",
+      "Registratore",
+      "Database",
+      "Log"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 57,
+    "text": "Nullable reference types?",
+    "options": [
+      "Evita NullReferenceException",
+      "Tipi nulli",
+      "Possibili errori",
+      "Bug"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 58,
+    "text": "Pattern matching?",
+    "options": [
+      "Switch avanzato/is",
+      "Regex",
+      "Design patterns",
+      "Colori"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 59,
+    "text": "Span<T>?",
+    "options": [
+      "Accesso memoria efficiente",
+      "Durata",
+      "Ponte",
+      "Tag HTML"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 60,
+    "text": "Memory<T>?",
+    "options": [
+      "Simile a Span ma heap/async",
+      "RAM",
+      "Cache",
+      "Ricordo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 61,
+    "text": "ValueTask?",
+    "options": [
+      "Task efficiente per allocazioni",
+      "Valore",
+      "Lavoro",
+      "Thread"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 62,
+    "text": "IAsyncEnumerable?",
+    "options": [
+      "Streaming asincrono",
+      "Lista",
+      "Enum",
+      "Loop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 63,
+    "text": "Channels?",
+    "options": [
+      "Produttore/Consumatore thread-safe",
+      "TV",
+      "Canali IRC",
+      "Network"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 64,
+    "text": "System.Text.Json?",
+    "options": [
+      "JSON parser performante",
+      "Testo",
+      "Editor",
+      "File"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 65,
+    "text": "Newtonsoft.Json?",
+    "options": [
+      "JSON.NET (storico)",
+      "Nuovo",
+      "Standard",
+      "Lento"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 66,
+    "text": "HttpClient?",
+    "options": [
+      "Client HTTP",
+      "Server",
+      "Browser",
+      "HTML"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 67,
+    "text": "IHttpClientFactory?",
+    "options": [
+      "Gestione instance HttpClient",
+      "Fabbrica",
+      "Interfaccia",
+      "Mock"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 68,
+    "text": "Polly?",
+    "options": [
+      "Resilienza e retries",
+      "Pappagallo",
+      "Polling",
+      "Polymer"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 69,
+    "text": "Serilog?",
+    "options": [
+      "Logging strutturato",
+      "Serio",
+      "Serie",
+      "Logica"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 70,
+    "text": "NLog / log4net?",
+    "options": [
+      "Alternative logging",
+      "Network",
+      "Login",
+      "Blog"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 71,
+    "text": "xUnit / NUnit / MSTest?",
+    "options": [
+      "Framework testing",
+      "Algebra",
+      "Unitari",
+      "Esami"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 72,
+    "text": "Moq / NSubstitute?",
+    "options": [
+      "Mocking libraries",
+      "Giochi",
+      "Sostituti",
+      "Null"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 73,
+    "text": "BenchmarkDotNet?",
+    "options": [
+      "Misura performance",
+      "Panchina",
+      "Rete",
+      "Test"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 74,
+    "text": "YARP?",
+    "options": [
+      "Yet Another Reverse Proxy",
+      "Urlo",
+      "ARP",
+      "Protocollo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 75,
+    "text": "Ocelot?",
+    "options": [
+      "API Gateway",
+      "Gatto",
+      "Proxy",
+      "Animale"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 76,
+    "text": "IdentityServer / Duende?",
+    "options": [
+      "OpenID Connect / OAuth2",
+      "Server",
+      "Identità",
+      "Sicurezza"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 77,
+    "text": "Quartz.NET / Hangfire?",
+    "options": [
+      "Job scheduling",
+      "Orologi",
+      "Fuoco",
+      "Appese"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 78,
+    "text": "AutoMapper?",
+    "options": [
+      "Mappatura oggetti",
+      "Mappa auto",
+      "Navigatore",
+      "Automatico"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 79,
+    "text": "FluentValidation?",
+    "options": [
+      "Validazione regole",
+      "Fluente",
+      "Lingua",
+      "Valuta"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 80,
+    "text": "MediatR?",
+    "options": [
+      "Mediator pattern",
+      "Media",
+      "Router",
+      "Social"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 81,
+    "text": "CQRS?",
+    "options": [
+      "Command Query Responsibility Segregation",
+      "Codice",
+      "Query",
+      "Server"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 82,
+    "text": "Event Sourcing?",
+    "options": [
+      "Stato come sequenza eventi",
+      "Eventi",
+      "Sorgente",
+      "Click"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 83,
+    "text": "Microservices in .NET?",
+    "options": [
+      "Comune e supportato",
+      "Sconsigliato",
+      "Impossibile",
+      "Lento"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 84,
+    "text": "Tye?",
+    "options": [
+      "Tool sviluppo microservizi",
+      "Cravatta",
+      "Tipo",
+      "Toy"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 85,
+    "text": "Aspire?",
+    "options": [
+      "Cloud native stack",
+      "Aspirare",
+      "Sperare",
+      "Respiro"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 86,
+    "text": "Reverse Proxy Kestrel?",
+    "options": [
+      "Possibile",
+      "No",
+      "Solo con IIS",
+      "Nginx"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 87,
+    "text": "Health Checks?",
+    "options": [
+      "Monitoraggio stato app",
+      "Salute",
+      "Medicina",
+      "Check"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 88,
+    "text": "Data Protection API?",
+    "options": [
+      "Crittografia dati",
+      "Privacy",
+      "GDPR",
+      "Backup"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 89,
+    "text": "Secrets Manager?",
+    "options": [
+      "Gestione segreti dev",
+      "Password",
+      "007",
+      "Nascosto"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 90,
+    "text": "Environment Variables?",
+    "options": [
+      "Configurazione ambiente",
+      "Meteo",
+      "Variabili",
+      "Global"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 91,
+    "text": "IOptions pattern?",
+    "options": [
+      "Accesso configurazione tipizzato",
+      "Opzioni",
+      "Scelte",
+      "Settings"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 92,
+    "text": "DI Scopes?",
+    "options": [
+      "Transient, Scoped, Singleton",
+      "Global, Local",
+      "Public, Private",
+      "Static"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 93,
+    "text": "Singleton lifetime?",
+    "options": [
+      "Una istanza per app",
+      "Una per richiesta",
+      "Sempre nuova",
+      "Mai"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 94,
+    "text": "Scoped lifetime?",
+    "options": [
+      "Una istanza per richiesta HTTP",
+      "Per app",
+      "Per thread",
+      "Per utente"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 95,
+    "text": "Transient lifetime?",
+    "options": [
+      "Nuova istanza ogni iniezione",
+      "Temporaneo",
+      "Fugace",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 96,
+    "text": "BackgroundService?",
+    "options": [
+      "Task in background",
+      "Sfondo",
+      "Servizio",
+      "Daemon"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 97,
+    "text": "IHostedService?",
+    "options": [
+      "Start/Stop logica",
+      "Host",
+      "Web",
+      "Cloud"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 98,
+    "text": "Worker Service template?",
+    "options": [
+      "Project long-running",
+      "Lavoratore",
+      "Operaio",
+      "Job"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 99,
+    "text": "dotnet build?",
+    "options": [
+      "Compila progetto",
+      "Costruisce",
+      "Esegue",
+      "Pulisce"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 100,
+    "text": "dotnet watch?",
+    "options": [
+      "Riavvia a modifiche",
+      "Guarda",
+      "Orologio",
+      "Timer"
+    ],
+    "correct": 1
+  }
+]

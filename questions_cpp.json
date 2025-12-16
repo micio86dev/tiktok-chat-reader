@@ -1,0 +1,1102 @@
+[
+  {
+    "id": 1,
+    "text": "Operatore accesso puntatore?",
+    "options": [
+      "->",
+      ".",
+      "::",
+      ":"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 2,
+    "text": "Eredita da classe?",
+    "options": [
+      ": public Base",
+      "extends Base",
+      "inherits Base",
+      "implements"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 3,
+    "text": "Cout stampa?",
+    "options": [
+      "cout <<",
+      "cout >>",
+      "print",
+      "echo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 4,
+    "text": "Cin legge?",
+    "options": [
+      "cin >>",
+      "cin <<",
+      "read",
+      "scan"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 5,
+    "text": "Distruggere oggetto new?",
+    "options": [
+      "delete",
+      "free",
+      "remove",
+      "kill"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 6,
+    "text": "Allocare array din?",
+    "options": [
+      "new int[]",
+      "malloc",
+      "alloc",
+      "calloc"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 7,
+    "text": "Deallocare array?",
+    "options": [
+      "delete[]",
+      "delete",
+      "free",
+      "remove"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 8,
+    "text": "Riferimento sintassi?",
+    "options": [
+      "int &x",
+      "int *x",
+      "ref int",
+      "pointer"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 9,
+    "text": "Costruttore copia?",
+    "options": [
+      "C(const C&)",
+      "C(C)",
+      "C()",
+      "Copy()"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 10,
+    "text": "Distruttore virtuale?",
+    "options": [
+      "virtual ~C()",
+      "~C()",
+      "delete()",
+      "end()"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 11,
+    "text": "Funzione virtuale pura?",
+    "options": [
+      "= 0",
+      "abstract",
+      "null",
+      "void"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 12,
+    "text": "Classe astratta?",
+    "options": [
+      "Almeno 1 func pura",
+      "Abstract keyword",
+      "Interface",
+      "Virtual"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 13,
+    "text": "This pointer?",
+    "options": [
+      "Puntatore a oggetto corrente",
+      "Riferimento",
+      "Valore",
+      "Null"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 14,
+    "text": "Namespace?",
+    "options": [
+      "Raggruppa nomi",
+      "Classe",
+      "File",
+      "Cartella"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 15,
+    "text": "Using namespace std?",
+    "options": [
+      "Importa std",
+      "Usa standard",
+      "Libreria",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 16,
+    "text": "Stl vector?",
+    "options": [
+      "Array dinamico",
+      "Vettore mate",
+      "Puntatore",
+      "Lista"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 17,
+    "text": "Map?",
+    "options": [
+      "Albero RB (Key-Val)",
+      "Hash map",
+      "Lista",
+      "Array"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 18,
+    "text": "Unordered maps?",
+    "options": [
+      "Hash table",
+      "Tree",
+      "List",
+      "Set"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 19,
+    "text": "Iterator?",
+    "options": [
+      "Puntatore generalizzato",
+      "Indice",
+      "Loop",
+      "Cursore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 20,
+    "text": "Auto keyword?",
+    "options": [
+      "Inferenza tipo",
+      "Automatico",
+      "Macchina",
+      "Int"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 21,
+    "text": "Constexpr?",
+    "options": [
+      "Valutato compile-time",
+      "Const",
+      "Static",
+      "Veloce"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 22,
+    "text": "Nullptr?",
+    "options": [
+      "Puntatore nullo type-safe",
+      "NULL",
+      "0",
+      "Void"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 23,
+    "text": "Lambda?",
+    "options": [
+      "[](){}",
+      "lambda",
+      "func",
+      "->"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 24,
+    "text": "Capture list lambda?",
+    "options": [
+      "[=], [&]",
+      "()",
+      "{}",
+      "<>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 25,
+    "text": "Smart pointers header?",
+    "options": [
+      "<memory>",
+      "<ptr>",
+      "<smart>",
+      "<alloc>"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 26,
+    "text": "Unique_ptr?",
+    "options": [
+      "Possesso esclusivo",
+      "Condiviso",
+      "Debole",
+      "Nullo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 27,
+    "text": "Shared_ptr?",
+    "options": [
+      "Possesso condiviso (Ref count)",
+      "Unico",
+      "Weak",
+      "Raw"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 28,
+    "text": "Weak_ptr?",
+    "options": [
+      "Osservatore non possedente",
+      "Debole",
+      "Lento",
+      "Null"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 29,
+    "text": "Move semantics?",
+    "options": [
+      "Trasferisce risorse (&&)",
+      "Copia",
+      "Cancella",
+      "Sposta"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 30,
+    "text": "Rvalue reference?",
+    "options": [
+      "Tipo &&",
+      "Tipo &",
+      "Tipo *",
+      "Tipo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 31,
+    "text": "Std::move?",
+    "options": [
+      "Cast a rvalue",
+      "Sposta memoria",
+      "Copia",
+      "Muove file"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 32,
+    "text": "Template?",
+    "options": [
+      "Programmazione generica",
+      "Modello",
+      "Classe",
+      "Macro"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 33,
+    "text": "Try catch?",
+    "options": [
+      "Gestione eccezioni",
+      "Test",
+      "Loop",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 34,
+    "text": "Throw?",
+    "options": [
+      "Lancia eccezione",
+      "Butta",
+      "Ritorna",
+      "Salta"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 35,
+    "text": "RAII?",
+    "options": [
+      "Resource Acquisition Is Initialization",
+      "Random",
+      "AI",
+      "Array"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 36,
+    "text": "Friend class?",
+    "options": [
+      "Accede membri privati",
+      "Amico",
+      "Pubblico",
+      "Parent"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 37,
+    "text": "Operator overloading?",
+    "options": [
+      "Ridefinire operatori",
+      "Sovraccarico",
+      "Errore",
+      "Loop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 38,
+    "text": "Functor?",
+    "options": [
+      "Oggetto chiamabile ()",
+      "Funzione",
+      "Puntatore",
+      "Metodo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 39,
+    "text": "Inline?",
+    "options": [
+      "Suggerisce espansione",
+      "In linea",
+      "Interno",
+      "Veloce"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 40,
+    "text": "Static member?",
+    "options": [
+      "Condiviso da istanze",
+      "Fisso",
+      "Globale",
+      "Locale"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 41,
+    "text": "Const member function?",
+    "options": [
+      "Non modifica oggetto",
+      "Costante",
+      "Statico",
+      "Puro"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 42,
+    "text": "Mutable keyword?",
+    "options": [
+      "Modifica in const func",
+      "Mutabile",
+      "Variabile",
+      "Muto"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 43,
+    "text": "Extern C?",
+    "options": [
+      "Linkage C",
+      "Esterno",
+      "Export",
+      "Import"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 44,
+    "text": "Header guards?",
+    "options": [
+      "#ifndef #define",
+      "GUARD",
+      "Once",
+      "Lock"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 45,
+    "text": "Pragma once?",
+    "options": [
+      "Include once non-standard",
+      "Standard",
+      "Errore",
+      "Loop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 46,
+    "text": "Sizeof char?",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "8"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 47,
+    "text": "Std::string?",
+    "options": [
+      "Classe stringa",
+      "char*",
+      "Array",
+      "Lista"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 48,
+    "text": "String c_str()?",
+    "options": [
+      "Ritorna const char*",
+      "Copia",
+      "Stampa",
+      "Null"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 49,
+    "text": "Vector push_back?",
+    "options": [
+      "Aggiunge in coda",
+      "Rimuove",
+      "Inserisce",
+      "Spinge"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 50,
+    "text": "Vector size vs capacity?",
+    "options": [
+      "Elem attuali vs Memoria allocata",
+      "Uguali",
+      "Lunghezza",
+      "Peso"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 51,
+    "text": "Std::array?",
+    "options": [
+      "Array dimensione fissa stack",
+      "Vector",
+      "Lista",
+      "Heap"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 52,
+    "text": "Std::list?",
+    "options": [
+      "Lista doppiamente linkata",
+      "Array",
+      "Vector",
+      "Set"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 53,
+    "text": "Std::set?",
+    "options": [
+      "Elementi unici ordinati",
+      "Lista",
+      "Map",
+      "Multi"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 54,
+    "text": "Std::pair?",
+    "options": [
+      "Coppia valori",
+      "Due",
+      "Link",
+      "Map"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 55,
+    "text": "Std::tuple?",
+    "options": [
+      "N valori eterogenei",
+      "Coppia",
+      "Triple",
+      "Array"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 56,
+    "text": "Std::sort?",
+    "options": [
+      "Ordina range",
+      "Cerca",
+      "Filtra",
+      "Mischia"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 57,
+    "text": "Std::find?",
+    "options": [
+      "Cerca elemento",
+      "Trova file",
+      "Ordina",
+      "Conta"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 58,
+    "text": "Std::cout << endl?",
+    "options": [
+      "Newline + flush",
+      "Solo newline",
+      "Solo flush",
+      "Fine"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 59,
+    "text": "C++11 novità?",
+    "options": [
+      "Auto, lambda, smart ptr...",
+      "Classi",
+      "Template",
+      "Loop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 60,
+    "text": "C++14 novità?",
+    "options": [
+      "Binary literals, auto return...",
+      "Moduli",
+      "Concetti",
+      "GC"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 61,
+    "text": "C++17 novità?",
+    "options": [
+      "Filesystem, optional, variant...",
+      "Net",
+      "Gui",
+      "Web"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 62,
+    "text": "C++20 novità?",
+    "options": [
+      "Modules, coroutines, concepts...",
+      "Reflection",
+      "Rust",
+      "Java"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 63,
+    "text": "Std::optional?",
+    "options": [
+      "Valore che può non esserci",
+      "Opzione",
+      "Scelta",
+      "Null"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 64,
+    "text": "Std::variant?",
+    "options": [
+      "Type-safe union",
+      "Variabile",
+      "Oggetto",
+      "Lista"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 65,
+    "text": "Std::any?",
+    "options": [
+      "Contiene qualsiasi tipo",
+      "Tutto",
+      "Void*",
+      "Auto"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 66,
+    "text": "Diamond problem?",
+    "options": [
+      "Ereditarietà multipla ambigua",
+      "Diamante",
+      "Gemma",
+      "Forma"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 67,
+    "text": "Virtual inheritance?",
+    "options": [
+      "Risolve diamond problem",
+      "Eredita virtual",
+      "Finto",
+      "Base"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 68,
+    "text": "Static_cast?",
+    "options": [
+      "Cast compile time sicuro",
+      "Dinamico",
+      "Reinterpret",
+      "Const"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 69,
+    "text": "Dynamic_cast?",
+    "options": [
+      "Cast runtime (polimorfico)",
+      "Statico",
+      "Veloce",
+      "Insicuro"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 70,
+    "text": "Reinterpret_cast?",
+    "options": [
+      "Cast bit a bit (low level)",
+      "Sicuro",
+      "Dinamico",
+      "Logico"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 71,
+    "text": "Const_cast?",
+    "options": [
+      "Rimuove/agg const",
+      "Cast",
+      "Copia",
+      "Move"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 72,
+    "text": "RTTI?",
+    "options": [
+      "Run-Time Type Information",
+      "Ritorno",
+      "Tipo",
+      "Info"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 73,
+    "text": "Typeid operator?",
+    "options": [
+      "Ottiene type_info",
+      "Id",
+      "Nome",
+      "Size"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 74,
+    "text": "Delete copy constructor?",
+    "options": [
+      "C(const C&) = delete;",
+      "No copy",
+      "Private",
+      "Void"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 75,
+    "text": "Default constructor?",
+    "options": [
+      "C() = default;",
+      "Vuoto",
+      "Base",
+      "Init"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 76,
+    "text": "Explicit keyword?",
+    "options": [
+      "Previene conversioni implicite",
+      "Esplicito",
+      "Chiaro",
+      "Pubblico"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 77,
+    "text": "Final keyword?",
+    "options": [
+      "Impedisce override/er",
+      "Finale",
+      "Ultimo",
+      "Costante"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 78,
+    "text": "Override keyword?",
+    "options": [
+      "Verifica override corretto",
+      "Sovrascrive",
+      "Nuovo",
+      "Super"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 79,
+    "text": "Noexcept?",
+    "options": [
+      "Funzione non lancia eccezioni",
+      "Forse",
+      "Sì",
+      "Errore"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 80,
+    "text": "Std::thread?",
+    "options": [
+      "Gestione thread",
+      "Processo",
+      "Task",
+      "Async"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 81,
+    "text": "Join thread?",
+    "options": [
+      "Attende terminazione thread",
+      "Unisce",
+      "Link",
+      "Start"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 82,
+    "text": "Detach thread?",
+    "options": [
+      "Esegue in background",
+      "Stacca",
+      "Cancella",
+      "Ferma"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 83,
+    "text": "Mutex?",
+    "options": [
+      "Mutual exclusion",
+      "Musica",
+      "Multi",
+      "Muto"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 84,
+    "text": "Lock_guard?",
+    "options": [
+      "RAII lock mutex",
+      "Guardia",
+      "Chiave",
+      "Sicurezza"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 85,
+    "text": "Unique_lock?",
+    "options": [
+      "Lock flessibile",
+      "Unico",
+      "Fisso",
+      "Rapido"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 86,
+    "text": "Condition variable?",
+    "options": [
+      "Sincronizzazione thread attesa",
+      "Condizione",
+      "If",
+      "Loop"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 87,
+    "text": "Atomic?",
+    "options": [
+      "Operazioni thread-safe",
+      "Bomba",
+      "Veloce",
+      "Piccolo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 88,
+    "text": "Std::future?",
+    "options": [
+      "Risultato asincrono",
+      "Futuro",
+      "Task",
+      "Promise"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 89,
+    "text": "Std::async?",
+    "options": [
+      "Lancia task asincrono",
+      "Sync",
+      "Thread",
+      "Wait"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 90,
+    "text": "Std::function?",
+    "options": [
+      "Wrapper callable generico",
+      "Funzione",
+      "Puntatore",
+      "Metodo"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 91,
+    "text": "Std::bind?",
+    "options": [
+      "Lega argomenti funzione",
+      "Colla",
+      "Link",
+      "Unisce"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 92,
+    "text": "Placement new?",
+    "options": [
+      "Costruisce su memoria già allocata",
+      "Nuovo",
+      "Heap",
+      "Stack"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 93,
+    "text": "Vtable?",
+    "options": [
+      "Tabella funzioni virtuali",
+      "Vettore",
+      "Valore",
+      "Variabile"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 94,
+    "text": "Vptr?",
+    "options": [
+      "Puntatore a vtable",
+      "Void ptr",
+      "Value ptr",
+      "Virtual"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 95,
+    "text": "Name mangling?",
+    "options": [
+      "Codifica nomi funzioni (overload)",
+      "Criptazione",
+      "Errore",
+      "Link"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 96,
+    "text": "Pimpl idiom?",
+    "options": [
+      "Pointer to implementation",
+      "Semplice",
+      "Template",
+      "Pattern"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 97,
+    "text": "Rule of Three?",
+    "options": [
+      "Destructor, Copy Ctor, Copy Assign",
+      "3 regole",
+      "Tre classi",
+      "Tre puntatori"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 98,
+    "text": "Rule of Five?",
+    "options": [
+      "+ Move Ctor, Move Assign",
+      "5 regole",
+      "Cinque",
+      "Classi"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 99,
+    "text": "Std::chrono?",
+    "options": [
+      "Libreria tempo",
+      "Crono",
+      "Timer",
+      "Data"
+    ],
+    "correct": 1
+  },
+  {
+    "id": 100,
+    "text": "Std::filesystem?",
+    "options": [
+      "Gestione file e path",
+      "File",
+      "Sistema",
+      "Disco"
+    ],
+    "correct": 1
+  }
+]
