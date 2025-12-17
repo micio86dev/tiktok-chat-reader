@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TikTok/YouTube Live Quiz</title>
+  <title>MicioDev Live Games</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
   <div id="app">
     <!-- Header -->
     <header>
-      <h1>TikTok/YouTube Live Quiz</h1>
+      <h1>MicioDev Live Games</h1>
     </header>
 
     <main>
@@ -63,54 +63,110 @@
         <!-- Menu Overlay -->
         <div class="stats-overlay" v-if="showMenu">
           <div class="stats-content">
-            <h3 class="stats-title">Scegli Argomento</h3>
-            <div class="menu-grid">
-              <button class="topic-btn" @click="startQuiz('js')">
-                JavaScript
-              </button>
-              <button class="topic-btn" @click="startQuiz('php')">
-                PHP
-              </button>
-              <button class="topic-btn" @click="startQuiz('python')">
-                Python
-              </button>
-              <button class="topic-btn" @click="startQuiz('java')">
-                Java
-              </button>
-              <button class="topic-btn" @click="startQuiz('html')">
-                HTML
-              </button>
-              <button class="topic-btn" @click="startQuiz('css')">
-                CSS
-              </button>
-              <button class="topic-btn" @click="startQuiz('cpp')">
-                C++
-              </button>
-              <button class="topic-btn" @click="startQuiz('csharp')">
-                C#
-              </button>
-              <button class="topic-btn" @click="startQuiz('dotnet')">
-                .NET
-              </button>
-              <button class="topic-btn" @click="startQuiz('c')">
-                C
-              </button>
-              <button class="topic-btn" @click="startQuiz('react')">
-                React
-              </button>
-              <button class="topic-btn" @click="startQuiz('vue')">
-                Vue
-              </button>
-              <button class="topic-btn" @click="startQuiz('node')">
-                Node.js
-              </button>
-              <button class="topic-btn" @click="startQuiz('go')">
-                Go
-              </button>
-              <button class="topic-btn" @click="startQuiz('rust')">
-                Rust
-              </button>
+            <!-- Game Selection Step -->
+            <div v-if="menuStep === 'GAME_SELECT'">
+              <h3 class="stats-title">Scegli Gioco</h3>
+              <div class="menu-grid" style="grid-template-columns: 1fr 1fr;">
+                <button class="topic-btn" @click="selectGame('QUIZ')">
+                  🧠 Quiz
+                </button>
+                <button class="topic-btn" @click="selectGame('BATTLESHIP')">
+                  🚢 Battaglia Navale
+                </button>
+              </div>
             </div>
+
+            <!-- Quiz Topic Selection Step -->
+            <div v-else-if="menuStep === 'TOPIC_SELECT'">
+              <h3 class="stats-title">Scegli Argomento</h3>
+              <div class="menu-grid">
+                <button class="topic-btn" @click="startQuiz('js')">
+                  JavaScript
+                </button>
+                <button class="topic-btn" @click="startQuiz('php')">
+                  PHP
+                </button>
+                <button class="topic-btn" @click="startQuiz('python')">
+                  Python
+                </button>
+                <button class="topic-btn" @click="startQuiz('java')">
+                  Java
+                </button>
+                <button class="topic-btn" @click="startQuiz('html')">
+                  HTML
+                </button>
+                <button class="topic-btn" @click="startQuiz('css')">
+                  CSS
+                </button>
+                <button class="topic-btn" @click="startQuiz('cpp')">
+                  C++
+                </button>
+                <button class="topic-btn" @click="startQuiz('csharp')">
+                  C#
+                </button>
+                <button class="topic-btn" @click="startQuiz('dotnet')">
+                  .NET
+                </button>
+                <button class="topic-btn" @click="startQuiz('c')">
+                  C
+                </button>
+                <button class="topic-btn" @click="startQuiz('react')">
+                  React
+                </button>
+                <button class="topic-btn" @click="startQuiz('vue')">
+                  Vue
+                </button>
+                <button class="topic-btn" @click="startQuiz('node')">
+                  Node.js
+                </button>
+                <button class="topic-btn" @click="startQuiz('go')">
+                  Go
+                </button>
+                <button class="topic-btn" @click="startQuiz('rust')">
+                  Rust
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Battleship Area -->
+        <div class="battleship-container" v-if="activeGameMode === 'BATTLESHIP'">
+          <div class="quiz-instructions">
+            Spara scrivendo coordinate! (es. <span class="highlight">A5</span>, <span class="highlight">C8</span>)
+          </div>
+
+          <div class="battleship-status">
+            <div class="status-item">Missili: <span class="highlight">{{ battleshipStats?.totalShots || 0 }}</span>
+            </div>
+            <div class="status-item">Navi Affondate: <span class="highlight">{{ battleshipStats?.sunkShips || 0
+                }}/5</span></div>
+          </div>
+
+          <div class="battleship-grid">
+            <!-- Header Row (A-J) -->
+            <div class="grid-row header">
+              <div class="grid-cell label"></div>
+              <div class="grid-cell label" v-for="col in ['A','B','C','D','E','F','G','H','I','J']">{{col}}</div>
+            </div>
+            <!-- Rows 1-10 -->
+            <div class="grid-row" v-for="(row, rIndex) in battleshipGrid" :key="rIndex">
+              <div class="grid-cell label">{{ rIndex + 1 }}</div>
+              <div class="grid-cell" v-for="(cell, cIndex) in row" :key="cIndex" :class="{
+                              'cell-water': cell === 0,
+                              'cell-ship': cell === 1,
+                              'cell-hit': cell === 2,
+                              'cell-miss': cell === 3
+                          }">
+                <!-- Optional: Animation/Icon -->
+                <span v-if="cell === 2">💥</span>
+                <span v-if="cell === 3">🌊</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="last-action" v-if="battleshipStats?.lastResult">
+            {{ battleshipStats.lastShooter }}: {{ battleshipStats.lastResult }}
           </div>
         </div>
 

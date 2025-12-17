@@ -40,6 +40,12 @@ createApp({
         };
 
         const showMenu = ref(false);
+        const menuStep = ref('GAME_SELECT'); // GAME_SELECT, TOPIC_SELECT
+        const activeGameMode = ref('MENU'); // MENU, QUIZ, BATTLESHIP
+
+        // Battleship State
+        const battleshipGrid = ref([]);
+        const battleshipStats = ref(null);
 
         // Auto Restart Countdown
         const restartCountdown = ref(null);
@@ -59,6 +65,7 @@ createApp({
             socket.on("showMenu", () => {
                 clearRestartCountdown();
                 showMenu.value = true;
+                menuStep.value = 'GAME_SELECT'; // Default to game select
                 stats.value = null;
                 isQuizActive.value = false;
                 currentQuestion.value = null;
@@ -66,6 +73,9 @@ createApp({
                 timer.value = "00:00";
                 currentTopic.value = '';
                 questionCounter.value = '';
+                activeGameMode.value = 'MENU';
+                battleshipGrid.value = [];
+                battleshipStats.value = null;
             });
 
             // New Question
@@ -73,6 +83,7 @@ createApp({
                 clearRestartCountdown();
                 showMenu.value = false; // Ensure menu is hidden
                 console.log("New Question:", q);
+                activeGameMode.value = 'QUIZ';
                 currentQuestion.value = q.question;
                 options.value = q.options;
                 stats.value = null; // Reset stats
@@ -92,6 +103,28 @@ createApp({
                 stats.value = res;
                 isQuizActive.value = false;
                 clearInterval(countdownInterval);
+            });
+
+            // Battleship Events
+            socket.on("battleshipState", (state) => {
+                console.log("Battleship State:", state);
+                activeGameMode.value = 'BATTLESHIP';
+                showMenu.value = false;
+                battleshipGrid.value = state.grid;
+                battleshipStats.value = state.stats;
+            });
+
+            socket.on("battleshipUpdate", (update) => {
+                // update.row, update.col, update.status
+                if (battleshipGrid.value[update.row]) {
+                    battleshipGrid.value[update.row][update.col] = update.status;
+                }
+                battleshipStats.value = update.stats;
+            });
+
+            socket.on("battleshipGameOver", (data) => {
+                battleshipStats.value = data.stats;
+                // maybe show a modal?
             });
         });
 
@@ -177,6 +210,16 @@ createApp({
             socket.emit("startQuiz", topic);
         };
 
+        const selectGame = (game) => {
+            if (game === 'QUIZ') {
+                menuStep.value = 'TOPIC_SELECT';
+            } else if (game === 'BATTLESHIP') {
+                clearRestartCountdown();
+                showMenu.value = false;
+                socket.emit("startBattleship");
+            }
+        };
+
         return {
             currentQuestion,
             options,
@@ -194,7 +237,14 @@ createApp({
             showMenu,
             startQuiz,
             restartCountdown,
-            topicSelection
+            topicSelection,
+
+            // Battleship exports
+            menuStep,
+            activeGameMode,
+            battleshipGrid,
+            battleshipStats,
+            selectGame
         };
     }
 }).mount('#app');

@@ -23,8 +23,7 @@ let questionTimer = null;
 const timerDuration = 60; // Seconds
 const maxQuestions = 10;
 
-// --- QUIZ MULTIPLE DOMANDE ---
-// --- QUIZ MULTIPLE DOMANDE ---
+// --- QUIZ ---
 let questions = [];
 
 let currentQuestion = null;
@@ -32,27 +31,48 @@ let responses = {};
 let globalScores = {};
 let questionStats = []; // Array to store stats for each question
 let gameState = "MENU"; // MENU, PLAYING, FINISHED
+let activeGameMode = "MENU"; // MENU, QUIZ, BATTLESHIP
 let currentTopic = "";
+
+// --- BATTLESHIP DATA ---
+let battleshipGrid = []; // Server side grid (0: Empty, 1: Ship, 2: Hit, 3: Miss)
+let battleshipShips = [];
+let battleshipHistory = new Set();
+let battleshipStats = {
+  totalShots: 0,
+  hits: 0,
+  misses: 0,
+  sunkShips: 0,
+  lastShooter: null,
+  lastResult: null // "HIT", "MISS", "SUNK", "WIN"
+};
 
 // --- CONNESSIONE CLIENT ---
 io.on("connection", (socket) => {
   console.log("Nuovo client connesso");
 
-  if (gameState === "MENU") {
+  if (activeGameMode === "MENU") {
     socket.emit("showMenu");
-  } else if (gameState === "PLAYING" && currentQuestion) {
-    // If playing, send current state
-    socket.emit("newQuestion", {
-      question: currentQuestion.text,
-      options: currentQuestion.options,
-      timer: timerDuration,
-      counter: questionsCounter,
-      topic: currentTopic,
-      total: maxQuestions,
+  } else if (activeGameMode === "QUIZ") {
+    if (gameState === "PLAYING" && currentQuestion) {
+      // If playing, send current state
+      socket.emit("newQuestion", {
+        question: currentQuestion.text,
+        options: currentQuestion.options,
+        timer: timerDuration,
+        counter: questionsCounter,
+        topic: currentTopic,
+        total: maxQuestions,
+      });
+    } else if (gameState === "FINISHED") {
+      socket.emit("showMenu");
+    }
+  } else if (activeGameMode === "BATTLESHIP") {
+    socket.emit("battleshipState", {
+      grid: getClientGrid(),
+      stats: battleshipStats,
+      shipsLeft: battleshipShips.filter(s => s.hits < s.size).length
     });
-  } else if (gameState === "FINISHED") {
-    // Maybe emit last results? For now do nothing or show menu
-    socket.emit("showMenu");
   }
 
   // Start Quiz with selected topic
@@ -62,6 +82,11 @@ io.on("connection", (socket) => {
   });
 
   // Admin: Restart/Reset to Menu
+  // Start Battleship
+  socket.on("startBattleship", () => {
+    startBattleship();
+  });
+
   // Admin: Restart/Reset to Menu
   socket.on("resetQuiz", () => {
     console.log("🔄 Reset a Menu");
@@ -71,12 +96,22 @@ io.on("connection", (socket) => {
       autoRestartTimer = null;
     }
 
+    activeGameMode = "MENU";
     gameState = "MENU";
+
+    // Quiz Reset
     questionsCounter = 0;
     responses = {};
     globalScores = {};
     questionStats = [];
     currentQuestion = null;
+    currentTopic = null;
+
+    // Battleship Reset
+    battleshipGrid = [];
+    battleshipShips = [];
+    battleshipHistory = new Set();
+    battleshipStats = { totalShots: 0, hits: 0, misses: 0, sunkShips: 0 };
     currentTopic = null;
     if (questionTimer) clearInterval(questionTimer);
 
@@ -165,10 +200,176 @@ function nextQuestion() {
     topic: currentTopic,
     total: maxQuestions,
   });
-
-  // simulateChat();
 }
 
+// --- BATTLESHIP LOGIC ---
+
+function startBattleship() {
+  console.log("🚀 Avvio Battaglia Navale");
+  activeGameMode = "BATTLESHIP";
+
+  // Init Grid 10x10
+  battleshipGrid = Array(10).fill().map(() => Array(10).fill(0));
+  battleshipHistory = new Set();
+  battleshipStats = { totalShots: 0, hits: 0, misses: 0, sunkShips: 0, lastShooter: null, lastResult: null };
+
+  // Place Ships
+  // Carrier (5), Battleship (4), Cruiser (3), Submarine (3), Destroyer (2)
+  const shipsToPlace = [
+    { name: "Carrier", size: 5 },
+    { name: "Battleship", size: 4 },
+    { name: "Cruiser", size: 3 },
+    { name: "Submarine", size: 3 },
+    { name: "Destroyer", size: 2 }
+  ];
+
+  battleshipShips = [];
+
+  shipsToPlace.forEach(ship => {
+    let placed = false;
+    while (!placed) {
+      const horizontal = Math.random() < 0.5;
+      const row = Math.floor(Math.random() * 10);
+      const col = Math.floor(Math.random() * 10);
+
+      if (canPlaceShip(row, col, ship.size, horizontal)) {
+        placeShip(row, col, ship.size, horizontal, ship.name);
+        placed = true;
+      }
+    }
+  });
+
+  io.emit("battleshipState", {
+    grid: getClientGrid(),
+    stats: battleshipStats,
+    shipsLeft: battleshipShips.filter(s => s.hits < s.size).length
+  });
+}
+
+function canPlaceShip(row, col, size, horizontal) {
+  if (horizontal) {
+    if (col + size > 10) return false;
+    for (let i = 0; i < size; i++) {
+      if (battleshipGrid[row][col + i] !== 0) return false;
+    }
+  } else {
+    if (row + size > 10) return false;
+    for (let i = 0; i < size; i++) {
+      if (battleshipGrid[row + i][col] !== 0) return false;
+    }
+  }
+  return true;
+}
+
+function placeShip(row, col, size, horizontal, name) {
+  const shipObj = { name, size, hits: 0, coords: [] };
+  if (horizontal) {
+    for (let i = 0; i < size; i++) {
+      battleshipGrid[row][col + i] = 1; // 1 = Ship
+      shipObj.coords.push({ r: row, c: col + i });
+    }
+  } else {
+    for (let i = 0; i < size; i++) {
+      battleshipGrid[row + i][col] = 1;
+      shipObj.coords.push({ r: row + i, c: col });
+    }
+  }
+  battleshipShips.push(shipObj);
+}
+
+function getClientGrid() {
+  // Returns grid where 0 and 1 are 0 (hidden), 2 is Hit, 3 is Miss
+  return battleshipGrid.map(row => row.map(cell => (cell === 1 ? 0 : cell)));
+}
+
+function handleBattleshipMessage(data) {
+  let msg = data.comment.trim().toUpperCase();
+  const match = msg.match(/^([A-J])([1-9]|10)$/);
+
+  if (activeGameMode !== "BATTLESHIP" || !match) return;
+
+  const colChar = match[1]; // A-J
+  const rowNum = parseInt(match[2]); // 1-10
+
+  const col = colChar.charCodeAt(0) - 65;
+  const row = rowNum - 1;
+
+  if (battleshipHistory.has(msg)) return;
+
+  battleshipHistory.add(msg);
+  battleshipStats.totalShots++;
+  battleshipStats.lastShooter = data.nickname;
+
+  const cell = battleshipGrid[row][col];
+
+  if (cell === 0) {
+    // Miss
+    battleshipGrid[row][col] = 3;
+    battleshipStats.lastResult = "MISS";
+    io.emit("battleshipUpdate", {
+      row, col, status: 3,
+      shooter: data.nickname,
+      result: "MISS",
+      stats: battleshipStats,
+      shipsLeft: battleshipShips.filter(s => s.hits < s.size).length
+    });
+  } else if (cell === 1) {
+    // Hit
+    battleshipGrid[row][col] = 2;
+
+    // Find which ship
+    let sunk = false;
+    let shipName = "";
+
+    for (let ship of battleshipShips) {
+      const hitCoord = ship.coords.find(c => c.r === row && c.c === col);
+      if (hitCoord) {
+        ship.hits++;
+        shipName = ship.name;
+        if (ship.hits >= ship.size) {
+          sunk = true;
+          battleshipStats.sunkShips++;
+        }
+        break;
+      }
+    }
+
+    if (sunk) {
+      battleshipStats.lastResult = `SUNK ${shipName}`;
+      io.emit("battleshipUpdate", {
+        row, col, status: 2,
+        shooter: data.nickname,
+        result: "SUNK",
+        shipName: shipName,
+        stats: battleshipStats,
+        shipsLeft: battleshipShips.filter(s => s.hits < s.size).length
+      });
+
+      if (battleshipStats.sunkShips >= battleshipShips.length) {
+        // Game Over
+        io.emit("battleshipGameOver", {
+          stats: battleshipStats
+        });
+        activeGameMode = "FINISHED";
+        // Show menu after delay
+        setTimeout(() => {
+          io.emit("showMenu");
+          activeGameMode = "MENU";
+        }, 10000);
+      }
+
+    } else {
+      battleshipStats.lastResult = "HIT";
+      io.emit("battleshipUpdate", {
+        row, col, status: 2,
+        shooter: data.nickname,
+        result: "HIT",
+        stats: battleshipStats,
+        shipsLeft: battleshipShips.filter(s => s.hits < s.size).length
+      });
+    }
+  }
+}
 
 
 let autoRestartTimer = null;
@@ -176,71 +377,9 @@ let autoRestartTimer = null;
 function startQuiz(topic) {
   console.log(`🚀 Avvio Quiz: ${topic}`);
   currentTopic = topic;
+  activeGameMode = "QUIZ";
   try {
-    if (topic === "js") questions = require("./questions_js.json");
-    else if (topic === "python")
-      questions = require("./questions_python.json");
-    else if (topic === "php") questions = require("./questions_php.json");
-    else if (topic === "java") questions = require("./questions_java.json");
-    else if (topic === "html") questions = require("./questions_html.json");
-    else if (topic === "css") questions = require("./questions_css.json");
-    else if (topic === "cpp") questions = require("./questions_cpp.json");
-    else if (topic === "csharp") questions = require("./questions_csharp.json");
-    let questionsFile;
-    switch (topic) {
-      case "js":
-        questionsFile = require("./questions_js.json");
-        break;
-      case "python":
-        questionsFile = require("./questions_python.json");
-        break;
-      case "php":
-        questionsFile = require("./questions_php.json");
-        break;
-      case "java":
-        questionsFile = require("./questions_java.json");
-        break;
-      case "html":
-        questionsFile = require("./questions_html.json");
-        break;
-      case "css":
-        questionsFile = require("./questions_css.json");
-        break;
-      case "cpp":
-        questionsFile = require("./questions_cpp.json");
-        break;
-      case "csharp":
-        questionsFile = require("./questions_csharp.json");
-        break;
-      case "dotnet":
-        questionsFile = require("./questions_dotnet.json");
-        break;
-      case "c":
-        questionsFile = require("./questions_c.json");
-        break;
-      case "react":
-        questionsFile = require("./questions_react.json");
-        break;
-      case "vue":
-        questionsFile = require("./questions_vue.json");
-        break;
-      case "node":
-        questionsFile = require("./questions_node.json");
-        break;
-      case "go":
-        questionsFile = require("./questions_go.json");
-        break;
-      case "rust":
-        questionsFile = require("./questions_rust.json");
-        break;
-      case "angular":
-        questionsFile = require("./questions_angular.json");
-        break;
-      default:
-        questionsFile = require("./questions.json"); // Fallback
-    }
-    questions = questionsFile;
-
+    questions = require(`./quiz/questions_${topic}.json`);
     if (autoRestartTimer) {
       clearTimeout(autoRestartTimer);
       autoRestartTimer = null;
@@ -258,6 +397,7 @@ function startQuiz(topic) {
     if (questionTimer) clearInterval(questionTimer);
     questionTimer = setInterval(() => nextQuestion(), timerDuration * 1000);
   } catch (e) {
+    questions = require(`./quiz/questions.json`);
     console.error("Errore caricamento domande:", e);
   }
 }
@@ -312,75 +452,50 @@ function quizFinished() {
 
   if (questionTimer) clearInterval(questionTimer);
 
-  // Auto Restart Logic
-  const restartDelay = 60;
-  io.emit("autoRestartCountdown", { seconds: restartDelay });
+  // Auto Restart Logic -> Go to Menu
+  io.emit("autoRestartCountdown", { seconds: 60 });
 
   autoRestartTimer = setTimeout(() => {
-    const topics = [
-      "js",
-      "python",
-      "php",
-      "java",
-      "html",
-      "css",
-      "cpp",
-      "csharp",
-      "dotnet",
-      "c",
-      "react",
-      "vue",
-      "node",
-      "go",
-      "rust",
-      "angular"
-    ];
-    const randomTopic = topics[Math.floor(Math.random() * topics.length)];
-
-    // Notify clients to start animation
-    const animationDuration = 4000;
-    io.emit("startTopicSelection", { target: randomTopic, duration: animationDuration });
-
-    // Wait for animation then start
-    setTimeout(() => {
-      startQuiz(randomTopic);
-    }, animationDuration);
-
-  }, restartDelay * 1000);
+    // Return to menu
+    io.emit("showMenu");
+    activeGameMode = "MENU";
+  }, 60 * 1000);
 }
 
 function sendChatMessage(data) {
-  if (!currentQuestion) return;
   if (receivedMsgs.has(data.msgId)) return;
   receivedMsgs.add(data.msgId);
 
   if (data.method === "WebcastChatMessage") {
-    let answer = data.comment.trim();
+    if (activeGameMode === "QUIZ") {
+      let answer = data.comment.trim();
 
-    // Normalize user answer: remove '?' prefix if present
-    answer = answer.replace(/^\?/, "");
+      // Normalize user answer: remove '?' prefix if present
+      answer = answer.replace(/^\?/, "");
 
-    // Check if it's a valid number format
-    if (/^\d+$/.test(answer) && !responses[data.uniqueId]) {
+      // Check if it's a valid number format
+      if (/^\d+$/.test(answer) && !responses[data.uniqueId]) {
+        const answerInt = parseInt(answer, 10);
 
-      const answerInt = parseInt(answer, 10);
+        // Check if currentQuestion exists and the answer is within valid options range
+        if (currentQuestion && currentQuestion.options && answerInt > 0 && answerInt <= currentQuestion.options.length) {
+          responses[data.uniqueId] = {
+            answer: answerInt, // Store as integer
+            nickname: data.nickname,
+            avatar: data.profilePictureUrl,
+            timestamp: Date.now(),
+          };
 
-      // Check if currentQuestion exists and the answer is within valid options range
-      if (currentQuestion && currentQuestion.options && answerInt > 0 && answerInt <= currentQuestion.options.length) {
-        responses[data.uniqueId] = {
-          answer: answerInt, // Store as integer
-          nickname: data.nickname,
-          avatar: data.profilePictureUrl,
-          timestamp: Date.now(),
-        };
-
-        // Calculate and emit answer counts
-        const counts = {};
-        Object.values(responses).forEach((r) => {
-          counts[r.answer] = (counts[r.answer] || 0) + 1;
-        });
-        io.emit("updateAnswerCounts", counts); // Keys will be "1", "2", etc.
+          // Calculate and emit answer counts
+          const counts = {};
+          Object.values(responses).forEach((r) => {
+            counts[r.answer] = (counts[r.answer] || 0) + 1;
+          });
+          io.emit("updateAnswerCounts", counts); // Keys will be "1", "2", etc.
+        }
       }
+    } else if (activeGameMode === "BATTLESHIP") {
+      handleBattleshipMessage(data);
     }
 
     io.emit("tiktokMessage", {
@@ -426,8 +541,6 @@ function connectLive() {
     console.log(`✅ Connesso a ${username} (roomId: ${room.roomId})`);
     retryDelay = 5000;
     tiktokAttempts = 0; // Reset attempts on success
-    /*if (questionTimer) clearInterval(questionTimer);
-    questionTimer = setInterval(() => nextQuestion(), timerDuration * 1000);*/
   });
 
   const scheduleRetry = () => {
@@ -456,25 +569,6 @@ function connectLive() {
     console.error("❌ Errore connessione iniziale", JSON.stringify(e));
     scheduleRetry();
   });
-}
-
-function simulateChat() {
-  const exampleMsg = require("./exampleMsg.json");
-  const totalAnswers = 10;
-
-  for (let i = 0; i < totalAnswers; i++) {
-    setTimeout(() => {
-      const random = Math.floor(Math.random() * 1000);
-      const testMsg = exampleMsg;
-      testMsg.comment = `?${Math.floor(Math.random() * 4) + 1}`;
-      testMsg.userId = `user${random}`;
-      testMsg.msgId = `msg${random}`;
-      testMsg.nickname = `User${random}`;
-      testMsg.uniqueId = `user${random}`;
-
-      sendChatMessage(testMsg);
-    }, i * 1000);
-  }
 }
 
 // --- CONNESSIONE YOUTUBE ---
