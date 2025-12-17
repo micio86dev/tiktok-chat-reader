@@ -30,7 +30,7 @@
       <!-- Quiz Area -->
       <div class="quiz-container">
         <!-- Instructions -->
-        <div class="quiz-instructions">
+        <div class="quiz-instructions" v-if="activeGameMode === 'QUIZ'">
           Scrivi il numero della risposta (es. <span class="highlight">1</span>)
         </div>
 
@@ -41,11 +41,11 @@
         </div>
 
         <!-- Timer -->
-        <div class="timer">{{ timer }}</div>
+        <div class="timer" v-if="activeGameMode === 'QUIZ'">{{ timer }}</div>
 
         <!-- Question -->
         <h2 class="question" v-if="currentQuestion">{{ currentQuestion }}</h2>
-        <h2 class="question" v-else>In attesa della prossima domanda...</h2>
+        <h2 class="question" v-else-if="activeGameMode === 'QUIZ'">In attesa della prossima domanda...</h2>
 
         <!-- Options -->
         <div class="options-grid" v-if="options.length > 0">
@@ -72,6 +72,9 @@
                 </button>
                 <button class="topic-btn" @click="selectGame('BATTLESHIP')">
                   🚢 Battaglia Navale
+                </button>
+                <button class="topic-btn" @click="selectGame('HANGMAN')">
+                  😵 Impiccato
                 </button>
               </div>
             </div>
@@ -167,6 +170,46 @@
 
           <div class="last-action" v-if="battleshipStats?.lastResult">
             {{ battleshipStats.lastShooter }}: {{ battleshipStats.lastResult }}
+          </div>
+        </div>
+
+        <!-- Hangman Area -->
+        <div class="hangman-container" v-if="activeGameMode === 'HANGMAN' && hangmanState">
+          <div class="quiz-instructions">
+            Indovina la parola scrivendo una lettera!
+          </div>
+
+          <div class="hangman-visual">
+            <!-- Simple CSS or SVG Hangman could go here, for now just text/counter -->
+            <div class="error-counter">
+              Errori: <span class="highlight"
+                :class="{'text-error': hangmanState.wrongAttempts >= hangmanState.maxAttempts - 1}">
+                {{ hangmanState.wrongAttempts }} / {{ hangmanState.maxAttempts }}
+              </span>
+            </div>
+          </div>
+
+          <div class="word-display">
+            <span v-for="(char, index) in hangmanState.maskedWord" :key="index" class="word-char">
+              {{ char }}
+            </span>
+          </div>
+
+          <div class="guessed-letters">
+            Lettere usate:
+            <span v-for="letter in hangmanState.guessed" :key="letter" class="guessed-char">
+              {{ letter }}
+            </span>
+          </div>
+
+          <div class="hangman-status" v-if="hangmanState.status !== 'PLAYING'">
+            <h2 v-if="hangmanState.status === 'WON'" class="text-success">VITTORIA! 🎉</h2>
+            <h2 v-if="hangmanState.status === 'LOST'" class="text-error">GAME OVER ☠️</h2>
+            <div v-if="hangmanState.status === 'LOST'">La parola era: {{ hangmanState.word }}</div>
+          </div>
+
+          <div class="last-action" v-if="hangmanState.lastGuesser">
+            Ultimo tentativo: {{ hangmanState.lastGuesser }}
           </div>
         </div>
 

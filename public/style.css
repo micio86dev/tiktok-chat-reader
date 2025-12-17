@@ -44,7 +44,7 @@ main {
 }
 
 /* Container Split */
-.quiz-container, .battleship-container {
+.quiz-container, .battleship-container, .hangman-container {
   flex: 2;
   padding: 2rem;
   display: flex;
@@ -345,4 +345,57 @@ main {
 }
 .restart-btn:hover {
     filter: brightness(1.1);
+}
+
+/* Hangman Styles */
+.hangman-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.word-display {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.word-char {
+    font-size: 3rem;
+    font-weight: bold;
+    border-bottom: 4px solid var(--accent);
+    min-width: 40px;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+.guessed-letters {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.guessed-char {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 2px 6px;
+    background: #333;
+    border-radius: 4px;
+}
+
+.text-error {
+    color: var(--error);
+}
+
+.text-success {
+    color: var(--success);
+}
+
+.error-counter {
+    font-size: 1.5rem;
+    background: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
 }

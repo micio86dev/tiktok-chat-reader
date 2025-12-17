@@ -47,6 +47,17 @@ let battleshipStats = {
   lastResult: null // "HIT", "MISS", "SUNK", "WIN"
 };
 
+// --- HANGMAN DATA ---
+const hangmanWords = require("./hangman_words.json");
+let hangmanState = {
+  word: "",
+  guessed: [], // Set of letters
+  wrongAttempts: 0,
+  maxAttempts: 6,
+  maskedWord: "", // "_ _ _ _"
+  status: "PLAYING" // PLAYING, WON, LOST
+};
+
 // --- CONNESSIONE CLIENT ---
 io.on("connection", (socket) => {
   console.log("Nuovo client connesso");
@@ -73,6 +84,8 @@ io.on("connection", (socket) => {
       stats: battleshipStats,
       shipsLeft: battleshipShips.filter(s => s.hits < s.size).length
     });
+  } else if (activeGameMode === "HANGMAN") {
+    socket.emit("hangmanState", hangmanState);
   }
 
   // Start Quiz with selected topic
@@ -85,6 +98,11 @@ io.on("connection", (socket) => {
   // Start Battleship
   socket.on("startBattleship", () => {
     startBattleship();
+  });
+
+  // Start Hangman
+  socket.on("startHangman", () => {
+    startHangman();
   });
 
   // Admin: Restart/Reset to Menu
@@ -112,6 +130,10 @@ io.on("connection", (socket) => {
     battleshipShips = [];
     battleshipHistory = new Set();
     battleshipStats = { totalShots: 0, hits: 0, misses: 0, sunkShips: 0 };
+
+    // Hangman Reset
+    hangmanState = { word: "", guessed: [], wrongAttempts: 0, maxAttempts: 6, maskedWord: "", status: "PLAYING" };
+
     currentTopic = null;
     if (questionTimer) clearInterval(questionTimer);
 
@@ -462,6 +484,86 @@ function quizFinished() {
   }, 60 * 1000);
 }
 
+// --- HANGMAN LOGIC ---
+
+function startHangman() {
+  console.log("🚀 Avvio Impiccato");
+  activeGameMode = "HANGMAN";
+
+  const randomWord = hangmanWords[Math.floor(Math.random() * hangmanWords.length)];
+
+  hangmanState = {
+    word: randomWord,
+    guessed: [],
+    wrongAttempts: 0,
+    maxAttempts: 7, // Head, Body, L-Arm, R-Arm, L-Leg, R-Leg, Dead
+    maskedWord: Array(randomWord.length).fill("_").join(" "),
+    status: "PLAYING",
+    lastGuesser: null
+  };
+
+  io.emit("hangmanState", hangmanState);
+}
+
+function handleHangmanMessage(data) {
+  if (activeGameMode !== "HANGMAN" || hangmanState.status !== "PLAYING") return;
+
+  let msg = data.comment.trim().toUpperCase();
+
+  // Check if it's a single letter
+  if (!/^[A-Z]$/.test(msg)) return;
+
+  // Check if already guessed
+  if (hangmanState.guessed.includes(msg)) return;
+
+  hangmanState.guessed.push(msg);
+  hangmanState.lastGuesser = data.nickname;
+
+  if (hangmanState.word.includes(msg)) {
+    // Correct guess
+    // Reveal letter
+    const wordArray = hangmanState.word.split("");
+    const maskedArray = hangmanState.maskedWord.split(" ");
+
+    // maskedWord is space separated string, but let's rebuild it properly
+    let newMasked = "";
+    let completed = true;
+
+    for (let char of wordArray) {
+      if (hangmanState.guessed.includes(char)) {
+        newMasked += char + " ";
+      } else {
+        newMasked += "_ ";
+        completed = false;
+      }
+    }
+    hangmanState.maskedWord = newMasked.trim();
+
+    if (completed) {
+      hangmanState.status = "WON";
+      io.emit("hangmanGameOver", { status: "WON", word: hangmanState.word, winner: data.nickname });
+      // Auto restart new word after 3 seconds
+      setTimeout(() => {
+        startHangman();
+      }, 3000);
+    }
+
+  } else {
+    // Wrong guess
+    hangmanState.wrongAttempts++;
+    if (hangmanState.wrongAttempts >= hangmanState.maxAttempts) {
+      hangmanState.status = "LOST";
+      io.emit("hangmanGameOver", { status: "LOST", word: hangmanState.word });
+      // Auto restart new word after 3 seconds
+      setTimeout(() => {
+        startHangman();
+      }, 3000);
+    }
+  }
+
+  io.emit("hangmanState", hangmanState);
+}
+
 function sendChatMessage(data) {
   if (receivedMsgs.has(data.msgId)) return;
   receivedMsgs.add(data.msgId);
@@ -496,6 +598,8 @@ function sendChatMessage(data) {
       }
     } else if (activeGameMode === "BATTLESHIP") {
       handleBattleshipMessage(data);
+    } else if (activeGameMode === "HANGMAN") {
+      handleHangmanMessage(data);
     }
 
     io.emit("tiktokMessage", {

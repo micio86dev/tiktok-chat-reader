@@ -47,6 +47,9 @@ createApp({
         const battleshipGrid = ref([]);
         const battleshipStats = ref(null);
 
+        // Hangman State
+        const hangmanState = ref(null);
+
         // Auto Restart Countdown
         const restartCountdown = ref(null);
         let restartInterval = null;
@@ -76,6 +79,7 @@ createApp({
                 activeGameMode.value = 'MENU';
                 battleshipGrid.value = [];
                 battleshipStats.value = null;
+                hangmanState.value = null;
             });
 
             // New Question
@@ -125,6 +129,23 @@ createApp({
             socket.on("battleshipGameOver", (data) => {
                 battleshipStats.value = data.stats;
                 // maybe show a modal?
+            });
+
+            // Hangman Events
+            socket.on("hangmanState", (state) => {
+                console.log("Hangman State:", state);
+                activeGameMode.value = 'HANGMAN';
+                showMenu.value = false;
+                hangmanState.value = state;
+            });
+
+            socket.on("hangmanGameOver", (data) => {
+                // data.status, data.word
+                if (hangmanState.value) {
+                    hangmanState.value.status = data.status;
+                    hangmanState.value.word = data.word;
+                    // Additional info if needed
+                }
             });
         });
 
@@ -217,6 +238,10 @@ createApp({
                 clearRestartCountdown();
                 showMenu.value = false;
                 socket.emit("startBattleship");
+            } else if (game === 'HANGMAN') {
+                clearRestartCountdown();
+                showMenu.value = false;
+                socket.emit("startHangman");
             }
         };
 
@@ -244,7 +269,10 @@ createApp({
             activeGameMode,
             battleshipGrid,
             battleshipStats,
-            selectGame
+            selectGame,
+
+            // Hangman exports
+            hangmanState
         };
     }
 }).mount('#app');
